@@ -1,19 +1,9 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
 <head>
-	<title>aMule Login</title>
+	<title>aMule - Control Panel - Login</title>
 
 	<script language="JavaScript" type="text/javascript">
-		function breakout_of_frame()
-		{
-		  // see http://www.thesitewizard.com/archive/framebreak.shtml
-		  // for an explanation of this script and how to use it on your
-		  // own website
-		  if (top.location != location) {
-		    top.location.href = document.location.href ;
-		  }
-		}
-
 		function login_init()
 		{
 			breakout_of_frame();
@@ -30,6 +20,7 @@
 	<style type="text/css">
 		body {
  			padding-top: 50px;
+ 			background-color: #eee;
 		}
 		.logo-cont {
   			padding: 40px 15px;
@@ -57,7 +48,7 @@
     <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
 	    <div class="container">
 	    	<a class="navbar-brand" href="#"><img src="logo-nav.png" class="logo-nav"> aMule WebUI</a>
-	    	<form class="navbar-form navbar-right" role="form">
+	    	<form class="navbar-form navbar-right" role="form" name="login">
 				<div class="form-group">
 			   		<input name="pass" type="password" class="form-control" placeholder="Password" required autofocus>
 			   		<button class="btn btn-primary" type="submit" name="submit" value="Submit">
@@ -65,7 +56,7 @@
 			   		</button>
 		    	</div>
     		</form>
-    		</div><!--/.navbar-collapse -->
+    		</div>
     	</div>
     </div>
     <div class="container logo-cont">
