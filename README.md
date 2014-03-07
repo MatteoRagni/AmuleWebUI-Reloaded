@@ -26,26 +26,55 @@ Here some screenshots for comparison purposes:
 
 #### Login 
 
-| Old                                                 | New                                                  |
-| --------------------------------------------------- | ---------------------------------------------------- |
-| ![login](https://copy.com/tLcRsW7lbVLe "Old login") | ![login2](https://copy.com/wLep1LuJYmEO "New login") |
+| Base                                                 | Reloaded                                                  |
+| ---------------------------------------------------- | --------------------------------------------------------- |
+| ![login](https://copy.com/tLcRsW7lbVLe "Base login") | ![login2](https://copy.com/wLep1LuJYmEO "Reloaded login") |
 
 #### Download/Uploads
 
+| Base                                                       | Reloaded                                                        |
+| ---------------------------------------------------------- | --------------------------------------------------------------- |
+| ![transfer](https://copy.com/N9DjJZSemeEV "Base transfer") | ![transfer2](https://copy.com/JBfdop4LKsVx "Reloaded transfer") |
 
 #### Search
+
+| Base                                                   | Reloaded                                                    |
+| ------------------------------------------------------ | ----------------------------------------------------------- |
+| ![search](https://copy.com/fFkBMkwivKke "Base search") | ![search2](https://copy.com/1IOzRCBN0qrq "Reloaded search") |
+
+#### Shared
+
+| Base                                                   | Reloaded                                                    |
+| ------------------------------------------------------ | ----------------------------------------------------------- |
+| ![shared](https://copy.com/eH2cxyd21Pu0 "Base shared") | ![shared2](https://copy.com/eH2cxyd21Pu0 "Reloaded shared") |
 
 
 #### Servers
 
+| Base                                                     | Reloaded                                                      |
+| -------------------------------------------------------- | ------------------------------------------------------------- |
+| ![servers](https://copy.com/x6hjf2FnIFWX "Base servers") | ![servers2](https://copy.com/1IOzRCBN0qrq "Reloaded servers") |
 
 #### Kad connections
 
+| Base                                             | Reloaded                                              |
+| ------------------------------------------------ | ----------------------------------------------------- |
+| ![Kad](https://copy.com/eTYvnnoQYKJK "Base Kad") | ![Kad2](https://copy.com/VdxFbLIRj0KG "Reloaded Kad") |
 
 #### Statistics
 
+| Base                                                           | Reloaded                                                            |
+| -------------------------------------------------------------- | ------------------------------------------------------------------- |
+| ![statistics](https://copy.com/elXbSg9urHx7 "Base statistics") | ![statistics2](https://copy.com/wXxwnn3SXts8 "Reloaded statistics") |
 
 #### Preferences
 
+| Base                                                             | Reloaded                                                              |
+| ---------------------------------------------------------------- | --------------------------------------------------------------------- |
+| ![preferences](https://copy.com/KreIScW78Wgy "Base preferences") | ![preferences2](https://copy.com/fACjjl4skRTa "Reloaded preferences") |
 
 #### Logging
+
+| Base                                               | Reloaded                                                |
+| -------------------------------------------------- | ------------------------------------------------------- |
+| ![logs](https://copy.com/amtqGBYYrhvy "Base logs") | ![logs2](https://copy.com/zOmJs3DiSCYy "Reloaded logs") |
