@@ -49,7 +49,7 @@ Now you have only to reload `amuleweb` process:
 kill $(pidof amuleweb) && amuleweb
 ```
 
-Interface is available at address [](http://localhost:4711)
+Interface is available at address [http://localhost:4711](http://localhost:4711)
 
 ## Comparison 
 
