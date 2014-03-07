@@ -23,7 +23,7 @@
     <link rel="stylesheet" href="stylesheets/ie.css">
     <![endif]-->
     <!--Googleplus-->
-    <script src="https://apis.google.com/js/plusone.js"></script>
+    <script type="text/javascript" src="https://apis.google.com/js/platform.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     
     <style type="text/css">
@@ -34,41 +34,46 @@
     }
     .google-plus{
       text-align: center;
+      margin: auto;
     }
-    .nb {
-      background-color: #333;
+    code {
+      background-color: rgb(25,25,25);
+      border-color: rgb(18,18,18);
+      font-family:monospace;
+      color: #eee;
     }
     </style>
 
   </head>
   <body>
-      <div id="header">
-        <nav>
-          <li class="fork"><a href="https://github.com/MatteoRagni/AmuleWebUI-Reloaded">View On GitHub</a></li>
-          <li class="downloads"><a href="https://github.com/MatteoRagni/AmuleWebUI-Reloaded/zipball/master">ZIP</a></li>
-          <li class="downloads"><a href="https://github.com/MatteoRagni/AmuleWebUI-Reloaded/tarball/master">TAR</a></li>
-          <li class="title">DOWNLOADS</li>
-        </nav>
-      </div><!-- end header -->
+      
+    <div id="header" class="navbar navbar-inverse">
+      <nav>
+        <li class="fork"><a href="https://github.com/MatteoRagni/AmuleWebUI-Reloaded">
+          <span class="glyphicon glyphicon-eye-open"></span>&nbsp;
+          View On GitHub
+        </a></li>
+        <li class="downloads"><a href="https://github.com/MatteoRagni/AmuleWebUI-Reloaded/zipball/master">
+          <span class="glyphicon glyphicon-download"></span>&nbsp;
+          ZIP
+        </a></li>
+        <li class="downloads"><a href="https://github.com/MatteoRagni/AmuleWebUI-Reloaded/tarball/master">
+          <span class="glyphicon glyphicon-download"></span>&nbsp;
+          TAR
+        </a></li>
+      </nav>
+    </div><!-- end header -->
 
     <div class="wrapper">
 
       <section>
-        <div id="title">
+
+       <div id="title">
           <h1>AmuleWebUI-Reloaded</h1>
           <p>A web interface for amuleweb. Reloaded style using Bootstrap, Glyphicons and jQuery!</p>
           <hr>
           <span class="credits left">Project maintained by <a href="https://github.com/MatteoRagni">MatteoRagni</a></span>
         </div>
-
-        <h1>
-<a name="amulewebui-reloaded" class="anchor" href="#amulewebui-reloaded"><span class="octicon octicon-link"></span></a>AmuleWebUI-Reloaded</h1>
-
-<p>A web interface for amuleweb. Reloaded style using Bootstrap, Glyphicons and jQuery!</p>
-
-<p class="google-plus">
-  <g:plus action="share" data-size="standard" data-annotation="none"></g:plus>
-</p>
 
 <h2>
 <a name="credits" class="anchor" href="#credits"><span class="octicon octicon-link"></span></a>Credits</h2>
@@ -216,6 +221,11 @@ Template=AmuleWebUI-Reloaded
     </a>
   </div>
   </section>
+<section>
+<div class="google-plus">
+  <div class="g-plus" data-action="share" data-annotation="vertical-bubble" data-height="60" data-href="http://matteoragni.github.io/AmuleWebUI-Reloaded/"></div>
+</div>
+</section>
 
 <span class="credits_alt">Hosted on GitHub Pages &mdash; Initial Theme by <a href="https://twitter.com/michigangraham">mattgraham</a></span>    
     </div>
