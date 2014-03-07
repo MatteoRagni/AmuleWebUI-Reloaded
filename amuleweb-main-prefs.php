@@ -317,7 +317,6 @@
       </div>
   </div>
      
-    ?>
     <div class="container-fluid panel-tr" style="margin-bottom:60px;">
       <div class="panel panel-default">
       <div class="panel-heading panel-center"><h4>PREFERENCES</h4></div>
