@@ -1,0 +1,217 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>AmuleWebUI-Reloaded by MatteoRagni</title>
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script src="javascripts/respond.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <!--[if lt IE 8]>
+    <link rel="stylesheet" href="stylesheets/ie.css">
+    <![endif]-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+  </head>
+  <body>
+      <div id="header">
+        <nav>
+          <li class="fork"><a href="https://github.com/MatteoRagni/AmuleWebUI-Reloaded">View On GitHub</a></li>
+          <li class="downloads"><a href="https://github.com/MatteoRagni/AmuleWebUI-Reloaded/zipball/master">ZIP</a></li>
+          <li class="downloads"><a href="https://github.com/MatteoRagni/AmuleWebUI-Reloaded/tarball/master">TAR</a></li>
+          <li class="title">DOWNLOADS</li>
+        </nav>
+      </div><!-- end header -->
+
+    <div class="wrapper">
+
+      <section>
+        <div id="title">
+          <h1>AmuleWebUI-Reloaded</h1>
+          <p>A web interface for amuleweb. Reloaded style using Bootstrap, Glyphicons and jQuery!</p>
+          <hr>
+          <span class="credits left">Project maintained by <a href="https://github.com/MatteoRagni">MatteoRagni</a></span>
+          <span class="credits right">Hosted on GitHub Pages &mdash; Theme by <a href="https://twitter.com/michigangraham">mattgraham</a></span>
+        </div>
+
+        <h1>
+<a name="amulewebui-reloaded" class="anchor" href="#amulewebui-reloaded"><span class="octicon octicon-link"></span></a>AmuleWebUI-Reloaded</h1>
+
+<p>A web interface for amuleweb. Reloaded style using Bootstrap, Glyphicons and jQuery!</p>
+
+<h2>
+<a name="credits" class="anchor" href="#credits"><span class="octicon octicon-link"></span></a>Credits</h2>
+
+<p>This work is entirely based upon the skeleton provided in <code>amuleweb</code> package for Debian. Besed on the work and the efforts of the main <em>aMule</em> branch developers, <em>Bootstrap</em>, <em>Glyphicon</em> and <em>jQuery</em>, I've decided to re-design the web interface. All is released under the <em>Gnu Public License</em>, and I'll be pleased if someone will decide to fork and improve my work.</p>
+
+<h2>
+<a name="structure" class="anchor" href="#structure"><span class="octicon octicon-link"></span></a>Structure</h2>
+
+<p>The structure is completely equivalent to the old <code>amuleweb</code> interface, and mantains all it's functionalities. </p>
+
+<ul>
+<li>Login</li>
+<li>Downloads/Uploads</li>
+<li>Search</li>
+<li>Servers</li>
+<li>Kad bootstrap</li>
+<li>Statistics</li>
+<li>Preferences</li>
+<li>Logging utilities</li>
+<li>Ed2k link insertion</li>
+</ul><h2>
+<a name="installation" class="anchor" href="#installation"><span class="octicon octicon-link"></span></a>Installation</h2>
+
+<p>To install the web interface simply clone the repo in a directory inside <code>/usr/share/amule/webserver</code> (tested on Debian-based distros):</p>
+
+<div class="highlight highlight-bash"><pre><span class="nb">cd</span> /usr/share/amule/webserver
+sudo git clone https://github.com/MatteoRagni/AmuleWebUI-Reloaded
+</pre></div>
+
+<p>After, you need to edit configuration file of rempote interface:</p>
+
+<div class="highlight highlight-bash"><pre>nano <span class="nv">$HOME</span>/.amule/remote.conf
+</pre></div>
+
+<pre><code>...
+[Webserver]
+...
+Template=AmuleWebUI-Reloaded
+...
+</code></pre>
+
+<p>Now you have only to reload <code>amuleweb</code> process:</p>
+
+<div class="highlight highlight-bash"><pre><span class="nb">kill</span> <span class="k">$(</span>pidof amuleweb<span class="k">)</span> <span class="o">&amp;&amp;</span> amuleweb
+</pre></div>
+
+<p>Interface is available at address <a href="http://localhost:4711">http://localhost:4711</a></p>
+
+<p>If you desire to lower the project size, delete the comparison image with the command: 
+<code>sudo rm -R /usr/share/amuleweb/webserver/AmuleWebUI-Reloaded/doc-images</code>  </p>
+
+<h2>
+<a name="comparison" class="anchor" href="#comparison"><span class="octicon octicon-link"></span></a>Comparison</h2>
+
+<p>Here some screenshots for comparison purposes:</p>
+
+<h4>
+<a name="login" class="anchor" href="#login"><span class="octicon octicon-link"></span></a>Login</h4>
+
+<table>
+<thead><tr>
+<th>Base</th>
+<th>Reloaded</th>
+</tr></thead>
+<tbody><tr>
+<td><img src="https://github.com/MatteoRagni/AmuleWebUI-Reloaded/raw/master/doc-images/BasePic/Login.png" alt="login" title="Base login"></td>
+<td><img src="https://github.com/MatteoRagni/AmuleWebUI-Reloaded/raw/master/doc-images/ReloadPic/Login.png" alt="login2" title="Reloaded login"></td>
+</tr></tbody>
+</table><h4>
+<a name="downloaduploads" class="anchor" href="#downloaduploads"><span class="octicon octicon-link"></span></a>Download/Uploads</h4>
+
+<table>
+<thead><tr>
+<th>Base</th>
+<th>Reloaded</th>
+</tr></thead>
+<tbody><tr>
+<td><img src="https://github.com/MatteoRagni/AmuleWebUI-Reloaded/raw/master/doc-images/BasePic/Transfer.png" alt="transfer" title="Base transfer"></td>
+<td><img src="https://github.com/MatteoRagni/AmuleWebUI-Reloaded/raw/master/doc-images/ReloadPic/Transfer.png" alt="transfer2" title="Reloaded transfer"></td>
+</tr></tbody>
+</table><h4>
+<a name="search" class="anchor" href="#search"><span class="octicon octicon-link"></span></a>Search</h4>
+
+<table>
+<thead><tr>
+<th>Base</th>
+<th>Reloaded</th>
+</tr></thead>
+<tbody><tr>
+<td><img src="https://github.com/MatteoRagni/AmuleWebUI-Reloaded/raw/master/doc-images/BasePic/Search.png" alt="search" title="Base search"></td>
+<td><img src="https://github.com/MatteoRagni/AmuleWebUI-Reloaded/raw/master/doc-images/ReloadPic/Search.png" alt="search2" title="Reloaded search"></td>
+</tr></tbody>
+</table><h4>
+<a name="shared" class="anchor" href="#shared"><span class="octicon octicon-link"></span></a>Shared</h4>
+
+<table>
+<thead><tr>
+<th>Base</th>
+<th>Reloaded</th>
+</tr></thead>
+<tbody><tr>
+<td><img src="https://github.com/MatteoRagni/AmuleWebUI-Reloaded/raw/master/doc-images/BasePic/Shared.png" alt="shared" title="Base shared"></td>
+<td><img src="https://github.com/MatteoRagni/AmuleWebUI-Reloaded/raw/master/doc-images/ReloadPic/Shared.png" alt="shared2" title="Reloaded shared"></td>
+</tr></tbody>
+</table><h4>
+<a name="servers" class="anchor" href="#servers"><span class="octicon octicon-link"></span></a>Servers</h4>
+
+<table>
+<thead><tr>
+<th>Base</th>
+<th>Reloaded</th>
+</tr></thead>
+<tbody><tr>
+<td><img src="https://github.com/MatteoRagni/AmuleWebUI-Reloaded/raw/master/doc-images/BasePic/Server.png" alt="servers" title="Base servers"></td>
+<td><img src="https://github.com/MatteoRagni/AmuleWebUI-Reloaded/raw/master/doc-images/ReloadPic/Server.png" alt="servers2" title="Reloaded servers"></td>
+</tr></tbody>
+</table><h4>
+<a name="kad-connections" class="anchor" href="#kad-connections"><span class="octicon octicon-link"></span></a>Kad connections</h4>
+
+<table>
+<thead><tr>
+<th>Base</th>
+<th>Reloaded</th>
+</tr></thead>
+<tbody><tr>
+<td><img src="https://github.com/MatteoRagni/AmuleWebUI-Reloaded/raw/master/doc-images/BasePic/Kad.png" alt="Kad" title="Base Kad"></td>
+<td><img src="https://github.com/MatteoRagni/AmuleWebUI-Reloaded/raw/master/doc-images/ReloadPic/Kad.png" alt="Kad2" title="Reloaded Kad"></td>
+</tr></tbody>
+</table><h4>
+<a name="statistics" class="anchor" href="#statistics"><span class="octicon octicon-link"></span></a>Statistics</h4>
+
+<table>
+<thead><tr>
+<th>Base</th>
+<th>Reloaded</th>
+</tr></thead>
+<tbody><tr>
+<td><img src="https://github.com/MatteoRagni/AmuleWebUI-Reloaded/raw/master/doc-images/BasePic/Stats.png" alt="statistics" title="Base statistics"></td>
+<td><img src="https://github.com/MatteoRagni/AmuleWebUI-Reloaded/raw/master/doc-images/ReloadPic/Stats.png" alt="statistics2" title="Reloaded statistics"></td>
+</tr></tbody>
+</table><h4>
+<a name="preferences" class="anchor" href="#preferences"><span class="octicon octicon-link"></span></a>Preferences</h4>
+
+<table>
+<thead><tr>
+<th>Base</th>
+<th>Reloaded</th>
+</tr></thead>
+<tbody><tr>
+<td><img src="https://github.com/MatteoRagni/AmuleWebUI-Reloaded/raw/master/doc-images/BasePic/Prefs.png" alt="preferences" title="Base preferences"></td>
+<td><img src="https://github.com/MatteoRagni/AmuleWebUI-Reloaded/raw/master/doc-images/ReloadPic/Prefs.png" alt="preferences2" title="Reloaded preferences"></td>
+</tr></tbody>
+</table><h4>
+<a name="logging" class="anchor" href="#logging"><span class="octicon octicon-link"></span></a>Logging</h4>
+
+<table>
+<thead><tr>
+<th>Base</th>
+<th>Reloaded</th>
+</tr></thead>
+<tbody><tr>
+<td><img src="https://github.com/MatteoRagni/AmuleWebUI-Reloaded/raw/master/doc-images/BasePic/Log.png" alt="logs" title="Base logs"></td>
+<td><img src="https://github.com/MatteoRagni/AmuleWebUI-Reloaded/raw/master/doc-images/ReloadPic/Logs.png" alt="logs2" title="Reloaded logs"></td>
+</tr></tbody>
+</table>
+      </section>
+
+    </div>
+    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
+    
+  </body>
+</html>
