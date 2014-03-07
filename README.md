@@ -51,6 +51,10 @@ kill $(pidof amuleweb) && amuleweb
 
 Interface is available at address [http://localhost:4711](http://localhost:4711)
 
+> If you desire to lower the project size, delete the comparison image with the command: 
+> 
+> `sudo rm -R /usr/share/amuleweb/webserver/AmuleWebUI-Reloaded/doc-images`  
+
 ## Comparison 
 
 Here some screenshots for comparison purposes:
