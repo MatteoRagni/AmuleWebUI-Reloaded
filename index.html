@@ -1,12 +1,20 @@
+
 <!doctype html>
 <html>
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
     <title>AmuleWebUI-Reloaded by MatteoRagni</title>
+
+    <!-- Inclusion of bootstrap css -->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap-theme.min.css">
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+
     <link rel="stylesheet" href="stylesheets/styles.css">
     <link rel="stylesheet" href="stylesheets/pygment_trac.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>-->
     <script src="javascripts/respond.js"></script>
     <!--[if lt IE 9]>
       <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -14,7 +22,20 @@
     <!--[if lt IE 8]>
     <link rel="stylesheet" href="stylesheets/ie.css">
     <![endif]-->
+    <!--Googleplus-->
+    <script src="https://apis.google.com/js/plusone.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    
+    <style type="text/css">
+    .credits_alt {
+      font-size: 10px;
+      font-color: #fff;
+      border-top: 1px solid #eee;
+    }
+    .google-plus{
+      text-align: center;
+    }
+    </style>
 
   </head>
   <body>
@@ -35,7 +56,6 @@
           <p>A web interface for amuleweb. Reloaded style using Bootstrap, Glyphicons and jQuery!</p>
           <hr>
           <span class="credits left">Project maintained by <a href="https://github.com/MatteoRagni">MatteoRagni</a></span>
-          <span class="credits right">Hosted on GitHub Pages &mdash; Theme by <a href="https://twitter.com/michigangraham">mattgraham</a></span>
         </div>
 
         <h1>
@@ -43,9 +63,8 @@
 
 <p>A web interface for amuleweb. Reloaded style using Bootstrap, Glyphicons and jQuery!</p>
 
-<p style="align-text:center;">
-  <script src="https://apis.google.com/js/plusone.js"></script>
-  <g:plus action="share"></g:plus>
+<p class="google-plus">
+  <g:plus action="share" data-size="standard" data-annotation="none"></g:plus>
 </p>
 
 <h2>
@@ -103,120 +122,102 @@ Template=AmuleWebUI-Reloaded
 <a name="comparison" class="anchor" href="#comparison"><span class="octicon octicon-link"></span></a>Screenshot</h2>
 
 <p>Here some screenshots for comparison purposes:</p>
+   
+  <div id="carousel-stats" class="carousel slide" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li data-target="#carousel-stats" data-slide-to="0" class="active"></li>
+      <li data-target="#carousel-stats" data-slide-to="1"></li>
+      <li data-target="#carousel-stats" data-slide-to="2"></li>
+      <li data-target="#carousel-stats" data-slide-to="3"></li>
+      <li data-target="#carousel-stats" data-slide-to="4"></li>
+      <li data-target="#carousel-stats" data-slide-to="5"></li>
+      <li data-target="#carousel-stats" data-slide-to="6"></li>
+      <li data-target="#carousel-stats" data-slide-to="7"></li>
+      <li data-target="#carousel-stats" data-slide-to="8"></li>
+    </ol>
 
-<h4>
-<a name="login" class="anchor" href="#login"><span class="octicon octicon-link"></span></a>Login</h4>
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner">
+      <div class="item active">
+          <img src="https://github.com/MatteoRagni/AmuleWebUI-Reloaded/raw/master/doc-images/BasePic/Login.png" alt="login" title="Base login">
+          <img src="https://github.com/MatteoRagni/AmuleWebUI-Reloaded/raw/master/doc-images/ReloadPic/Login.png" alt="login" title="Base login">
+        <div class="carousel-caption">
+          <h3>Login</h3>
+        </div>
+      </div>
+      <div class="item">
+          <img src="https://github.com/MatteoRagni/AmuleWebUI-Reloaded/raw/master/doc-images/BasePic/Transfer.png" alt="login" title="Base login">
+          <img src="https://github.com/MatteoRagni/AmuleWebUI-Reloaded/raw/master/doc-images/ReloadPic/Transfer.png" alt="login" title="Base login">
+        <div class="carousel-caption">
+          <h3>Transfer</h3>
+        </div>
+      </div>
+      <div class="item">
+          <img src="https://github.com/MatteoRagni/AmuleWebUI-Reloaded/raw/master/doc-images/BasePic/Shared.png" alt="login" title="Base login">
+          <img src="https://github.com/MatteoRagni/AmuleWebUI-Reloaded/raw/master/doc-images/ReloadPic/Shared.png" alt="login" title="Base login">
+        <div class="carousel-caption">
+          <h3>Shared</h3>
+        </div>
+      </div>
+      <div class="item">
+          <img src="https://github.com/MatteoRagni/AmuleWebUI-Reloaded/raw/master/doc-images/BasePic/Search.png" alt="login" title="Base login">
+          <img src="https://github.com/MatteoRagni/AmuleWebUI-Reloaded/raw/master/doc-images/ReloadPic/Shared.png" alt="login" title="Base login">
+        <div class="carousel-caption">
+          <h3>Search</h3>
+        </div>
+      </div>
+      <div class="item">
+          <img src="https://github.com/MatteoRagni/AmuleWebUI-Reloaded/raw/master/doc-images/BasePic/Server.png" alt="login" title="Base login">
+          <img src="https://github.com/MatteoRagni/AmuleWebUI-Reloaded/raw/master/doc-images/ReloadPic/Server.png" alt="login" title="Base login">
+        <div class="carousel-caption">
+          <h3>Server</h3>
+        </div>
+      </div>
+      <div class="item">
+          <img src="https://github.com/MatteoRagni/AmuleWebUI-Reloaded/raw/master/doc-images/BasePic/Kad.png" alt="login" title="Base login">
+          <img src="https://github.com/MatteoRagni/AmuleWebUI-Reloaded/raw/master/doc-images/ReloadPic/Kad.png" alt="login" title="Base login">
+        <div class="carousel-caption">
+          <h3>Kad</h3>
+        </div>
+      </div>
+      <div class="item">
+          <img src="https://github.com/MatteoRagni/AmuleWebUI-Reloaded/raw/master/doc-images/BasePic/Stats.png" alt="login" title="Base login">
+          <img src="https://github.com/MatteoRagni/AmuleWebUI-Reloaded/raw/master/doc-images/ReloadPic/Stats.png" alt="login" title="Base login">
+        <div class="carousel-caption">
+          <h3>Stats</h3>
+        </div>
+      </div>
+      <div class="item">
+          <img src="https://github.com/MatteoRagni/AmuleWebUI-Reloaded/raw/master/doc-images/BasePic/Prefs.png" alt="login" title="Base login">
+          <img src="https://github.com/MatteoRagni/AmuleWebUI-Reloaded/raw/master/doc-images/ReloadPic/Prefs.png" alt="login" title="Base login">
+        <div class="carousel-caption">
+          <h3>Prefs</h3>
+        </div>
+      </div>
+      <div class="item">
+          <img src="https://github.com/MatteoRagni/AmuleWebUI-Reloaded/raw/master/doc-images/BasePic/Log.png" alt="login" title="Base login">
+          <img src="https://github.com/MatteoRagni/AmuleWebUI-Reloaded/raw/master/doc-images/ReloadPic/Logs.png" alt="login" title="Base login">
+        <div class="carousel-caption">
+          <h3>Logs</h3>
+        </div>
+      </div>
+      
+    </div>
+    <!-- Controls -->
+    <a class="left carousel-control" href="#carousel-stats" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left"></span>
+    </a>
+    <a class="right carousel-control" href="#carousel-stats" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right"></span>
+    </a>
+  </div>
+  </section>
 
-<table>
-<thead><tr>
-<th>Base</th>
-<th>Reloaded</th>
-</tr></thead>
-<tbody><tr>
-<td><img src="https://github.com/MatteoRagni/AmuleWebUI-Reloaded/raw/master/doc-images/BasePic/Login.png" alt="login" title="Base login"></td>
-<td><img src="https://github.com/MatteoRagni/AmuleWebUI-Reloaded/raw/master/doc-images/ReloadPic/Login.png" alt="login2" title="Reloaded login"></td>
-</tr></tbody>
-</table><h4>
-<a name="downloaduploads" class="anchor" href="#downloaduploads"><span class="octicon octicon-link"></span></a>Download/Uploads</h4>
-
-<table>
-<thead><tr>
-<th>Base</th>
-<th>Reloaded</th>
-</tr></thead>
-<tbody><tr>
-<td><img src="https://github.com/MatteoRagni/AmuleWebUI-Reloaded/raw/master/doc-images/BasePic/Transfer.png" alt="transfer" title="Base transfer"></td>
-<td><img src="https://github.com/MatteoRagni/AmuleWebUI-Reloaded/raw/master/doc-images/ReloadPic/Transfer.png" alt="transfer2" title="Reloaded transfer"></td>
-</tr></tbody>
-</table><h4>
-<a name="search" class="anchor" href="#search"><span class="octicon octicon-link"></span></a>Search</h4>
-
-<table>
-<thead><tr>
-<th>Base</th>
-<th>Reloaded</th>
-</tr></thead>
-<tbody><tr>
-<td><img src="https://github.com/MatteoRagni/AmuleWebUI-Reloaded/raw/master/doc-images/BasePic/Search.png" alt="search" title="Base search"></td>
-<td><img src="https://github.com/MatteoRagni/AmuleWebUI-Reloaded/raw/master/doc-images/ReloadPic/Search.png" alt="search2" title="Reloaded search"></td>
-</tr></tbody>
-</table><h4>
-<a name="shared" class="anchor" href="#shared"><span class="octicon octicon-link"></span></a>Shared</h4>
-
-<table>
-<thead><tr>
-<th>Base</th>
-<th>Reloaded</th>
-</tr></thead>
-<tbody><tr>
-<td><img src="https://github.com/MatteoRagni/AmuleWebUI-Reloaded/raw/master/doc-images/BasePic/Shared.png" alt="shared" title="Base shared"></td>
-<td><img src="https://github.com/MatteoRagni/AmuleWebUI-Reloaded/raw/master/doc-images/ReloadPic/Shared.png" alt="shared2" title="Reloaded shared"></td>
-</tr></tbody>
-</table><h4>
-<a name="servers" class="anchor" href="#servers"><span class="octicon octicon-link"></span></a>Servers</h4>
-
-<table>
-<thead><tr>
-<th>Base</th>
-<th>Reloaded</th>
-</tr></thead>
-<tbody><tr>
-<td><img src="https://github.com/MatteoRagni/AmuleWebUI-Reloaded/raw/master/doc-images/BasePic/Server.png" alt="servers" title="Base servers"></td>
-<td><img src="https://github.com/MatteoRagni/AmuleWebUI-Reloaded/raw/master/doc-images/ReloadPic/Server.png" alt="servers2" title="Reloaded servers"></td>
-</tr></tbody>
-</table><h4>
-<a name="kad-connections" class="anchor" href="#kad-connections"><span class="octicon octicon-link"></span></a>Kad connections</h4>
-
-<table>
-<thead><tr>
-<th>Base</th>
-<th>Reloaded</th>
-</tr></thead>
-<tbody><tr>
-<td><img src="https://github.com/MatteoRagni/AmuleWebUI-Reloaded/raw/master/doc-images/BasePic/Kad.png" alt="Kad" title="Base Kad"></td>
-<td><img src="https://github.com/MatteoRagni/AmuleWebUI-Reloaded/raw/master/doc-images/ReloadPic/Kad.png" alt="Kad2" title="Reloaded Kad"></td>
-</tr></tbody>
-</table><h4>
-<a name="statistics" class="anchor" href="#statistics"><span class="octicon octicon-link"></span></a>Statistics</h4>
-
-<table>
-<thead><tr>
-<th>Base</th>
-<th>Reloaded</th>
-</tr></thead>
-<tbody><tr>
-<td><img src="https://github.com/MatteoRagni/AmuleWebUI-Reloaded/raw/master/doc-images/BasePic/Stats.png" alt="statistics" title="Base statistics"></td>
-<td><img src="https://github.com/MatteoRagni/AmuleWebUI-Reloaded/raw/master/doc-images/ReloadPic/Stats.png" alt="statistics2" title="Reloaded statistics"></td>
-</tr></tbody>
-</table><h4>
-<a name="preferences" class="anchor" href="#preferences"><span class="octicon octicon-link"></span></a>Preferences</h4>
-
-<table>
-<thead><tr>
-<th>Base</th>
-<th>Reloaded</th>
-</tr></thead>
-<tbody><tr>
-<td><img src="https://github.com/MatteoRagni/AmuleWebUI-Reloaded/raw/master/doc-images/BasePic/Prefs.png" alt="preferences" title="Base preferences"></td>
-<td><img src="https://github.com/MatteoRagni/AmuleWebUI-Reloaded/raw/master/doc-images/ReloadPic/Prefs.png" alt="preferences2" title="Reloaded preferences"></td>
-</tr></tbody>
-</table><h4>
-<a name="logging" class="anchor" href="#logging"><span class="octicon octicon-link"></span></a>Logging</h4>
-
-<table>
-<thead><tr>
-<th>Base</th>
-<th>Reloaded</th>
-</tr></thead>
-<tbody><tr>
-<td><img src="https://github.com/MatteoRagni/AmuleWebUI-Reloaded/raw/master/doc-images/BasePic/Log.png" alt="logs" title="Base logs"></td>
-<td><img src="https://github.com/MatteoRagni/AmuleWebUI-Reloaded/raw/master/doc-images/ReloadPic/Logs.png" alt="logs2" title="Reloaded logs"></td>
-</tr></tbody>
-</table>
-      </section>
-
+<span class="credits_alt">Hosted on GitHub Pages &mdash; Initial Theme by <a href="https://twitter.com/michigangraham">mattgraham</a></span>    
     </div>
     <!--[if !IE]><script>fixScale(document);</script><![endif]-->
-    
+
+  
   </body>
 </html>
