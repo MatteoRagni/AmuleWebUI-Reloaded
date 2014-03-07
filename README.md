@@ -20,6 +20,37 @@ The structure is completely equivalent to the old `amuleweb` interface, and mant
  * Logging utilities
  * Ed2k link insertion
 
+## Installation
+
+To install the web interface simply clone the repo in a directory inside `/usr/share/amule/webserver` (tested on Debian-based distros):
+
+``` bash
+cd /usr/share/amule/webserver
+sudo git clone https://github.com/MatteoRagni/AmuleWebUI-Reloaded
+```
+
+After, you need to edit configuration file of rempote interface:
+
+``` bash
+nano $HOME/.amule/remote.conf
+```
+
+```
+...
+[Webserver]
+...
+Template=AmuleWebUI-Reloaded
+...
+```
+
+Now you have only to reload `amuleweb` process:
+
+``` bash
+kill $(pidof amuleweb) && amuleweb
+```
+
+Interface is available at address ![](http://localhost:4711)
+
 ## Comparison 
 
 Here some screenshots for comparison purposes:
@@ -46,7 +77,7 @@ Here some screenshots for comparison purposes:
 
 | Base                                                   | Reloaded                                                    |
 | ------------------------------------------------------ | ----------------------------------------------------------- |
-| ![shared](https://copy.com/eH2cxyd21Pu0 "Base shared") | ![shared2](https://copy.com/eH2cxyd21Pu0 "Reloaded shared") |
+| ![shared](https://copy.com/Kd2AFU296dCe "Base shared") | ![shared2](https://copy.com/eH2cxyd21Pu0 "Reloaded shared") |
 
 
 #### Servers
