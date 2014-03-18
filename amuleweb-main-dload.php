@@ -535,7 +535,7 @@
 	<div id="footer">
 		<div class="col-md-1"></div>
 		<div class="col-md-5">
-			<form name="formlink" method="post" class="form-inline" action="footer.php" role="form" id="formed2link">
+			<form name="formlink" method="post" class="form-inline" action="amuleweb-main-dload.php" role="form" id="formed2link">
     			<div class="btn-group">
         			<input class="form-control btn-group" name="ed2klink" type="text" id="ed2klink" placeholder="ed2k:// - Insert link" style="border-top-right-radius: 0px; border-bottom-right-radius: 0px; height: 30px;" size="25">
         			<select class="form-control btn-group" name="selectcat" id="selectcat" style="height: 30px;">
