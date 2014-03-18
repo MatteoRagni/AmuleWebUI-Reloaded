@@ -139,61 +139,43 @@ function formCommandSubmit(command)
 				<div class="collapse navbar-collapse">
 					<div class="btn-group">
 						<!-- Downloads -->
-						<button type="button" class="btn btn-dark">	
-					   		<a class="navbar-link" title="Downloads and Uploads" href="amuleweb-main-dload.php">
-					   			<span class="glyphicon glyphicon-transfer"></span>
-					   		</a>
-				   		</button>
+						<a class="btn btn-dark navbar-link" title="Downloads and Uploads" href="amuleweb-main-dload.php">
+				   			<span class="glyphicon glyphicon-transfer"></span>
+				   		</a>
 				   		<!-- Shared -->
-				   		<button type="button" class="btn btn-dark">	
-					   		<a class="navbar-link" title="Sharing" href="amuleweb-main-shared.php">
+				   		<a class="btn btn-dark navbar-link" title="Sharing" href="amuleweb-main-shared.php">
 					   			<span class="glyphicon glyphicon-share"></span>
-					   		</a>
-				   		</button>
+				   		</a>
 				   		<!-- Search -->
-				   		<button type="button" class="btn btn-dark">	
-					   		<a class="navbar-link" title="Search" href="amuleweb-main-search.php">
-					   			<span class="glyphicon glyphicon-search"></span>
-					   		</a>
-				   		</button>
+				   		<a class="btn btn-dark navbar-link" title="Search" href="amuleweb-main-search.php">
+					   		<span class="glyphicon glyphicon-search"></span>
+					   	</a>
 				   		<!-- Servers -->
-				   		<button type="button" class="btn btn-dark">	
-					   		<a class="navbar-link" title="Servers" href="amuleweb-main-servers.php">
-					   			<span class="glyphicon glyphicon-tasks"></span>
-					   		</a>
-				   		</button>
+				   		<a class="btn btn-dark navbar-link" title="Servers" href="amuleweb-main-servers.php">
+					   		<span class="glyphicon glyphicon-tasks"></span>
+					   	</a>
 				   		<!-- Kad -->
-				   		<button type="button" class="btn btn-dark">	
-					   		<a class="navbar-link" title="Kademelia" href="amuleweb-main-kad.php">
-					   			<span class="glyphicon glyphicon-asterisk"></span>
-					   		</a>
-				   		</button>
+				   		<a class="btn btn-dark navbar-link" title="Kademelia" href="amuleweb-main-kad.php">
+					   		<span class="glyphicon glyphicon-asterisk"></span>
+					   	</a>
 				   		<!-- Stats -->
-				   		<button type="button" class="btn btn-dark">	
-					   		<a class="navbar-link" title="Statistics" href="amuleweb-main-stats.php">
-					   			<span class="glyphicon glyphicon-stats"></span>
-					   		</a>
-				   		</button>
+				   		<a class="btn btn-dark navbar-link" title="Statistics" href="amuleweb-main-stats.php">
+					   		<span class="glyphicon glyphicon-stats"></span>
+					   	</a>
 				   	</div>
 				   	<div class="btn-group">
 						<!-- Configuration -->
-						<button type="button" class="btn btn-dark">	
-					   		<a class="navbar-link" title="Configurations" href="amuleweb-main-prefs.php">
-					   			<span class="glyphicon glyphicon-cog"></span>
-					   		</a>
-				   		</button>
+						<a class="btn btn-dark navbar-link" title="Configurations" href="amuleweb-main-prefs.php">
+					   		<span class="glyphicon glyphicon-cog"></span>
+					   	</a>
 				   		<!-- Log -->
-				   		<button type="button" class="btn btn-dark">	
-					   		<a class="navbar-link" title="Log" href="amuleweb-main-log.php">
-					   			<span class="glyphicon glyphicon-flag"></span>
-					   		</a>
-				   		</button>
+				   		<a class="btn btn-dark navbar-link" title="Log" href="amuleweb-main-log.php">
+					   		<span class="glyphicon glyphicon-flag"></span>
+					   	</a>
 				   		<!-- Exit -->
-				   		<button type="button" class="btn btn-danger">	
-					   		<a class="navbar-link" title="Exit" href="login.php">
-					   			<span class="glyphicon glyphicon-off"></span>
-					   		</a>
-				   		</button>
+				   		<a class="btn btn-danger navbar-link" title="Exit" href="login.php">
+				   			<span class="glyphicon glyphicon-off"></span>
+				   		</a>
 				   	</div>
 		    	</div>
     		</form>
