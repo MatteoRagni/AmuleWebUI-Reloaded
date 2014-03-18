@@ -374,20 +374,6 @@
               style=" width:450px;
                       background-color:#eee;
                       border-top-right-radius: 0px;
-                      border-bottom-right-radius: 0px;" onclick="javascript:focusName('slot_alloc')">
-                <input type="checkbox" class="btn btn-default" name="nothing" disabled>&nbsp;&nbsp;
-                Slot Allocation
-              </label>
-              <input type="text" class="btn-group form-control"
-                style=" border-top-left-radius:0px;
-                        border-bottom-left-radius:0px;
-                        width: 100px" name="slot_alloc">
-          </div>
-          <div class="btn-group form-inline">
-            <label class="form-control btn-group" 
-              style=" width:450px;
-                      background-color:#eee;
-                      border-top-right-radius: 0px;
                       border-bottom-right-radius: 0px;" onclick="javascript:focusName('max_up_limit')">
                 <input type="checkbox" class="btn btn-default" name="nothing" disabled>&nbsp;&nbsp;
                 Max Upload Rate
@@ -396,6 +382,20 @@
                 style=" border-top-left-radius:0px;
                         border-bottom-left-radius:0px;
                         width: 100px" name="max_up_limit">
+          </div>
+          <div class="btn-group form-inline">
+            <label class="form-control btn-group" 
+              style=" width:450px;
+                      background-color:#eee;
+                      border-top-right-radius: 0px;
+                      border-bottom-right-radius: 0px;" onclick="javascript:focusName('slot_alloc')">
+                <input type="checkbox" class="btn btn-default" name="nothing" disabled>&nbsp;&nbsp;
+                Slot Allocation
+              </label>
+              <input type="text" class="btn-group form-control"
+                style=" border-top-left-radius:0px;
+                        border-bottom-left-radius:0px;
+                        width: 100px" name="slot_alloc">
           </div></p>
 
           <p><b style="font-size:16px; width:550px;" class="form-control">CONNECTION SETTINGS</b>
