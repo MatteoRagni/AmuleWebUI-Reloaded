@@ -376,7 +376,7 @@
                       border-top-right-radius: 0px;
                       border-bottom-right-radius: 0px;" onclick="javascript:focusName('slot_alloc')">
                 <input type="checkbox" class="btn btn-default" name="nothing" disabled>&nbsp;&nbsp;
-                Max upload rate
+                Slot Allocation
               </label>
               <input type="text" class="btn-group form-control"
                 style=" border-top-left-radius:0px;
@@ -390,7 +390,7 @@
                       border-top-right-radius: 0px;
                       border-bottom-right-radius: 0px;" onclick="javascript:focusName('max_up_limit')">
                 <input type="checkbox" class="btn btn-default" name="nothing" disabled>&nbsp;&nbsp;
-                Slot allocation
+                Max Upload Rate
               </label>
               <input type="text" class="btn-group form-control"
                 style=" border-top-left-radius:0px;
