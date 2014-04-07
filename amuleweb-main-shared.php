@@ -197,10 +197,11 @@ function formCommandSubmit(command)
     		<!-- Inserting filtering php -->
     		<div class="btn-group">
      			<select name="select" id="filter" class="form-control btn-group"> 
-     				<option>Choose</option>
+     				<option selected>All</option>
      				<option>Low</option>
      				<option>Normal</option>
      				<option>High</option>
+     				<option>Release</option>
      			</select>
     			<a class="btn btn-default btn-filter" href="javascript:formCommandSubmit('setprio');" title="Filter"><span class="glyphicon glyphicon-check"></span></a>
     			<?php
@@ -277,6 +278,13 @@ function formCommandSubmit(command)
 						return $result;
 					}
 
+					function PrioStringSorter($file) {
+						$prionames = array(0 => "Low", 1 => "Normal", 2 => "High",
+							3 => "High", 4 => "Low", 5=> "Normal", 6 => "Release");
+						$result = $prionames[$file->prio];
+						return $result;
+					}
+
 					$sort_order;$sort_reverse;
 
 					function my_cmp($a, $b)	{
@@ -338,16 +346,33 @@ function formCommandSubmit(command)
 						usort(&$shared, "my_cmp");
 					}
 
-					foreach ($shared as $file) {
-						echo '<tr>';
+					if ($HTTP_GET_VARS["select"] == "All") {
+						foreach ($shared as $file) {
 
-						echo '<td style="font-size:12px;">', '<div class="checkbox download-checkbox" style="margin: 0px;"><label><input type="checkbox" name="', $file->hash, '" >&nbsp;<b>', $file->short_name, "</b></label></div></td>";
-						echo '<td style="font-size:12px;">', CastToXBytes($file->xfer), " (", CastToXBytes($file->xfer_all),")</td>";
-						echo '<td style="font-size:12px;">', $file->req, " (", $file->req_all, ")</td>";
-						echo '<td style="font-size:12px;">', $file->accept, " (", $file->accept_all, ")</td>";
-						echo '<td style="font-size:12px;">', CastToXBytes($file->size), "</td>";
-						echo '<td style="font-size:12px;">', PrioString($file), "</td>";;
-						echo '</tr>';
+							echo '<tr>';
+
+							echo '<td style="font-size:12px;">', '<div class="checkbox download-checkbox" style="margin: 0px;"><label><input type="checkbox" name="', $file->hash, '" >&nbsp;<b>', $file->short_name, "</b></label></div></td>";
+							echo '<td style="font-size:12px;">', CastToXBytes($file->xfer), " (", CastToXBytes($file->xfer_all),")</td>";
+							echo '<td style="font-size:12px;">', $file->req, " (", $file->req_all, ")</td>";
+							echo '<td style="font-size:12px;">', $file->accept, " (", $file->accept_all, ")</td>";
+							echo '<td style="font-size:12px;">', CastToXBytes($file->size), "</td>";
+							echo '<td style="font-size:12px;">', PrioString($file), "</td>";;
+							echo '</tr>';
+						}
+					} else {
+						foreach ($shared as $file) {
+							if ($HTTP_GET_VARS["select"] == PrioStringSorter($file)) {
+								echo '<tr>';
+
+								echo '<td style="font-size:12px;">', '<div class="checkbox download-checkbox" style="margin: 0px;"><label><input type="checkbox" name="', $file->hash, '" >&nbsp;<b>', $file->short_name, "</b></label></div></td>";
+								echo '<td style="font-size:12px;">', CastToXBytes($file->xfer), " (", CastToXBytes($file->xfer_all),")</td>";
+								echo '<td style="font-size:12px;">', $file->req, " (", $file->req_all, ")</td>";
+								echo '<td style="font-size:12px;">', $file->accept, " (", $file->accept_all, ")</td>";
+								echo '<td style="font-size:12px;">', CastToXBytes($file->size), "</td>";
+								echo '<td style="font-size:12px;">', PrioString($file), "</td>";;
+								echo '</tr>';
+							}
+						}
 					}
 				?>
 
