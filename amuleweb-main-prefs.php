@@ -251,7 +251,7 @@
                 <span class="glyphicon glyphicon-tasks"></span>
               </a>
               <!-- Kad -->
-              <a class="btn btn-dark navbar-link" title="Kademelia" href="amuleweb-main-kad.php">
+              <a class="btn btn-dark navbar-link" title="Kademlia" href="amuleweb-main-kad.php">
                 <span class="glyphicon glyphicon-asterisk"></span>
               </a>
               <!-- Stats -->
@@ -553,7 +553,7 @@
                       border-top-right-radius: 0px;
                       border-bottom-right-radius: 0px;">
                 <input type="checkbox" class="btn btn-default" name="new_files_auto_ul_prio">&nbsp;&nbsp;
-                New shared files with with auto priority
+                New shared files with auto priority
               </label>
               <input type="text" class="btn-group form-control"
                 style=" border-top-left-radius:0px;

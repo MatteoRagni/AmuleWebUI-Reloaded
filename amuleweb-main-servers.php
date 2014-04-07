@@ -116,7 +116,7 @@
 					   		<span class="glyphicon glyphicon-tasks"></span>
 					   	</a>
 				   		<!-- Kad -->
-				   		<a class="btn btn-dark navbar-link" title="Kademelia" href="amuleweb-main-kad.php">
+				   		<a class="btn btn-dark navbar-link" title="Kademlia" href="amuleweb-main-kad.php">
 					   		<span class="glyphicon glyphicon-asterisk"></span>
 					   	</a>
 				   		<!-- Stats -->
