@@ -346,7 +346,7 @@ function formCommandSubmit(command)
 						usort(&$shared, "my_cmp");
 					}
 
-					if ($HTTP_GET_VARS["select"] == "All") {
+					if ($HTTP_GET_VARS["select"] == "All" || $HTTP_GET_VARS["select"] == "") {
 						foreach ($shared as $file) {
 
 							echo '<tr>';

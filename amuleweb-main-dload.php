@@ -5,8 +5,6 @@
 <head>
 
 	<title>aMule - Control Panel - Downloads and Uploads</title>
-	<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
-    <link rel="icon" href="/favicon.ico" type="image/x-icon">
 	<?php
 		if ( $_SESSION["auto_refresh"] > 0 ) {
 			echo "<meta http-equiv=\"refresh\" content=\"", $_SESSION["auto_refresh"], '">';
