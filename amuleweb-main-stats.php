@@ -208,7 +208,7 @@
             </div>
           </div>
           <div class="item">
-            <img src="amule_stats_download.png" alt="Upload graph" style="height:100%; width:100%;"/>
+            <img src="amule_stats_upload.png" alt="Upload graph" style="height:100%; width:100%;"/>
             <div class="carousel-caption">
               <h3>Uploads</h3>
             </div>
