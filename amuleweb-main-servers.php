@@ -158,7 +158,7 @@
 						<th><a href="amuleweb-main-servers.php?sort=desc">Description</a></th>
 						<th>Address</th>
 						<th><a href="amuleweb-main-servers.php?sort=users">Users</a></th>						
-						<th><a href="amuleweb-main-servers.serversphp?sort=files">Files</a></th>						
+						<th><a href="amuleweb-main-servers.php?sort=files">Files</a></th>						
 					</tr>
 				</thead>
 				<tbody>
