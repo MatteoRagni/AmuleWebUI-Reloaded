@@ -269,7 +269,7 @@
 					<tr>
 						<th><a href="amuleweb-main-search.php?sort=name">File name</a></th>
 						<th><a href="amuleweb-main-search.php?sort=size">Size</a></th>
-						<th><a href="amuleweb-main-search.php?sort=srccount">Sources</a></th>
+						<th><a href="amuleweb-main-search.php?sort=sources">Sources</a></th>
 					</tr>
 				</thead>
 				<tbody>
