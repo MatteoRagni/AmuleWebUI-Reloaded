@@ -29,7 +29,7 @@ Fix css code Footer for Mobile Device
 
 ## Installation
 
-To install the web interface simply clone the repo in a directory inside `/usr/share/amule/webserver` (tested on my Raspian on raspberry (Debian based distro)):
+To install the web interface simply clone the repo in a directory inside `/usr/share/amule/webserver` (tested on my Raspian on raspberry (Debian based distro):
 
 Step 1: Stop `amuleweb` process:
 
