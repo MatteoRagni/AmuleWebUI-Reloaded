@@ -8,6 +8,7 @@
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js" integrity="sha384-/Gm+ur33q/W+9ANGYwB2Q4V0ZWApToOzRuA8md/1p9xMMxpqnlguMvk8QuEFWA1B" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" integrity="sha384-7tY7Dc2Q8WQTKGz2Fa0vC4dWQo07N4mJjKvHfIGnxuC4vPqFGFQppd9b3NWpf18/" crossorigin="anonymous">
   <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap-theme.min.css" integrity="sha384-BD3p+z3TqIhBK2OaMBRzK4Nz02t4OQcwrEkJxy3PAqU2Rwm1giS6RCgvBDk6+iPH" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
   <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js" integrity="sha384-oFMgcGzKX7GaHtF4hx14KbxdsGjyfHK6m1comHjI1FH6g4m6qYre+4cnZbwaYbHD" crossorigin="anonymous"></script>
 
   <script type="text/Javascript">
@@ -19,7 +20,7 @@
   <style type="text/css">
     body {
       padding-top: 60px;
-      background-color: #eee;
+      background-color:#39425f;
     }
     .logo-nav {
       height: 40px;
@@ -27,22 +28,6 @@
     }
     .navbar-brand {
       padding-top: 5px;
-    }
-    .btn-dark {
-      background-color: hsl(0, 0%, 16%) !important;
-      background-repeat: repeat-x;
-      filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#5b5b5b", endColorstr="#282828");
-      background-image: -khtml-gradient(linear, left top, left bottom, from(#5b5b5b), to(#282828));
-      background-image: -moz-linear-gradient(top, #5b5b5b, #282828);
-      background-image: -ms-linear-gradient(top, #5b5b5b, #282828);
-      background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #5b5b5b), color-stop(100%, #282828));
-      background-image: -webkit-linear-gradient(top, #5b5b5b, #282828);
-      background-image: -o-linear-gradient(top, #5b5b5b, #282828);
-      background-image: linear-gradient(#5b5b5b, #282828);
-      border-color: #282828 #282828 hsl(0, 0%, 11%);
-      color: #fff !important;
-      text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.33);
-      -webkit-font-smoothing: antialiased;
     }
   </style>
 
@@ -76,12 +61,11 @@
       margin-top: 1px;
       margin-bottom: 1px;
     }
-    
   </style>
 
   <!-- Tables -->
   <style type="css/text">
-    .panel-tr {   
+    .panel-tr {
       width: 95%;
       margin-left: auto;
       margin-right: auto;
@@ -96,8 +80,8 @@
       bottom: 0;
       width: 100%;
       /* Set the fixed height of the footer here */
-      height: 45px;
-      background-color: #f5f5f5;
+      height: auto;
+      background-color:#2f303d;
     }
     #ed2link {
       margin-right: 5px;
@@ -112,6 +96,57 @@
     }
   </style>
 
+		 <!-- /* Styling for Brax AmuleWebUI Material Theme */-->
+        <style text="css/text">
+
+                .navbar {
+                background-color:#2f303d;
+                }
+                .label-success {
+                        background-color:#319a9b;
+                }
+                .label-default {
+                        background-color:#ffffff;
+                        color:#319a9b;
+                }
+                .panel {
+                        background-color:#39425f;
+                        border: 0;
+                }
+                .panel-heading{
+                        background-color:#319a9b;
+                        border: 0;
+                }
+                .form-control {
+                border: 0;
+                }
+                .table > thead > tr > th, .table > thead > tr > td {
+                        border: 1;
+                }
+                .glyphicon {
+                        color:#319a9b;
+                }
+                .btn:hover .glyphicon{
+                        color:#fff;
+                  }
+                  a:hover {
+                        color:#fff;
+                        }
+                a {
+                        color:#4db6ac;
+                }
+                h4 {
+                        color:#cfd8dc;
+                }
+                 td {
+                        color:#cfd8dc
+                }
+                  th {
+                        color:#4db6ac
+                }
+        </style>
+
+
   <script language="JavaScript" type="text/JavaScript">
   function formCommandSubmit(command) {
     var frm=document.forms.mainform
@@ -123,7 +158,7 @@
 
   <?php
     // apply new options before proceeding
-    
+
     if ( ($HTTP_GET_VARS["Submit"] == "Apply") && ($_SESSION["guest_login"] == 0) ) {
       $file_opts = array("check_free_space", "extract_metadata", 
         "ich_en","aich_trust", "preview_prio","save_sources", "resume_same_cat",
@@ -225,63 +260,79 @@
 
 </head>
 
-<body>
+<body class="animated fadeIn" style="animation-duration: 1.5s">
 
   <!-- Navigation bar :: This part will be common in all the scripts -->
-  <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+  <nav class="navbar  navbar-fixed-top" role="navigation">
       <div class="container">
-        <a class="navbar-brand" href="#"><img src="logo-nav.png" class="logo-nav"> aMule WebUI</a>
+        <a class="navbar-brand" href="#"><img src="logo-nav-brax.png" class="logo-nav"> aMule WebUI</a>
         <form class="navbar-form navbar-right" role="form" name="login">
         <div class="collapse navbar-collapse">
-          <div class="btn-group">
-<!-- Downloads -->
-            <a class="btn btn-dark navbar-link" title="Downloads and Uploads" href="amuleweb-main-dload.php">
-                <span class="glyphicon glyphicon-transfer"></span>
-              </a>
-              <!-- Shared -->
-              <a class="btn btn-dark navbar-link" title="Sharing" href="amuleweb-main-shared.php">
-                  <span class="glyphicon glyphicon-share"></span>
-              </a>
-              <!-- Search -->
-              <a class="btn btn-dark navbar-link" title="Search" href="amuleweb-main-search.php">
-                <span class="glyphicon glyphicon-search"></span>
-              </a>
-              <!-- Servers -->
-              <a class="btn btn-dark navbar-link" title="Servers" href="amuleweb-main-servers.php">
-                <span class="glyphicon glyphicon-tasks"></span>
-              </a>
-              <!-- Kad -->
-              <a class="btn btn-dark navbar-link" title="Kademlia" href="amuleweb-main-kad.php">
-                <span class="glyphicon glyphicon-asterisk"></span>
-              </a>
-              <!-- Stats -->
-              <a class="btn btn-dark navbar-link" title="Statistics" href="amuleweb-main-stats.php">
-                <span class="glyphicon glyphicon-stats"></span>
-              </a>
-            </div>
-            <div class="btn-group">
-            <!-- Configuration -->
-            <a class="btn btn-dark navbar-link" title="Configurations" href="amuleweb-main-prefs.php">
-                <span class="glyphicon glyphicon-cog"></span>
-              </a>
-              <!-- Log -->
-              <a class="btn btn-dark navbar-link" title="Log" href="amuleweb-main-log.php">
-                <span class="glyphicon glyphicon-flag"></span>
-              </a>
-              <!-- Exit -->
-              <a class="btn btn-danger navbar-link" title="Exit" href="login.php">
-                <span class="glyphicon glyphicon-off"></span>
-              </a>
+						<div class="btn-group">
+                                                <!-- Downloads -->
+                                                <a class="btn  navbar-link title="Downloads and Uploads" href="amuleweb-main-dload.php">
+                                                                <span class="glyphicon glyphicon-transfer">
+                                                                <div style="font-size:9px"><br>Transfer</div>
+                                                                </span>
+                                                </a>
+                                                <!-- Shared -->
+                                                <a class="btn  navbar-link" title="Sharing" href="amuleweb-main-shared.php">
+                                                                <span class="glyphicon glyphicon-share">
+                                                                <div style="font-size:9px"><br>Shared</div>
+                                                                </span>
+                                                                </a>
+                                                <!-- Search -->
+                                                <a class="btn  navbar-link" title="Search" href="amuleweb-main-search.php">
+                                                                <span class="glyphicon glyphicon-search">
+                                                                <div style="font-size:9px"><br>Search</div>
+                                                                </span>
+                                                </a>
+                                                <!-- Servers -->
+                                                <a class="btn  navbar-link" title="Servers" href="amuleweb-main-servers.php">
+                                                                <span class="glyphicon glyphicon-tasks">
+                                                                <div style="font-size:9px"><br>Server</div>
+                                                                </span>
+                                                </a>
+                                                <!-- Kad -->
+                                                <a class="btn  navbar-link" title="Kademlia" href="amuleweb-main-kad.php">
+                                                                <span class="glyphicon glyphicon-asterisk">
+                                                                <div style="font-size:9px"><br>Kad</div>
+                                                                </span>
+                                                </a>
+                                                <!-- Stats -->
+                                                <a class="btn  navbar-link" title="Statistics" href="amuleweb-main-stats.php">
+                                                                <span class="glyphicon glyphicon-stats">
+                                                                <div style="font-size:9px"><br>Stats</div>
+                                                                </span>
+                                                </a>
+                                        </div>
+                                        <div class="btn-group">
+                                                <!-- Configuration -->
+                                                <a class="btn navbar-link" title="Configurations" href="amuleweb-main-prefs.php">
+                                                                <span class="glyphicon glyphicon-cog">
+                                                                <div style="font-size:9px"><br>Settings</div>
+                                                                </span>
+                                                </a>
+                                                <!-- Log -->
+                                                <a class="btn  navbar-link" title="Log" href="amuleweb-main-log.php">
+                                                                <span class="glyphicon glyphicon-flag">
+                                                                <div style="font-size:9px"><br>Logs</div>
+                                                                </span>
+                                                </a>
+                                                <!-- Exit -->
+                                                <a class="btn navbar-link" title="Exit" href="login.php">
+                                                                <span class="glyphicon glyphicon-off">
+                                                                <div style="font-size:9px"><br>Exit</div>
+                                                                </span>
+                                                </a>
             </div>
           </div>
         </form>
         </div><!--/.navbar-collapse -->
       </div>
     </nav>
-
     <!-- Center body -->
     <form name="mainform" action="amuleweb-main-prefs.php" method="post">
-
            <!-- Commands -->
     <div class="panel panel-default panel-tasks">
       <div class="panel-body container panel-center">
@@ -298,18 +349,19 @@
         </div>
       </div>
   </div>
-     
-    <div class="container-fluid panel-tr" style="margin-bottom:60px;">
-      <div class="panel panel-default">
+
+         <div class="container-fluid panel-tr" style="margin-bottom:60px;">
+      <div class="panel">
       <div class="panel-heading panel-center"><h4>PREFERENCES</h4></div>
-        
+
         <div style="width:600px; margin: auto; margin-top: 20px;">
-          <p><b style="font-size:16px; width:550px;" class="form-control">WEBSERVER</b>
-          
+          <p><b style="font-size:16px;width:550px;background-color:#319a9b;color:cfd8dc" class="form-control">WEBSERVER</b>
+
           <div class="btn-group form-inline">
-            <label class="form-control btn-group" 
+            <label class="form-control btn-group"
               style=" width:450px;
-                      background-color:#eee;
+                      background-color:#ffffff;
+			color:319a9b;
                       border-top-right-radius: 0px;
                       border-bottom-right-radius: 0px;" onclick="javascript:focusName('autorefresh_time')">
                 <input type="checkbox" class="btn btn-default" name="nothing" disabled>&nbsp;&nbsp;
@@ -323,7 +375,8 @@
           <div class="btn-group form-inline">
             <label class="form-control btn-group" 
               style=" width:450px;
-                      background-color:#eee;
+                       background-color:#ffffff;
+                        color:319a9b;
                       border-top-right-radius: 0px;
                       border-bottom-right-radius: 0px;">
                 <input type="checkbox" class="btn btn-default" name="use_gzip">&nbsp;&nbsp;
@@ -335,12 +388,13 @@
                         width: 100px" disabled="true" name="nothing">
           </div></p>
 
-          <p><b style="font-size:16px; width:550px;" class="form-control">BANDWIDTH LIMITS</b>
+          <p><b style="font-size:16px; width:550px;background-color:#319a9b;color:cfd8dc" " class="form-control">BANDWIDTH LIMITS</b>
 
           <div class="btn-group form-inline">
             <label class="form-control btn-group" 
               style=" width:450px;
-                      background-color:#eee;
+			 background-color:#ffffff;
+                        color:319a9b;
                       border-top-right-radius: 0px;
                       border-bottom-right-radius: 0px;" onclick="javascript:focusName('max_down_limit')">
                 <input type="checkbox" class="btn btn-default" name="nothing" disabled>&nbsp;&nbsp;
@@ -354,7 +408,8 @@
           <div class="btn-group form-inline">
             <label class="form-control btn-group" 
               style=" width:450px;
-                      background-color:#eee;
+                       background-color:#ffffff;
+                        color:319a9b;
                       border-top-right-radius: 0px;
                       border-bottom-right-radius: 0px;" onclick="javascript:focusName('max_up_limit')">
                 <input type="checkbox" class="btn btn-default" name="nothing" disabled>&nbsp;&nbsp;
@@ -368,7 +423,8 @@
           <div class="btn-group form-inline">
             <label class="form-control btn-group" 
               style=" width:450px;
-                      background-color:#eee;
+                       background-color:#ffffff;
+                        color:319a9b;
                       border-top-right-radius: 0px;
                       border-bottom-right-radius: 0px;" onclick="javascript:focusName('slot_alloc')">
                 <input type="checkbox" class="btn btn-default" name="nothing" disabled>&nbsp;&nbsp;
@@ -380,12 +436,13 @@
                         width: 100px" name="slot_alloc">
           </div></p>
 
-          <p><b style="font-size:16px; width:550px;" class="form-control">CONNECTION SETTINGS</b>
+          <p><b style="font-size:16px; width:550px;background-color:#319a9b;color:cfd8dc" class="form-control">CONNECTION SETTINGS</b>
 
           <div class="btn-group form-inline">
             <label class="form-control btn-group" 
               style=" width:450px;
-                      background-color:#eee;
+                       background-color:#ffffff;
+                        color:319a9b;
                       border-top-right-radius: 0px;
                       border-bottom-right-radius: 0px;" onclick="javascript:focusName('max_conn_total')">
                 <input type="checkbox" class="btn btn-default" name="nothing" disabled>&nbsp;&nbsp;
@@ -399,7 +456,8 @@
           <div class="btn-group form-inline">
             <label class="form-control btn-group" 
               style=" width:450px;
-                      background-color:#eee;
+                       background-color:#ffffff;
+                        color:319a9b;
                       border-top-right-radius: 0px;
                       border-bottom-right-radius: 0px;" onclick="javascript:focusName('max_file_src')">
                 <input type="checkbox" class="btn btn-default" name="nothing" disabled>&nbsp;&nbsp;
@@ -413,7 +471,8 @@
           <div class="btn-group form-inline">
             <label class="form-control btn-group" 
               style=" width:450px;
-                      background-color:#eee;
+                       background-color:#ffffff;
+                        color:319a9b;
                       border-top-right-radius: 0px;
                       border-bottom-right-radius: 0px;">
                 <input type="checkbox" class="btn btn-default" name="autoconn_en">&nbsp;&nbsp;
@@ -427,7 +486,8 @@
           <div class="btn-group form-inline">
             <label class="form-control btn-group" 
               style=" width:450px;
-                      background-color:#eee;
+                       background-color:#ffffff;
+                        color:319a9b;
                       border-top-right-radius: 0px;
                       border-bottom-right-radius: 0px;">
                 <input type="checkbox" class="btn btn-default" name="reconn_en">&nbsp;&nbsp;
@@ -439,12 +499,13 @@
                         width: 100px" disabled="true" name="nothing">
           </div></p>
 
-          <p><b style="font-size:16px; width:550px;" class="form-control">CONNECTION SETTINGS</b>
+          <p><b style="font-size:16px; width:550px;background-color:#319a9b;color:cfd8dc" class="form-control">CONNECTION SETTINGS</b>
 
           <div class="btn-group form-inline">
             <label class="form-control btn-group" 
               style=" width:450px;
-                      background-color:#eee;
+                       background-color:#ffffff;
+                        color:319a9b;
                       border-top-right-radius: 0px;
                       border-bottom-right-radius: 0px;" onclick="javascript:focusName('tcp_port')">
                 <input type="checkbox" class="btn btn-default" name="nothing" disabled>&nbsp;&nbsp;
@@ -458,7 +519,8 @@
           <div class="btn-group form-inline">
             <label class="form-control btn-group" 
               style=" width:450px;
-                      background-color:#eee;
+                       background-color:#ffffff;
+                        color:319a9b;
                       border-top-right-radius: 0px;
                       border-bottom-right-radius: 0px;" onclick="javascript:focusName('udp_port')">
                 <input type="checkbox" class="btn btn-default" name="nothing" disabled>&nbsp;&nbsp;
@@ -472,7 +534,8 @@
           <div class="btn-group form-inline">
             <label class="form-control btn-group" 
               style=" width:450px;
-                      background-color:#eee;
+                       background-color:#ffffff;
+                        color:319a9b;
                       border-top-right-radius: 0px;
                       border-bottom-right-radius: 0px;">
                 <input type="checkbox" class="btn btn-default" name="udp_dis">&nbsp;&nbsp;
@@ -484,12 +547,13 @@
                         width: 100px" disabled="true" name="nothing">
           </div></p>
 
-        <p><b style="font-size:16px; width:550px;" class="form-control">LINE CAPACITY (STATISTICS)</b>
+        <p><b style="font-size:16px; width:550px;background-color:#319a9b;color:cfd8dc" class="form-control">LINE CAPACITY (STATISTICS)</b>
 
           <div class="btn-group form-inline">
             <label class="form-control btn-group" 
               style=" width:450px;
-                      background-color:#eee;
+                       background-color:#ffffff;
+                        color:319a9b;
                       border-top-right-radius: 0px;
                       border-bottom-right-radius: 0px;" onclick="javascript:focusName('max_line_down_cap')">
                 <input type="checkbox" class="btn btn-default" name="nothing" disabled>&nbsp;&nbsp;
@@ -503,7 +567,8 @@
           <div class="btn-group form-inline">
             <label class="form-control btn-group" 
               style=" width:450px;
-                      background-color:#eee;
+                       background-color:#ffffff;
+                        color:319a9b;
                       border-top-right-radius: 0px;
                       border-bottom-right-radius: 0px;" onclick="javascript:focusName('max_line_up_cap')">
                 <input type="checkbox" class="btn btn-default" name="nothing" disabled>&nbsp;&nbsp;
@@ -515,12 +580,13 @@
                         width: 100px" name="max_line_up_cap">
           </div></p>
 
-          <p><b style="font-size:16px; width:550px;" class="form-control">FILE SETTINGS</b>
+          <p><b style="font-size:16px; width:550px;background-color:#319a9b;color:cfd8dc" class="form-control">FILE SETTINGS</b>
 
           <div class="btn-group form-inline">
             <label class="form-control btn-group" 
               style=" width:450px;
-                      background-color:#eee;
+                       background-color:#ffffff;
+                        color:319a9b;
                       border-top-right-radius: 0px;
                       border-bottom-right-radius: 0px;">
                 <input type="checkbox" class="btn btn-default" name="check_free_space"
@@ -535,7 +601,8 @@
           <div class="btn-group form-inline">
             <label class="form-control btn-group" 
               style=" width:450px;
-                      background-color:#eee;
+                       background-color:#ffffff;
+                        color:319a9b;
                       border-top-right-radius: 0px;
                       border-bottom-right-radius: 0px;">
                 <input type="checkbox" class="btn btn-default" name="new_files_auto_dl_prio">&nbsp;&nbsp;
@@ -549,7 +616,8 @@
           <div class="btn-group form-inline">
             <label class="form-control btn-group" 
               style=" width:450px;
-                      background-color:#eee;
+                       background-color:#ffffff;
+                        color:319a9b;
                       border-top-right-radius: 0px;
                       border-bottom-right-radius: 0px;">
                 <input type="checkbox" class="btn btn-default" name="new_files_auto_ul_prio">&nbsp;&nbsp;
@@ -563,7 +631,8 @@
           <div class="btn-group form-inline">
             <label class="form-control btn-group" 
               style=" width:450px;
-                      background-color:#eee;
+                       background-color:#ffffff;
+                        color:319a9b;
                       border-top-right-radius: 0px;
                       border-bottom-right-radius: 0px;">
                 <input type="checkbox" class="btn btn-default" name="ich_en">&nbsp;&nbsp;
@@ -577,7 +646,8 @@
           <div class="btn-group form-inline">
             <label class="form-control btn-group" 
               style=" width:450px;
-                      background-color:#eee;
+                       background-color:#ffffff;
+                        color:319a9b;
                       border-top-right-radius: 0px;
                       border-bottom-right-radius: 0px;">
                 <input type="checkbox" class="btn btn-default" name="aich_trust">&nbsp;&nbsp;
@@ -591,7 +661,8 @@
           <div class="btn-group form-inline">
             <label class="form-control btn-group" 
               style=" width:450px;
-                      background-color:#eee;
+                       background-color:#ffffff;
+                        color:319a9b;
                       border-top-right-radius: 0px;
                       border-bottom-right-radius: 0px;">
                 <input type="checkbox" class="btn btn-default" name="alloc_full_chunks">&nbsp;&nbsp;
@@ -605,7 +676,8 @@
           <div class="btn-group form-inline">
             <label class="form-control btn-group" 
               style=" width:450px;
-                      background-color:#eee;
+                       background-color:#ffffff;
+                        color:319a9b;
                       border-top-right-radius: 0px;
                       border-bottom-right-radius: 0px;">
                 <input type="checkbox" class="btn btn-default" name="alloc_full">&nbsp;&nbsp;
@@ -619,7 +691,8 @@
           <div class="btn-group form-inline">
             <label class="form-control btn-group" 
               style=" width:450px;
-                      background-color:#eee;
+                       background-color:#ffffff;
+                        color:319a9b;
                       border-top-right-radius: 0px;
                       border-bottom-right-radius: 0px;">
                 <input type="checkbox" class="btn btn-default" name="new_files_paused">&nbsp;&nbsp;
@@ -633,7 +706,8 @@
           <div class="btn-group form-inline">
             <label class="form-control btn-group" 
               style=" width:450px;
-                      background-color:#eee;
+                       background-color:#ffffff;
+                        color:319a9b;
                       border-top-right-radius: 0px;
                       border-bottom-right-radius: 0px;">
                 <input type="checkbox" class="btn btn-default" name="extract_metadata">&nbsp;&nbsp;
@@ -728,8 +802,9 @@
       </div>
     </div>
     <div class="col-md-1"></div>
-  </div>
+ </div>
   </form>
 
 </body>
 </html>
+

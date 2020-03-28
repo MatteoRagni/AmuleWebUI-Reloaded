@@ -1,115 +1,124 @@
-# AmuleWebUI-Reloaded #
+# AmuleWebUI-Reloaded Mateterial Style
 
-A web interface for amuleweb. Reloaded style using Bootstrap, Glyphicons and jQuery!
+Update style of 'AmuleWebUI-Reloaded' in Material design with CSS
 
 ## Credits 
 
-This work is entirely based upon the skeleton provided in `amuleweb` package for Debian. Besed on the work and the efforts of the main _aMule_ branch developers, _Bootstrap_, _Glyphicon_ and _jQuery_, I've decided to re-design the web interface. All is released under the _Gnu Public License_, and I'll be pleased if someone will decide to fork and improve my work.
+* Matteo Ragni for Reloaded Project `https://github.com/MatteoRagni/AmuleWebUI-Reloaded`
+* Daneden for animate .css `https://github.com/daneden/animate.css/`
 
 ## Structure 
 
-The structure is completely equivalent to the old `amuleweb` interface, and mantains all it's functionalities. 
+The structure and it's functionalities, is completely equivalent to the old `Reloaded`
 
- * Login
- * Downloads/Uploads
- * Search
- * Servers
- * Kad bootstrap
- * Statistics
- * Preferences
- * Logging utilities
- * Ed2k link insertion
+## Change & Fix
+
+```
+Add CSS Animated Logo in Login page
+Add CSS FadeIn on all page
+Add modern style with CSS
+Add Top Page  button in Search with CSS and js code
+Fix css code Footer for Mobile Device
+```
+
+# Animated Login
+
+<p align="center">
+  <img width="460" height="300" src="https://github.com/Brax84/AmuleWebUI-Reloaded-Material/blob/master/doc-images/ReloadMateriaPic/login.gif">
+</p>
 
 ## Installation
 
-To install the web interface simply clone the repo in a directory inside `/usr/share/amule/webserver` (tested on Debian-based distros):
+To install the web interface simply clone the repo in a directory inside `/usr/share/amule/webserver` (tested on my Raspian on raspberry (Debian based distro)):
+
+Step 1: Stop `amuleweb` process:
+
+``` bash
+sudo service amule-daemon stop
+```
 
 ``` bash
 cd /usr/share/amule/webserver
-sudo git clone https://github.com/MatteoRagni/AmuleWebUI-Reloaded
+sudo git clone https://github.com/Brax84/AmuleWebUI-Reloaded-Material
 ```
 
-After, you need to edit configuration file of rempote interface:
+After, you need to edit configuration file:
 
 ``` bash
-nano $HOME/.amule/remote.conf
+sudo nano /home/amule/.aMule/amule.conf
 ```
+Find and edit line `Template`
 
 ```
 ...
 [Webserver]
 ...
-Template=AmuleWebUI-Reloaded
+Template=AmuleWebUI-Reloaded-Material
 ...
 ```
 
-Now you have only to reload `amuleweb` process:
+Step 2: Reload `amuleweb` process:
 
 ``` bash
-kill $(pidof amuleweb) && amuleweb
+sudo service amule-daemon start (or restart command)
 ```
 
-Interface is available at address [http://localhost:4711](http://localhost:4711)
+Interface is available at address `http://localhost:4711` or `NetworkDeviceIp:4711`
 
-> If you desire to lower the project size, delete the comparison image with the command: 
-> 
-> `sudo rm -R /usr/share/amuleweb/webserver/AmuleWebUI-Reloaded/doc-images`  
 
 ## Comparison 
 
-Here some screenshots for comparison purposes:
-
 #### Login 
 
-| Base | Reloaded |
+| Reloaded | Reloaded Material |
 | ---- | -------- |
-| ![login](https://github.com/MatteoRagni/AmuleWebUI-Reloaded/raw/master/doc-images/BasePic/Login.png "Base login") | ![login2](https://github.com/MatteoRagni/AmuleWebUI-Reloaded/raw/master/doc-images/ReloadPic/Login.png "Reloaded login") |
+| ![login](https://github.com/Brax84/AmuleWebUI-Reloaded-Material/blob/master/doc-images/ReloadPic/Login.png "Reloaded login") | ![login2](https://github.com/Brax84/AmuleWebUI-Reloaded-Material/blob/master/doc-images/ReloadMateriaPic/Login.png "Material login" ) |
 
 #### Download/Uploads
 
-| Base | Reloaded |
+| Reloaded | Reloaded Material |
 | ---- | -------- |
-| ![transfer](https://github.com/MatteoRagni/AmuleWebUI-Reloaded/raw/master/doc-images/BasePic/Transfer.png "Base transfer") | ![transfer2](https://github.com/MatteoRagni/AmuleWebUI-Reloaded/raw/master/doc-images/ReloadPic/Transfer.png "Reloaded transfer") |
+| ![transfer](https://github.com/Brax84/AmuleWebUI-Reloaded-Material/blob/master/doc-images/ReloadPic/Transfer.png "Reloaded transfer") | ![transfer2](https://github.com/Brax84/AmuleWebUI-Reloaded-Material/blob/master/doc-images/ReloadMateriaPic/Transfer.png "Material transfer") |
 
 #### Search
 
-| Base | Reloaded |
+| Reloaded | Reloaded Material |
 | ---- | -------- |
-| ![search](https://github.com/MatteoRagni/AmuleWebUI-Reloaded/raw/master/doc-images/BasePic/Search.png "Base search") | ![search2](https://github.com/MatteoRagni/AmuleWebUI-Reloaded/raw/master/doc-images/ReloadPic/Search.png "Reloaded search") |
+| ![search](https://github.com/Brax84/AmuleWebUI-Reloaded-Material/blob/master/doc-images/ReloadPic/Search.png "Reloaded Search") | ![search2](https://github.com/Brax84/AmuleWebUI-Reloaded-Material/blob/master/doc-images/ReloadMateriaPic/Search.png "Material search") |
 
 #### Shared
 
-| Base | Reloaded |
+| Reloaded | Reloaded Material |
 | ---- | -------- |
-| ![shared](https://github.com/MatteoRagni/AmuleWebUI-Reloaded/raw/master/doc-images/BasePic/Shared.png "Base shared") | ![shared2](https://github.com/MatteoRagni/AmuleWebUI-Reloaded/raw/master/doc-images/ReloadPic/Shared.png "Reloaded shared") |
+| ![shared](https://github.com/Brax84/AmuleWebUI-Reloaded-Material/blob/master/doc-images/ReloadPic/Shared.png "Reloaded Shared") | ![shared2](https://github.com/Brax84/AmuleWebUI-Reloaded-Material/blob/master/doc-images/ReloadMateriaPic/Shared.png "Material Search") |
 
 
 #### Servers
 
-| Base | Reloaded |
+| Reloaded | Reloaded Material |
 | ---- | -------- |
-| ![servers](https://github.com/MatteoRagni/AmuleWebUI-Reloaded/raw/master/doc-images/BasePic/Server.png "Base servers") | ![servers2](https://github.com/MatteoRagni/AmuleWebUI-Reloaded/raw/master/doc-images/ReloadPic/Server.png "Reloaded servers") |
+| ![servers](https://github.com/Brax84/AmuleWebUI-Reloaded-Material/blob/master/doc-images/ReloadPic/Server.png "Reloaded Server") | ![servers2](https://github.com/Brax84/AmuleWebUI-Reloaded-Material/blob/master/doc-images/ReloadMateriaPic/Servers.png "Material Server") |
 
 #### Kad connections
 
-| Base | Reloaded |
+| Reloaded | Reloaded Material |
 | ---- | -------- |
-| ![Kad](https://github.com/MatteoRagni/AmuleWebUI-Reloaded/raw/master/doc-images/BasePic/Kad.png "Base Kad") | ![Kad2](https://github.com/MatteoRagni/AmuleWebUI-Reloaded/raw/master/doc-images/ReloadPic/Kad.png "Reloaded Kad") |
+| ![Kad](https://github.com/Brax84/AmuleWebUI-Reloaded-Material/blob/master/doc-images/ReloadPic/Kad.png "Reloaded Kad") | ![Kad2](https://github.com/Brax84/AmuleWebUI-Reloaded-Material/blob/master/doc-images/ReloadMateriaPic/Kad.png "Material kad") |
 
 #### Statistics
 
-| Base | Reloaded |
+| Reloaded | Reloaded Material |
 | ---- | -------- |
-| ![statistics](https://github.com/MatteoRagni/AmuleWebUI-Reloaded/raw/master/doc-images/BasePic/Stats.png "Base statistics") | ![statistics2](https://github.com/MatteoRagni/AmuleWebUI-Reloaded/raw/master/doc-images/ReloadPic/Stats.png "Reloaded statistics") |
+| ![statistics](https://github.com/Brax84/AmuleWebUI-Reloaded-Material/blob/master/doc-images/ReloadPic/Stats.png "Reloaded statistics") | ![statistics2](https://github.com/Brax84/AmuleWebUI-Reloaded-Material/blob/master/doc-images/ReloadMateriaPic/Statics.png "Material statistics") |
 
 #### Preferences
 
-| Base | Reloaded |
+| Reloaded | Reloaded Material |
 | ---- | -------- |
-| ![preferences](https://github.com/MatteoRagni/AmuleWebUI-Reloaded/raw/master/doc-images/BasePic/Prefs.png "Base preferences") | ![preferences2](https://github.com/MatteoRagni/AmuleWebUI-Reloaded/raw/master/doc-images/ReloadPic/Prefs.png "Reloaded preferences") |
+| ![preferences](https://github.com/Brax84/AmuleWebUI-Reloaded-Material/blob/master/doc-images/ReloadPic/Prefs.png "Reloaded preferences") | ![preferences2](https://github.com/Brax84/AmuleWebUI-Reloaded-Material/blob/master/doc-images/ReloadMateriaPic/Settings.png "Material preferences") |
 
 #### Logging
 
-| Base | Reloaded |
+| Reloaded | Reloaded Material |
 | ---- | -------- |
-| ![logs](https://github.com/MatteoRagni/AmuleWebUI-Reloaded/raw/master/doc-images/BasePic/Log.png "Base logs") | ![logs2](https://github.com/MatteoRagni/AmuleWebUI-Reloaded/raw/master/doc-images/ReloadPic/Logs.png "Reloaded logs") |
+| ![logs](https://github.com/Brax84/AmuleWebUI-Reloaded-Material/blob/master/doc-images/ReloadPic/Logs.png "Reloaded Logging") | ![logs2](https://github.com/Brax84/AmuleWebUI-Reloaded-Material/blob/master/doc-images/ReloadMateriaPic/Logs.png "Material Logging") |

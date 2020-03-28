@@ -51,7 +51,7 @@
   <style type="text/css">
     body {
       padding-top: 60px;
-      background-color: #eee;
+      background-color:#39425f;
     }
     .logo-nav {
       height: 40px;
@@ -103,78 +103,147 @@
 
   </style>
 
-  <!-- Styling for footer -->
-  <style text="css/text">
-    #footer {
-      position: fixed;
-      bottom: 0;
-      width: 100%;
-      /* Set the fixed height of the footer here */
-      height: 45px;
-      background-color: #f5f5f5;
-    }
-    #ed2link {
-      margin-right: 5px;
-      width: 120px;
-    }
-    #selectcat {
-      border-radius: 0px;
-      width: 100px;
-    }
-    #formed2link {
-      margin: 5px;
-    }
-  </style>
 
+	 <!-- /* Styling for Brax AmuleWebUI Material Theme */-->
+        <style text="css/text">
+
+                .navbar {
+                background-color:#2f303d;
+                }
+                .label-success {
+                        background-color:#319a9b;
+                }
+                .label-default {
+                        background-color:#ffffff;
+                        color:#319a9b;
+                }
+                .panel {
+                        background-color:#39425f;
+                        border: 0;
+                }
+                .panel-heading{
+                        background-color:#319a9b;
+                        border: 0;
+                }
+                .form-control {
+                border: 0;
+                }
+                .table > thead > tr > th, .table > thead > tr > td {
+                        border: 0;
+                }
+                .glyphicon {
+                        color:#319a9b;
+                }
+                .btn:hover .glyphicon{
+                        color:#fff;
+                  }
+                  a:hover {
+                        color:#fff;
+                        }
+                a {
+                        color:#4db6ac;
+                }
+                h4 {
+                        color:#cfd8dc;
+                }
+                 td {
+                        color:#cfd8dc
+                }
+                  th {
+                        color:#4db6ac
+                }
+        </style>
+
+
+        <!-- Styling for footer -->
+        <style text="css/text">
+                #footer {
+                        position: fixed;
+                        bottom: 0;
+                        width: 100%;
+                        /* Set the fixed height of the footer here */
+                        height:auto;
+                        background-color:#2f303d;
+                }
+                #ed2link {
+                        margin-right: 5px;
+                        width: 120px;
+                }
+                #selectcat {
+                        border-radius: 0px;
+                        width: 100px;
+                }
+                #formed2link {
+                        margin: 5px;
+                }
+        </style>
 </head>
 
 
 <body>
   <!-- Navigation bar :: This part will be common in all the scripts -->
-  <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+  <nav class="navbar  navbar-fixed-top" role="navigation">
       <div class="container">
-        <a class="navbar-brand" href="#"><img src="logo-nav.png" class="logo-nav"> aMule WebUI</a>
+        <a class="navbar-brand" href="#"><img src="logo-nav-brax.png" class="logo-nav"> aMule WebUI</a>
         <form class="navbar-form navbar-right" role="form" name="login">
         <div class="collapse navbar-collapse">
-          <div class="btn-group">
-           <!-- Downloads -->
-            <a class="btn btn-dark navbar-link" title="Downloads and Uploads" href="amuleweb-main-dload.php">
-                <span class="glyphicon glyphicon-transfer"></span>
-              </a>
-              <!-- Shared -->
-              <a class="btn btn-dark navbar-link" title="Sharing" href="amuleweb-main-shared.php">
-                  <span class="glyphicon glyphicon-share"></span>
-              </a>
-              <!-- Search -->
-              <a class="btn btn-dark navbar-link" title="Search" href="amuleweb-main-search.php">
-                <span class="glyphicon glyphicon-search"></span>
-              </a>
-              <!-- Servers -->
-              <a class="btn btn-dark navbar-link" title="Servers" href="amuleweb-main-servers.php">
-                <span class="glyphicon glyphicon-tasks"></span>
-              </a>
-              <!-- Kad -->
-              <a class="btn btn-dark navbar-link" title="Kademlia" href="amuleweb-main-kad.php">
-                <span class="glyphicon glyphicon-asterisk"></span>
-              </a>
-              <!-- Stats -->
-              <a class="btn btn-dark navbar-link" title="Statistics" href="amuleweb-main-stats.php">
-                <span class="glyphicon glyphicon-stats"></span>
-              </a>
-            </div>
-            <div class="btn-group">
-            <!-- Configuration -->
-            <a class="btn btn-dark navbar-link" title="Configurations" href="amuleweb-main-prefs.php">
-                <span class="glyphicon glyphicon-cog"></span>
-              </a>
-              <!-- Log -->
-              <a class="btn btn-dark navbar-link" title="Log" href="amuleweb-main-log.php">
-                <span class="glyphicon glyphicon-flag"></span>
-              </a>
-              <!-- Exit -->
-              <a class="btn btn-danger navbar-link" title="Exit" href="login.php">
-                <span class="glyphicon glyphicon-off"></span>
-              </a>
+						<div class="btn-group">
+                                                <!-- Downloads -->
+                                                <a class="btn  navbar-link title="Downloads and Uploads" href="amuleweb-main-dload.php">
+                                                                <span class="glyphicon glyphicon-transfer">
+                                                                <div style="font-size:9px"><br>Transfer</div>
+                                                                </span>
+                                                </a>
+                                                <!-- Shared -->
+                                                <a class="btn  navbar-link" title="Sharing" href="amuleweb-main-shared.php">
+                                                                <span class="glyphicon glyphicon-share">
+                                                                <div style="font-size:9px"><br>Shared</div>
+                                                                </span>
+                                                                </a>
+                                                <!-- Search -->
+                                                <a class="btn  navbar-link" title="Search" href="amuleweb-main-search.php">
+                                                                <span class="glyphicon glyphicon-search">
+                                                                <div style="font-size:9px"><br>Search</div>
+                                                                </span>
+                                                </a>
+                                                <!-- Servers -->
+                                                <a class="btn  navbar-link" title="Servers" href="amuleweb-main-servers.php">
+                                                                <span class="glyphicon glyphicon-tasks">
+                                                                <div style="font-size:9px"><br>Server</div>
+                                                                </span>
+                                                </a>
+                                                <!-- Kad -->
+                                                <a class="btn  navbar-link" title="Kademlia" href="amuleweb-main-kad.php">
+                                                                <span class="glyphicon glyphicon-asterisk">
+                                                                <div style="font-size:9px"><br>Kad</div>
+                                                                </span>
+                                                </a>
+                                                <!-- Stats -->
+                                                <a class="btn  navbar-link" title="Statistics" href="amuleweb-main-stats.php">
+                                                                <span class="glyphicon glyphicon-stats">
+                                                                <div style="font-size:9px"><br>Stats</div>
+                                                                </span>
+                                                </a>
+                                        </div>
+                                        <div class="btn-group">
+                                                <!-- Configuration -->
+                                                <a class="btn navbar-link" title="Configurations" href="amuleweb-main-prefs.php">
+                                                                <span class="glyphicon glyphicon-cog">
+                                                                <div style="font-size:9px"><br>Settings</div>
+                                                                </span>
+                                                </a>
+                                                <!-- Log -->
+                                                <a class="btn  navbar-link" title="Log" href="amuleweb-main-log.php">
+                                                                <span class="glyphicon glyphicon-flag">
+                                                                <div style="font-size:9px"><br>Logs</div>
+                                                                </span>
+                                                </a>
+                                                <!-- Exit -->
+                                                <a class="btn navbar-link" title="Exit" href="login.php">
+                                                                <span class="glyphicon glyphicon-off">
+                                                                <div style="font-size:9px"><br>Exit</div>
+                                                                </span>
+                                                </a>
             </div>
           </div>
         </form>
@@ -183,7 +252,7 @@
     </nav>
 
     <div class="container-fluid panel-tr" style="margin-bottom: 60px;">
-    <div class="panel panel-default">
+    <div class="panel ">
     <div class="panel-heading panel-center" style="text-align:center;"><h4>STATISTICS</h4></div>
       <div class="container-fluid">
       <div class="col-md-4 stats-col " style="margin-top: 10px; margin-bottom: 10px;">
