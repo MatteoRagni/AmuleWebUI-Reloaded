@@ -3,6 +3,7 @@
 <head>
 <title>aMule - Control Panel - Search</title>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<a href="#" id="scroll" style="display: none;"><span></span></a>
 
 	<?php
 		if ( $_SESSION["auto_refresh"] > 0 ) {
@@ -16,6 +17,7 @@
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js" integrity="sha384-/Gm+ur33q/W+9ANGYwB2Q4V0ZWApToOzRuA8md/1p9xMMxpqnlguMvk8QuEFWA1B" crossorigin="anonymous"></script>
 	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" integrity="sha384-7tY7Dc2Q8WQTKGz2Fa0vC4dWQo07N4mJjKvHfIGnxuC4vPqFGFQppd9b3NWpf18/" crossorigin="anonymous">
 	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap-theme.min.css" integrity="sha384-BD3p+z3TqIhBK2OaMBRzK4Nz02t4OQcwrEkJxy3PAqU2Rwm1giS6RCgvBDk6+iPH" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
 	<script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js" integrity="sha384-oFMgcGzKX7GaHtF4hx14KbxdsGjyfHK6m1comHjI1FH6g4m6qYre+4cnZbwaYbHD" crossorigin="anonymous"></script>
 
 	<script type="text/Javascript">
@@ -27,7 +29,7 @@
 	<style type="text/css">
 		body {
 			padding-top: 60px;
-			background-color: #eee;
+			background-color: #39425f;
 		}
 		.logo-nav {
 			height: 40px;
@@ -35,22 +37,6 @@
 		}
 		.navbar-brand {
 			padding-top: 5px;
-		}
-		.btn-dark {
-			background-color: hsl(0, 0%, 16%) !important;
-			background-repeat: repeat-x;
-			filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#5b5b5b", endColorstr="#282828");
-			background-image: -khtml-gradient(linear, left top, left bottom, from(#5b5b5b), to(#282828));
-			background-image: -moz-linear-gradient(top, #5b5b5b, #282828);
-			background-image: -ms-linear-gradient(top, #5b5b5b, #282828);
-			background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #5b5b5b), color-stop(100%, #282828));
-			background-image: -webkit-linear-gradient(top, #5b5b5b, #282828);
-			background-image: -o-linear-gradient(top, #5b5b5b, #282828);
-			background-image: linear-gradient(#5b5b5b, #282828);
-			border-color: #282828 #282828 hsl(0, 0%, 11%);
-			color: #fff !important;
-			text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.33);
-			-webkit-font-smoothing: antialiased;
 		}
 	</style>
 
@@ -84,12 +70,11 @@
 			margin-top: 1px;
 			margin-bottom: 1px;
 		}
-		
 	</style>
 
 	<!-- Tables -->
 	<style type="css/text">
-		.panel-tr {		
+		.panel-tr {
 			width: 95%;
 			margin-left: auto;
 			margin-right: auto;
@@ -97,29 +82,111 @@
 		}
 	</style>
 
-	<!-- Styling for footer -->
-	<style text="css/text">
-		#footer {
-			position: fixed;
-			bottom: 0;
-			width: 100%;
-			/* Set the fixed height of the footer here */
-			height: 45px;
-			background-color: #f5f5f5;
-		}
-		#ed2link {
-			margin-right: 5px;
-			width: 120px;
-		}
-		#selectcat {
-			border-radius: 0px;
-			width: 100px;
-		}
-		#formed2link {
-			margin: 5px;
-		}
-	</style>
+        <!-- Styling for footer -->
+        <style text="css/text">
+                #footer {
+                        position: fixed;
+			left:0;
+                        bottom: 0;
+                        width: 100%;
+                        /* Set the fixed height of the footer here */
+                        height:auto;
+                        background-color: #2f303d;
+                }
+                #ed2link {
+                        margin-right: 5px;
+                        width: 120px;
+                }
+                #selectcat {
+                        border-radius: 0px;
+                        width: 100px;
+                }
+                #formed2link {
+                        margin: 5px;
+                }
+        </style>
 
+<!-- /* Styling for Brax AmuleWebUI Material Theme */ -->
+        <style text="css/text">
+
+		.navbar {
+                background-color:#2f303d;
+                }
+                .label-success {
+                        background-color:#319a9b;
+                }
+                .label-default {
+                        background-color:#ffffff;
+                        color:#319a9b;
+                }
+                .panel {
+                	background:transparent;
+	            }
+                .panel-heading{
+                 	background-color:#319a9b;
+                	border: 0;
+                }
+                .table > thead > tr > th, .table > thead > tr > td {
+                	border: 1;
+                }
+                .glyphicon {
+                 	color:#319a9b;
+                }
+		.btn:hover .glyphicon{
+ 		  	color:#fff;
+	 	  }
+		  a:hover {
+                        color:#fff;
+                       }
+		.badge {
+			background-color:#319a9b;
+			color:#ffffff;
+		}
+
+                a {
+                	color:#4db6ac;
+                }
+                h4 {
+                	color:#cfd8dc;
+                }
+                 td {
+                	color:#cfd8dc;
+                }
+        </style>
+
+ <!-- /* Styling for Brax AmuleWebUI Material Theme ScrollTOP */-->
+<style text="css/text">
+	#scroll {
+	    position:fixed;
+	    right:10px;
+	    bottom:50px;
+	    cursor:pointer;
+	    width:50px;
+	    height:50px;
+	    background-color:#1565c0;
+	    text-indent:-9999px;
+	    display:none;
+	    -webkit-border-radius:60px;
+	    -moz-border-radius:60px;
+	    border-radius:60px
+}
+	#scroll span {
+	    position:absolute;
+	    top:50%;
+	    left:50%;
+	    margin-left:-8px;
+	    margin-top:-12px;
+	    height:0;
+	    width:0;
+	    border:8px solid transparent;
+	    border-bottom-color:#ffffff;
+}
+	#scroll:hover {
+	    background-color:#319a9b;
+	    opacity:1;filter:"alpha(opacity=100)";
+	    -ms-filter:"alpha(opacity=100)";
+}
+</style>
 	<script language="JavaScript" type="text/JavaScript">
 	function formCommandSubmit(command)
 		{
@@ -137,53 +204,89 @@
 
 </head>
 
-<body>
+<body class="animated fadeIn" style="animation-duration: 1.5s">
 
+        <script "type="text/JavaScript">
+
+$(document).ready(function(){ 
+    $(window).scroll(function(){ 
+        if ($(this).scrollTop() > 100) { 
+            $('#scroll').fadeIn(); 
+        } else { 
+            $('#scroll').fadeOut(); 
+        } 
+    }); 
+    $('#scroll').click(function(){ 
+        $("html, body").animate({ scrollTop: 0 }, 600); 
+        return false; 
+    }); 
+});
+
+
+	</script>
 	<!-- Navigation bar :: This part will be common in all the scripts -->
-	<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+	<nav class="navbar navbar-fixed-top" role="navigation">
 	    <div class="container">
-	    	<a class="navbar-brand" href="#"><img src="logo-nav.png" class="logo-nav"> aMule WebUI</a>
+	    	<a class="navbar-brand" href="#"><img src="logo-nav-brax.png" class="logo-nav"> aMule WebUI</a>
 	    	<form class="navbar-form navbar-right" role="form" name="login">
 				<div class="collapse navbar-collapse">
-					<div class="btn-group">
-						<!-- Downloads -->
-						<a class="btn btn-dark navbar-link" title="Downloads and Uploads" href="amuleweb-main-dload.php">
-				   			<span class="glyphicon glyphicon-transfer"></span>
-				   		</a>
-				   		<!-- Shared -->
-				   		<a class="btn btn-dark navbar-link" title="Sharing" href="amuleweb-main-shared.php">
-					   			<span class="glyphicon glyphicon-share"></span>
-				   		</a>
-				   		<!-- Search -->
-				   		<a class="btn btn-dark navbar-link" title="Search" href="amuleweb-main-search.php">
-					   		<span class="glyphicon glyphicon-search"></span>
-					   	</a>
-				   		<!-- Servers -->
-				   		<a class="btn btn-dark navbar-link" title="Servers" href="amuleweb-main-servers.php">
-					   		<span class="glyphicon glyphicon-tasks"></span>
-					   	</a>
-				   		<!-- Kad -->
-				   		<a class="btn btn-dark navbar-link" title="Kademlia" href="amuleweb-main-kad.php">
-					   		<span class="glyphicon glyphicon-asterisk"></span>
-					   	</a>
-				   		<!-- Stats -->
-				   		<a class="btn btn-dark navbar-link" title="Statistics" href="amuleweb-main-stats.php">
-					   		<span class="glyphicon glyphicon-stats"></span>
-					   	</a>
-				   	</div>
-				   	<div class="btn-group">
-						<!-- Configuration -->
-						<a class="btn btn-dark navbar-link" title="Configurations" href="amuleweb-main-prefs.php">
-					   		<span class="glyphicon glyphicon-cog"></span>
-					   	</a>
-				   		<!-- Log -->
-				   		<a class="btn btn-dark navbar-link" title="Log" href="amuleweb-main-log.php">
-					   		<span class="glyphicon glyphicon-flag"></span>
-					   	</a>
-				   		<!-- Exit -->
-				   		<a class="btn btn-danger navbar-link" title="Exit" href="login.php">
-				   			<span class="glyphicon glyphicon-off"></span>
-				   		</a>
+									<div class="btn-group">
+                                                <!-- Downloads -->
+                                                <a class="btn  navbar-link title="Downloads and Uploads" href="amuleweb-main-dload.php">
+                                                                <span class="glyphicon glyphicon-transfer">
+                                                                <div style="font-size:9px"><br>Transfer</div>
+                                                                </span>
+                                                </a>
+                                                <!-- Shared -->
+                                                <a class="btn  navbar-link" title="Sharing" href="amuleweb-main-shared.php">
+                                                                <span class="glyphicon glyphicon-share">
+                                                                <div style="font-size:9px"><br>Shared</div>
+                                                                </span>
+                                                                </a>
+                                                <!-- Search -->
+                                                <a class="btn  navbar-link" title="Search" href="amuleweb-main-search.php">
+                                                                <span class="glyphicon glyphicon-search">
+                                                                <div style="font-size:9px"><br>Search</div>
+                                                                </span>
+                                                </a>
+                                                <!-- Servers -->
+                                                <a class="btn  navbar-link" title="Servers" href="amuleweb-main-servers.php">
+                                                                <span class="glyphicon glyphicon-tasks">
+                                                                <div style="font-size:9px"><br>Server</div>
+                                                                </span>
+                                                </a>
+                                                <!-- Kad -->
+                                                <a class="btn  navbar-link" title="Kademlia" href="amuleweb-main-kad.php">
+                                                                <span class="glyphicon glyphicon-asterisk">
+                                                                <div style="font-size:9px"><br>Kad</div>
+                                                                </span>
+                                                </a>
+                                                <!-- Stats -->
+                                                <a class="btn  navbar-link" title="Statistics" href="amuleweb-main-stats.php">
+                                                                <span class="glyphicon glyphicon-stats">
+                                                                <div style="font-size:9px"><br>Stats</div>
+                                                                </span>
+                                                </a>
+                                        </div>
+                                        <div class="btn-group">
+                                                <!-- Configuration -->
+                                                <a class="btn navbar-link" title="Configurations" href="amuleweb-main-prefs.php">
+                                                                <span class="glyphicon glyphicon-cog">
+                                                                <div style="font-size:9px"><br>Settings</div>
+                                                                </span>
+                                                </a>
+                                                <!-- Log -->
+                                                <a class="btn  navbar-link" title="Log" href="amuleweb-main-log.php">
+                                                                <span class="glyphicon glyphicon-flag">
+                                                                <div style="font-size:9px"><br>Logs</div>
+                                                                </span>
+                                                </a>
+                                                <!-- Exit -->
+                                                <a class="btn navbar-link" title="Exit" href="login.php">
+                                                                <span class="glyphicon glyphicon-off">
+                                                                <div style="font-size:9px"><br>Exit</div>
+                                                                </span>
+                                                </a>
 				   	</div>
 		    	</div>
     		</form>
@@ -195,14 +298,14 @@
     <!-- Commands -->
     <form action="amuleweb-main-search.php" method="post" name="mainform">
     <input type="hidden" name="command">
-    <div class="panel panel-default panel-tasks">
+    <div class="panel  panel-tasks">
   		<div class="panel-body container panel-center">
     		<div class="form-inline form-tasks">
     		<p><div class="btn-group">
     			<a class="btn btn-info btn-group" href="amuleweb-main-search.php?search_sort=<?php echo($HTTP_GET_VARS["sort"]);?>" title="Refresh to see the results" style="height:34px;">
-    				<span class="glyphicon glyphicon-refresh"></span>
+    				<span class="glyphicon glyphicon-refresh" style="color:white"></span>
     			</a>
-    			<input type="text" placeholder="Insert string to search..." name="searchval" class="form-control btn-group" style="border-radius:0px; z-index:1;" size="70">
+    			<input type="text" placeholder="Inserire parola da cercare..." name="searchval" class="form-control btn-group" style="border-radius:0px; z-index:1;" size="70">
     			<select class="form-control btn-group" style="border-radius:0px; background-color:#eee;" name="searchtype">
     				<option>Local</option>
     				<option selected>Global</option>
@@ -236,7 +339,7 @@
   		</div>
 	</div>
 
-    <div class="panel panel-default panel-tasks">
+    <div class="panel  panel-tasks">
   		<div class="panel-body container panel-center">
     		<div class="form-inline form-tasks">
     		<div class="btn-group">
@@ -256,14 +359,11 @@
   		</div>
 	</div>
 
-	
-  
 	<!-- BEGIN OF CENTRAL BODY -->
 	<div class="container-fluid panel-tr">
-		
 		<!-- Table Download -->
-		<div class="panel panel-default" style="margin-bottom:60px;">
-		<div class="panel-heading panel-center"><h4>Search results</h4></div>
+		<div class="panel" style="margin-bottom:60px;">
+		<div class="panel-heading panel-center"><h4>SEARCH RESULTS</h4></div>
 			<table class="table">
 				<thead>
 					<tr>
@@ -292,8 +392,8 @@
 
 					function my_cmp($a, $b) {
 						global $sort_order, $sort_reverse;
-						
-						switch ( $sort_order) {
+
+		switch ( $sort_order) {
 							case "size": $result = $a->size > $b->size; break;
 							case "name": $result = $a->name > $b->name; break;
 							case "sources": $result = $a->sources > $b->sources; break;

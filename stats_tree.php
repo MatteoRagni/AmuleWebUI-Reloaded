@@ -30,7 +30,8 @@
 	body {
 		margin: 0px;
 		padding: 5px;
-		background-color: #fff;
+		background-color: #39425f;
+		color:#fff;
 		font-family: sans-serif;
 		font-size:12px;
 	}
