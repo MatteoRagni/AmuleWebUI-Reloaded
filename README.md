@@ -30,7 +30,7 @@ Fix css code Footer for Mobile Device
 
 To install the web interface simply clone the repo in a directory inside `/usr/share/amule/webserver` (tested on my Raspberry running Raspbian):
 
-Step 1: Stop `amuleweb` process:
+Step 1: Stop `amule-daemon` process:
 
 ``` bash
 sudo service amule-daemon stop
@@ -56,7 +56,7 @@ Template=AmuleWebUI-Reloaded
 ...
 ```
 
-Step 2: Start `amuleweb` process:
+Step 2: Start `amule-daemon` process:
 
 ``` bash
 sudo service amule-daemon start (or restart command)
