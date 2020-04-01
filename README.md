@@ -4,7 +4,6 @@ Update style of 'AmuleWebUI-Reloaded' in Material design with CSS
 
 ## Credits 
 
-* Matteo Ragni for Reloaded Project `https://github.com/MatteoRagni/AmuleWebUI-Reloaded`
 * Daneden for animate .css `https://github.com/daneden/animate.css/`
 
 ## Structure 
@@ -24,14 +23,14 @@ Fix css code Footer for Mobile Device
 # Animated Login
 
 <p align="center">
-  <img width="460" height="300" src="https://github.com/Brax84/AmuleWebUI-Reloaded-Material/blob/master/doc-images/ReloadMateriaPic/login.gif">
+  <img width="460" height="300" src="https://github.com/MatteoRagni/AmuleWebUI-Reloaded/blob/master/doc-images/ReloadMateriaPic/login.gif?raw=true">
 </p>
 
 ## Installation
 
-To install the web interface simply clone the repo in a directory inside `/usr/share/amule/webserver` (tested on my Raspian on raspberry (Debian based distro):
+To install the web interface simply clone the repo in a directory inside `/usr/share/amule/webserver` (tested on my Raspberry running Raspbian):
 
-Step 1: Stop `amuleweb` process:
+Step 1: Stop `amule-daemon` process:
 
 ``` bash
 sudo service amule-daemon stop
@@ -39,7 +38,7 @@ sudo service amule-daemon stop
 
 ``` bash
 cd /usr/share/amule/webserver
-sudo git clone https://github.com/Brax84/AmuleWebUI-Reloaded-Material
+sudo git clone https://github.com/MatteoRagni/AmuleWebUI-Reloaded.git
 ```
 
 After, you need to edit configuration file:
@@ -53,11 +52,11 @@ Find and edit line `Template`
 ...
 [Webserver]
 ...
-Template=AmuleWebUI-Reloaded-Material
+Template=AmuleWebUI-Reloaded
 ...
 ```
 
-Step 2: Reload `amuleweb` process:
+Step 2: Start `amule-daemon` process:
 
 ``` bash
 sudo service amule-daemon start (or restart command)
@@ -72,53 +71,53 @@ Interface is available at address `http://localhost:4711` or `NetworkDeviceIp:47
 
 | Reloaded | Reloaded Material |
 | ---- | -------- |
-| ![login](https://github.com/Brax84/AmuleWebUI-Reloaded-Material/blob/master/doc-images/ReloadPic/Login.png "Reloaded login") | ![login2](https://github.com/Brax84/AmuleWebUI-Reloaded-Material/blob/master/doc-images/ReloadMateriaPic/Login.png "Material login" ) |
+| ![login](https://github.com/MatteoRagni/AmuleWebUI-Reloaded/blob/master/doc-images/ReloadPic/Login.png?raw=true "Reloaded login") | ![login2](https://github.com/MatteoRagni/AmuleWebUI-Reloaded/blob/master/doc-images/ReloadMateriaPic/Login.png?raw=true "Material login" ) |
 
 #### Download/Uploads
 
 | Reloaded | Reloaded Material |
 | ---- | -------- |
-| ![transfer](https://github.com/Brax84/AmuleWebUI-Reloaded-Material/blob/master/doc-images/ReloadPic/Transfer.png "Reloaded transfer") | ![transfer2](https://github.com/Brax84/AmuleWebUI-Reloaded-Material/blob/master/doc-images/ReloadMateriaPic/Transfer.png "Material transfer") |
+| ![transfer](https://github.com/MatteoRagni/AmuleWebUI-Reloaded/blob/master/doc-images/ReloadPic/Transfer.png?raw=true "Reloaded transfer") | ![transfer2](https://github.com/MatteoRagni/AmuleWebUI-Reloaded/blob/master/doc-images/ReloadMateriaPic/Transfer.png?raw=true "Material transfer") |
 
 #### Search
 
 | Reloaded | Reloaded Material |
 | ---- | -------- |
-| ![search](https://github.com/Brax84/AmuleWebUI-Reloaded-Material/blob/master/doc-images/ReloadPic/Search.png "Reloaded Search") | ![search2](https://github.com/Brax84/AmuleWebUI-Reloaded-Material/blob/master/doc-images/ReloadMateriaPic/Search.png "Material search") |
+| ![search](https://github.com/MatteoRagni/AmuleWebUI-Reloaded/blob/master/doc-images/ReloadPic/Search.png?raw=true "Reloaded Search") | ![search2](https://github.com/MatteoRagni/AmuleWebUI-Reloaded/blob/master/doc-images/ReloadMateriaPic/Search.png?raw=true "Material search") |
 
 #### Shared
 
 | Reloaded | Reloaded Material |
 | ---- | -------- |
-| ![shared](https://github.com/Brax84/AmuleWebUI-Reloaded-Material/blob/master/doc-images/ReloadPic/Shared.png "Reloaded Shared") | ![shared2](https://github.com/Brax84/AmuleWebUI-Reloaded-Material/blob/master/doc-images/ReloadMateriaPic/Shared.png "Material Search") |
+| ![shared](https://github.com/MatteoRagni/AmuleWebUI-Reloaded/blob/master/doc-images/ReloadPic/Shared.png?raw=true "Reloaded Shared") | ![shared2](https://github.com/MatteoRagni/AmuleWebUI-Reloaded/blob/master/doc-images/ReloadMateriaPic/Shared.png?raw=true "Material Search") |
 
 
 #### Servers
 
 | Reloaded | Reloaded Material |
 | ---- | -------- |
-| ![servers](https://github.com/Brax84/AmuleWebUI-Reloaded-Material/blob/master/doc-images/ReloadPic/Server.png "Reloaded Server") | ![servers2](https://github.com/Brax84/AmuleWebUI-Reloaded-Material/blob/master/doc-images/ReloadMateriaPic/Servers.png "Material Server") |
+| ![servers](https://github.com/MatteoRagni/AmuleWebUI-Reloaded/blob/master/doc-images/ReloadPic/Server.png?raw=true "Reloaded Server") | ![servers2](https://github.com/MatteoRagni/AmuleWebUI-Reloaded/blob/master/doc-images/ReloadMateriaPic/Servers.png?raw=true "Material Server") |
 
 #### Kad connections
 
 | Reloaded | Reloaded Material |
 | ---- | -------- |
-| ![Kad](https://github.com/Brax84/AmuleWebUI-Reloaded-Material/blob/master/doc-images/ReloadPic/Kad.png "Reloaded Kad") | ![Kad2](https://github.com/Brax84/AmuleWebUI-Reloaded-Material/blob/master/doc-images/ReloadMateriaPic/Kad.png "Material kad") |
+| ![Kad](https://github.com/MatteoRagni/AmuleWebUI-Reloaded/blob/master/doc-images/ReloadPic/Kad.png?raw=true "Reloaded Kad") | ![Kad2](https://github.com/MatteoRagni/AmuleWebUI-Reloaded/blob/master/doc-images/ReloadMateriaPic/Kad.png?raw=true "Material kad") |
 
 #### Statistics
 
 | Reloaded | Reloaded Material |
 | ---- | -------- |
-| ![statistics](https://github.com/Brax84/AmuleWebUI-Reloaded-Material/blob/master/doc-images/ReloadPic/Stats.png "Reloaded statistics") | ![statistics2](https://github.com/Brax84/AmuleWebUI-Reloaded-Material/blob/master/doc-images/ReloadMateriaPic/Statics.png "Material statistics") |
+| ![statistics](https://github.com/MatteoRagni/AmuleWebUI-Reloaded/blob/master/doc-images/ReloadPic/Stats.png?raw=true "Reloaded statistics") | ![statistics2](https://github.com/MatteoRagni/AmuleWebUI-Reloaded/blob/master/doc-images/ReloadMateriaPic/Statics.png?raw=true "Material statistics") |
 
 #### Preferences
 
 | Reloaded | Reloaded Material |
 | ---- | -------- |
-| ![preferences](https://github.com/Brax84/AmuleWebUI-Reloaded-Material/blob/master/doc-images/ReloadPic/Prefs.png "Reloaded preferences") | ![preferences2](https://github.com/Brax84/AmuleWebUI-Reloaded-Material/blob/master/doc-images/ReloadMateriaPic/Settings.png "Material preferences") |
+| ![preferences](https://github.com/MatteoRagni/AmuleWebUI-Reloaded/blob/master/doc-images/ReloadPic/Prefs.png?raw=true "Reloaded preferences") | ![preferences2](https://github.com/MatteoRagni/AmuleWebUI-Reloaded/blob/master/doc-images/ReloadMateriaPic/Settings.png?raw=true "Material preferences") |
 
 #### Logging
 
 | Reloaded | Reloaded Material |
 | ---- | -------- |
-| ![logs](https://github.com/Brax84/AmuleWebUI-Reloaded-Material/blob/master/doc-images/ReloadPic/Logs.png "Reloaded Logging") | ![logs2](https://github.com/Brax84/AmuleWebUI-Reloaded-Material/blob/master/doc-images/ReloadMateriaPic/Logs.png "Material Logging") |
+| ![logs](https://github.com/MatteoRagni/AmuleWebUI-Reloaded/blob/master/doc-images/ReloadPic/Logs.png?raw=true "Reloaded Logging") | ![logs2](https://github.com/MatteoRagni/AmuleWebUI-Reloaded/blob/master/doc-images/ReloadMateriaPic/Logs.png?raw=true "Material Logging") |
