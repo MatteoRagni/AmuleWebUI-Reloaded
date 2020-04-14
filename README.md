@@ -5,7 +5,7 @@ Update style of 'AmuleWebUI-Reloaded' in Material design with CSS
 ## Credits 
 
 * Brax84 for a **full redesign** of my inital work, making it really nice ([Pull 17](https://github.com/MatteoRagni/AmuleWebUI-Reloaded/pull/17))
-* Knocks83 for fixing some README inconsistencies in links ([Pull 18](https://github.com/MatteoRagni/AmuleWebUI-Reloaded/pull/18))
+* Knocks83 for fixing some README inconsistencies in links ([Pull 18](https://github.com/MatteoRagni/AmuleWebUI-Reloaded/pull/18)) and minor fixes ([Pull 19](https://github.com/MatteoRagni/AmuleWebUI-Reloaded/pull/19))
 * atlant2011 that improved integrity checks and caching in browser ([Pull 14](https://github.com/MatteoRagni/AmuleWebUI-Reloaded/pull/14))
 * gise88 for fixing an error in main search ([Pull 13](https://github.com/MatteoRagni/AmuleWebUI-Reloaded/pull/13))
 * ThecaTTony for fixing an error in sort by files ([Pull 9](https://github.com/MatteoRagni/AmuleWebUI-Reloaded/pull/9))
