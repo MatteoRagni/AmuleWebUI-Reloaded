@@ -39,6 +39,9 @@
 		.navbar-brand {
 			padding-top: 5px;
 		}
+		.navbar-link:hover {
+			color: white !important;
+		}
 	</style>
 
 	<!-- Tasks panel -->
@@ -53,13 +56,16 @@
 			text-align: center;
 			margin: auto;
 		}
+		.form-tasks .btn:hover {
+			color: white !important;
+		}
 
 		#filter {
-                        width: 125px;
-                        height: 28px;
-                        border-top-right-radius: 0px;
-                        border-bottom-right-radius: 0px;
-
+          width: 125px;
+          height: 28px;
+          border-top-right-radius: 0px;
+          border-bottom-right-radius: 0px;
+    }
 		#category {
 			width: 125px;
 			height: 28px;
@@ -77,7 +83,7 @@
 
 	<!-- Tables -->
 	<style type="css/text">
-		.panel-tr
+		.panel-tr {
 			width: 95%;
 			margin-left: auto;
 			margin-right: auto;
@@ -204,67 +210,67 @@
 
 <body class="animated fadeIn" style="animation-duration: 1.5s">
 	<!-- Navigation bar :: This part will be common in all the scripts -->
-	<nav class="navbar  navbar-fixed-top" "role="navigation">
+	<nav class="navbar  navbar-fixed-top" role="navigation">
 	    <div class="container">
 	    	<a class="navbar-brand" href="#"><img src="logo-nav.png" class="logo-nav">aMule WebUI</a>
 	    	<form class="navbar-form navbar-right" role="form" name="login">
 				<div class="collapse navbar-collapse">
 					<div class="btn-group">
 						<!-- Downloads -->
-						<a class="btn  navbar-link title="Downloads and Uploads" href="amuleweb-main-dload.php">
-				   				<span class="glyphicon glyphicon-transfer">
+						<a class="btn  navbar-link" title="Downloads and Uploads" href="amuleweb-main-dload.php">
+				   				<span class="glyphicon glyphicon-transfer"></span>
 								<div style="font-size:9px"><br>Transfer</div>
-								</span>
+
 						</a>
 				   		<!-- Shared -->
 				   		<a class="btn  navbar-link" title="Sharing" href="amuleweb-main-shared.php">
-					   			<span class="glyphicon glyphicon-share">
+					   			<span class="glyphicon glyphicon-share"></span>
 								<div style="font-size:9px"><br>Shared</div>
-								</span>
+
 				   				</a>
 				   		<!-- Search -->
 				   		<a class="btn  navbar-link" title="Search" href="amuleweb-main-search.php">
-					   			<span class="glyphicon glyphicon-search">
+					   			<span class="glyphicon glyphicon-search"></span>
 								<div style="font-size:9px"><br>Search</div>
-								</span>
+
 					   	</a>
 				   		<!-- Servers -->
 				   		<a class="btn  navbar-link" title="Servers" href="amuleweb-main-servers.php">
-					   			<span class="glyphicon glyphicon-tasks">
+					   			<span class="glyphicon glyphicon-tasks"></span>
 								<div style="font-size:9px"><br>Server</div>
-								</span>
+
 					   	</a>
 				   		<!-- Kad -->
 				   		<a class="btn  navbar-link" title="Kademlia" href="amuleweb-main-kad.php">
-					   			<span class="glyphicon glyphicon-asterisk">
+					   			<span class="glyphicon glyphicon-asterisk"></span>
 								<div style="font-size:9px"><br>Kad</div>
-								</span>
+
 					   	</a>
 				   		<!-- Stats -->
 				   		<a class="btn  navbar-link" title="Statistics" href="amuleweb-main-stats.php">
-					   			<span class="glyphicon glyphicon-stats">
+					   			<span class="glyphicon glyphicon-stats"></span>
 								<div style="font-size:9px"><br>Stats</div>
-								</span>
+
 					   	</a>
 				   	</div>
 				   	<div class="btn-group">
 						<!-- Configuration -->
 						<a class="btn navbar-link" title="Configurations" href="amuleweb-main-prefs.php">
-					   			<span class="glyphicon glyphicon-cog">
+					   			<span class="glyphicon glyphicon-cog"></span>
 								<div style="font-size:9px"><br>Settings</div>
-								</span>
+
 					   	</a>
 				   		<!-- Log -->
 				   		<a class="btn  navbar-link" title="Log" href="amuleweb-main-log.php">
-					   			<span class="glyphicon glyphicon-flag">
+					   			<span class="glyphicon glyphicon-flag"></span>
 								<div style="font-size:9px"><br>Logs</div>
-								</span>
+
 					   	</a>
 				   		<!-- Exit -->
 				   		<a class="btn navbar-link" title="Exit" href="login.php">
-				   				<span class="glyphicon glyphicon-off">
+				   				<span class="glyphicon glyphicon-off"></span>
 								<div style="font-size:9px"><br>Exit</div>
-								</span>
+
 				   		</a>
 				   	</div>
 		    	</div>
@@ -280,28 +286,33 @@
   		<div class="panel-body container panel-center">
     		<div class="form-inline form-tasks">
     		<div class="btn-group">
-    			<a class="btn" href="javascript:formCommandSubmit('pause');" title="Pause"><span class="glyphicon glyphicon-pause">
-			<div style="font-size:9px"><br>Pause</div>
-			</span></a>
-    			<a class="btn" href="javascript:formCommandSubmit('resume');" title="Resume"><span class="glyphicon glyphicon-play">
-			<div style="font-size:9px"><br>Resume</div>
-			</span></a>
+    			<a class="btn" href="javascript:formCommandSubmit('pause');" title="Pause">
+						<span class="glyphicon glyphicon-pause"></span>
+						<div style="font-size:9px"><br>Pause</div>
+					</a>
+    			<a class="btn" href="javascript:formCommandSubmit('resume');" title="Resume">
+						<span class="glyphicon glyphicon-play"></span>
+							<div style="font-size:9px"><br>Resume</div>
+					</a>
     		</div>
     		<div class="btn-group">
-    			<a class="btn" href="javascript:formCommandSubmit('priodown');" title="Lower priority"><span class="glyphicon glyphicon-download">
-			<div style="font-size:9px"><br>Lower Priority</div>
-			</span></a>
-    			<a class="btn" href="javascript:formCommandSubmit('cancel');" title="Remove"><span class="glyphicon glyphicon-remove-circle">
-			<div style="font-size:9px"><br>Remove</div>
-			</span></a>
-    			<a class="btn" href="javascript:formCommandSubmit('prioup');" title="Higher priority"><span class="glyphicon glyphicon-upload">
-			<div style="font-size:9px"><br>High Priority</div>
-			</span></a>
+    			<a class="btn" href="javascript:formCommandSubmit('priodown');" title="Lower priority">
+						<span class="glyphicon glyphicon-download"></span>
+						<div style="font-size:9px"><br>Lower Priority</div>
+			</a>
+    			<a class="btn" href="javascript:formCommandSubmit('cancel');" title="Remove">
+						<span class="glyphicon glyphicon-remove-circle"></span>
+						<div style="font-size:9px"><br>Remove</div>
+			</a>
+    			<a class="btn" href="javascript:formCommandSubmit('prioup');" title="Higher priority">
+						<span class="glyphicon glyphicon-upload"></span>
+						<div style="font-size:9px"><br>High Priority</div>
+			</a>
     		</div>
     		<!-- Inserting filtering php -->
     		<div class="btn-group">
      		<?php
-    			$all_status = array("all", "Waiting", "Paused", "Downloading");	
+    			$all_status = array("all", "Waiting", "Paused", "Downloading");
  				if ( $HTTP_GET_VARS["command"] == "filter") {
  					$_SESSION["filter_status"] = $HTTP_GET_VARS["status"];
  					$_SESSION["filter_cat"] = $HTTP_GET_VARS["category"];
@@ -323,9 +334,10 @@
 				}
 				echo '</select>';
     		?>
-    		<a class="btn btn-filter" href="javascript:formCommandSubmit('filter');" title="Filter"><span class="glyphicon glyphicon-filter">
-		<div style="font-size:9px"><br>Filter</div>
-		</span></a>
+    		<a class="btn btn-filter" href="javascript:formCommandSubmit('filter');" title="Filter">
+					<span class="glyphicon glyphicon-filter"></span>
+						<div style="font-size:9px"><br>Filter</div>
+					</a>
     		<?php
     			if ($_SESSION["guest_login"] != 0) {
 				    echo '<br><br><span class="label label-warning">You logged in as guest - commands are disabled</span>';
