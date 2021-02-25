@@ -38,6 +38,9 @@
 		.navbar-brand {
 			padding-top: 5px;
 		}
+		.navbar-link:hover {
+			color: white !important;
+		}
 	</style>
 
 	<!-- Tasks panel -->
@@ -206,20 +209,20 @@
 
 <body class="animated fadeIn" style="animation-duration: 1.5s">
 
-        <script "type="text/JavaScript">
+        <script type="text/JavaScript">
 
-$(document).ready(function(){ 
-    $(window).scroll(function(){ 
-        if ($(this).scrollTop() > 100) { 
-            $('#scroll').fadeIn(); 
-        } else { 
-            $('#scroll').fadeOut(); 
-        } 
-    }); 
-    $('#scroll').click(function(){ 
-        $("html, body").animate({ scrollTop: 0 }, 600); 
-        return false; 
-    }); 
+$(document).ready(function(){
+    $(window).scroll(function(){
+        if ($(this).scrollTop() > 100) {
+            $('#scroll').fadeIn();
+        } else {
+            $('#scroll').fadeOut();
+        }
+    });
+    $('#scroll').click(function(){
+        $("html, body").animate({ scrollTop: 0 }, 600);
+        return false;
+    });
 });
 
 
@@ -232,60 +235,59 @@ $(document).ready(function(){
 				<div class="collapse navbar-collapse">
 									<div class="btn-group">
                                                 <!-- Downloads -->
-                                                <a class="btn  navbar-link title="Downloads and Uploads" href="amuleweb-main-dload.php">
-                                                                <span class="glyphicon glyphicon-transfer">
+                                                <a class="btn  navbar-link" title="Downloads and Uploads" href="amuleweb-main-dload.php">
+                                                                <span class="glyphicon glyphicon-transfer"></span>
                                                                 <div style="font-size:9px"><br>Transfer</div>
-                                                                </span>
                                                 </a>
                                                 <!-- Shared -->
                                                 <a class="btn  navbar-link" title="Sharing" href="amuleweb-main-shared.php">
-                                                                <span class="glyphicon glyphicon-share">
+                                                                <span class="glyphicon glyphicon-share"></span>
                                                                 <div style="font-size:9px"><br>Shared</div>
-                                                                </span>
+
                                                                 </a>
                                                 <!-- Search -->
                                                 <a class="btn  navbar-link" title="Search" href="amuleweb-main-search.php">
-                                                                <span class="glyphicon glyphicon-search">
+                                                                <span class="glyphicon glyphicon-search"></span>
                                                                 <div style="font-size:9px"><br>Search</div>
-                                                                </span>
+
                                                 </a>
                                                 <!-- Servers -->
                                                 <a class="btn  navbar-link" title="Servers" href="amuleweb-main-servers.php">
-                                                                <span class="glyphicon glyphicon-tasks">
+                                                                <span class="glyphicon glyphicon-tasks"></span>
                                                                 <div style="font-size:9px"><br>Server</div>
-                                                                </span>
+
                                                 </a>
                                                 <!-- Kad -->
                                                 <a class="btn  navbar-link" title="Kademlia" href="amuleweb-main-kad.php">
-                                                                <span class="glyphicon glyphicon-asterisk">
+                                                                <span class="glyphicon glyphicon-asterisk"></span>
                                                                 <div style="font-size:9px"><br>Kad</div>
-                                                                </span>
+
                                                 </a>
                                                 <!-- Stats -->
                                                 <a class="btn  navbar-link" title="Statistics" href="amuleweb-main-stats.php">
-                                                                <span class="glyphicon glyphicon-stats">
+                                                                <span class="glyphicon glyphicon-stats"></span>
                                                                 <div style="font-size:9px"><br>Stats</div>
-                                                                </span>
+
                                                 </a>
                                         </div>
                                         <div class="btn-group">
                                                 <!-- Configuration -->
                                                 <a class="btn navbar-link" title="Configurations" href="amuleweb-main-prefs.php">
-                                                                <span class="glyphicon glyphicon-cog">
+                                                                <span class="glyphicon glyphicon-cog"></span>
                                                                 <div style="font-size:9px"><br>Settings</div>
-                                                                </span>
+
                                                 </a>
                                                 <!-- Log -->
                                                 <a class="btn  navbar-link" title="Log" href="amuleweb-main-log.php">
-                                                                <span class="glyphicon glyphicon-flag">
+                                                                <span class="glyphicon glyphicon-flag"></span>
                                                                 <div style="font-size:9px"><br>Logs</div>
-                                                                </span>
+
                                                 </a>
                                                 <!-- Exit -->
                                                 <a class="btn navbar-link" title="Exit" href="login.php">
-                                                                <span class="glyphicon glyphicon-off">
+                                                                <span class="glyphicon glyphicon-off"></span>
                                                                 <div style="font-size:9px"><br>Exit</div>
-                                                                </span>
+
                                                 </a>
 				   	</div>
 		    	</div>
@@ -305,7 +307,7 @@ $(document).ready(function(){
     			<a class="btn btn-info btn-group" href="amuleweb-main-search.php?search_sort=<?php echo($HTTP_GET_VARS["sort"]);?>" title="Refresh to see the results" style="height:34px;">
     				<span class="glyphicon glyphicon-refresh" style="color:white"></span>
     			</a>
-    			<input type="text" placeholder="Inserire parola da cercare..." name="searchval" class="form-control btn-group" style="border-radius:0px; z-index:1;" size="70">
+    			<input type="text" placeholder="Text query..." name="searchval" class="form-control btn-group" style="border-radius:0px; z-index:1;" size="70">
     			<select class="form-control btn-group" style="border-radius:0px; background-color:#eee;" name="searchtype">
     				<option>Local</option>
     				<option selected>Global</option>
@@ -410,7 +412,7 @@ $(document).ready(function(){
 						$result = 1;
 						switch($str) {
 							case "Byte":	$result = 1; break;
-							case "KByte":	$result = 1024; break;		
+							case "KByte":	$result = 1024; break;
 							case "MByte":	$result = 1012*1024; break;
 							case "GByte":	$result = 1012*1024*1024; break;
 						}
@@ -439,7 +441,7 @@ $(document).ready(function(){
 
 							$min_size *= str2mult($HTTP_GET_VARS["minsizeu"]);
 							$max_size *= str2mult($HTTP_GET_VARS["maxsizeu"]);
-							
+
 							amule_do_search_start_cmd($HTTP_GET_VARS["searchval"],
 								//$HTTP_GET_VARS["ext"], $HTTP_GET_VARS["filetype"],
 								"", "",
@@ -455,7 +457,7 @@ $(document).ready(function(){
 							}
 						} else {
 						}
-					}		
+					}
 					$search = amule_load_vars("searchresult");
 
 					$sort_order = $HTTP_GET_VARS["sort"];
@@ -484,7 +486,7 @@ $(document).ready(function(){
 						echo '</tr>';
 					}
 
-					
+
 				?>
 				</tbody>
 			</table>
@@ -499,10 +501,10 @@ $(document).ready(function(){
     			<div class="btn-group">
         			<input class="form-control btn-group" name="ed2klink" type="text" id="ed2klink" placeholder="ed2k:// - Insert link" style="border-top-right-radius: 0px; border-bottom-right-radius: 0px; height: 30px;" size="25">
         			<select class="form-control btn-group" name="selectcat" id="selectcat" style="height: 30px;">
-        
+
 			        <?php
 						$cats = amule_get_categories();
-						
+
 						if ( $HTTP_GET_VARS["Submit"] != "" ) {
 							$link = $HTTP_GET_VARS["ed2klink"];
 							$target_cat = $HTTP_GET_VARS["selectcat"];
@@ -524,7 +526,7 @@ $(document).ready(function(){
 							echo  '<option>', $c, '</option>';
 						}
 					?>
-			        
+
         		</select>
         		<input class="btn btn-default btn-group" type="submit" name="Submit" value="Download link" onClick="amuleweb-main-dload.php" style="height: 30px;">
     		</div>

@@ -29,6 +29,9 @@
     .navbar-brand {
       padding-top: 5px;
     }
+    .navbar-link:hover {
+			color: white !important;
+		}
   </style>
 
   <!-- Tasks panel -->
@@ -160,36 +163,36 @@
     // apply new options before proceeding
 
     if ( ($HTTP_GET_VARS["Submit"] == "Apply") && ($_SESSION["guest_login"] == 0) ) {
-      $file_opts = array("check_free_space", "extract_metadata", 
+      $file_opts = array("check_free_space", "extract_metadata",
         "ich_en","aich_trust", "preview_prio","save_sources", "resume_same_cat",
         "min_free_space", "new_files_paused", "alloc_full", "alloc_full_chunks",
         "new_files_auto_dl_prio", "new_files_auto_ul_prio"
       );
       $conn_opts = array("max_line_up_cap","max_up_limit",
-        "max_line_down_cap","max_down_limit", "slot_alloc", 
+        "max_line_down_cap","max_down_limit", "slot_alloc",
         "tcp_port","udp_dis","max_file_src","max_conn_total","autoconn_en");
       $webserver_opts = array("use_gzip", "autorefresh_time");
-      
+
       $all_opts;
       foreach ($conn_opts as $i) {
         $curr_value = $HTTP_GET_VARS[$i];
         if ( $curr_value == "on") $curr_value = 1;
         if ( $curr_value == "") $curr_value = 0;
-        
+
         $all_opts["connection"][$i] = $curr_value;
       }
       foreach ($file_opts as $i) {
         $curr_value = $HTTP_GET_VARS[$i];
         if ( $curr_value == "on") $curr_value = 1;
         if ( $curr_value == "") $curr_value = 0;
-        
+
         $all_opts["files"][$i] = $curr_value;
       }
       foreach ($webserver_opts as $i) {
         $curr_value = $HTTP_GET_VARS[$i];
         if ( $curr_value == "on") $curr_value = 1;
         if ( $curr_value == "") $curr_value = 0;
-        
+
         $all_opts["webserver"][$i] = $curr_value;
       }
       //var_dump($all_opts);
@@ -197,9 +200,9 @@
     }
 
     $opts = amule_get_options();
-    
+
     $opt_groups = array("connection", "files", "webserver");
-    
+
     foreach ($opt_groups as $group) {
       $curr_opts = $opts[$group];
       //var_dump($curr_opts);
@@ -270,60 +273,51 @@
         <div class="collapse navbar-collapse">
 						<div class="btn-group">
                                                 <!-- Downloads -->
-                                                <a class="btn  navbar-link title="Downloads and Uploads" href="amuleweb-main-dload.php">
-                                                                <span class="glyphicon glyphicon-transfer">
+                                                <a class="btn  navbar-link" title="Downloads and Uploads" href="amuleweb-main-dload.php">
+                                                                <span class="glyphicon glyphicon-transfer"></span>
                                                                 <div style="font-size:9px"><br>Transfer</div>
-                                                                </span>
                                                 </a>
                                                 <!-- Shared -->
                                                 <a class="btn  navbar-link" title="Sharing" href="amuleweb-main-shared.php">
-                                                                <span class="glyphicon glyphicon-share">
+                                                                <span class="glyphicon glyphicon-share"></span>
                                                                 <div style="font-size:9px"><br>Shared</div>
-                                                                </span>
                                                                 </a>
                                                 <!-- Search -->
                                                 <a class="btn  navbar-link" title="Search" href="amuleweb-main-search.php">
-                                                                <span class="glyphicon glyphicon-search">
+                                                                <span class="glyphicon glyphicon-search"></span>
                                                                 <div style="font-size:9px"><br>Search</div>
-                                                                </span>
                                                 </a>
                                                 <!-- Servers -->
                                                 <a class="btn  navbar-link" title="Servers" href="amuleweb-main-servers.php">
-                                                                <span class="glyphicon glyphicon-tasks">
+                                                                <span class="glyphicon glyphicon-tasks"></span>
                                                                 <div style="font-size:9px"><br>Server</div>
-                                                                </span>
                                                 </a>
                                                 <!-- Kad -->
                                                 <a class="btn  navbar-link" title="Kademlia" href="amuleweb-main-kad.php">
-                                                                <span class="glyphicon glyphicon-asterisk">
+                                                                <span class="glyphicon glyphicon-asterisk"></span>
                                                                 <div style="font-size:9px"><br>Kad</div>
-                                                                </span>
                                                 </a>
                                                 <!-- Stats -->
                                                 <a class="btn  navbar-link" title="Statistics" href="amuleweb-main-stats.php">
-                                                                <span class="glyphicon glyphicon-stats">
+                                                                <span class="glyphicon glyphicon-stats"></span>
                                                                 <div style="font-size:9px"><br>Stats</div>
-                                                                </span>
                                                 </a>
                                         </div>
                                         <div class="btn-group">
                                                 <!-- Configuration -->
                                                 <a class="btn navbar-link" title="Configurations" href="amuleweb-main-prefs.php">
-                                                                <span class="glyphicon glyphicon-cog">
+                                                                <span class="glyphicon glyphicon-cog"></span>
                                                                 <div style="font-size:9px"><br>Settings</div>
-                                                                </span>
                                                 </a>
                                                 <!-- Log -->
                                                 <a class="btn  navbar-link" title="Log" href="amuleweb-main-log.php">
-                                                                <span class="glyphicon glyphicon-flag">
+                                                                <span class="glyphicon glyphicon-flag"></span>
                                                                 <div style="font-size:9px"><br>Logs</div>
-                                                                </span>
                                                 </a>
                                                 <!-- Exit -->
                                                 <a class="btn navbar-link" title="Exit" href="login.php">
-                                                                <span class="glyphicon glyphicon-off">
+                                                                <span class="glyphicon glyphicon-off"></span>
                                                                 <div style="font-size:9px"><br>Exit</div>
-                                                                </span>
                                                 </a>
             </div>
           </div>
@@ -373,7 +367,7 @@
                         width: 100px" name="autorefresh_time">
           </div>
           <div class="btn-group form-inline">
-            <label class="form-control btn-group" 
+            <label class="form-control btn-group"
               style=" width:450px;
                        background-color:#ffffff;
                         color:319a9b;
@@ -388,10 +382,10 @@
                         width: 100px" disabled="true" name="nothing">
           </div></p>
 
-          <p><b style="font-size:16px; width:550px;background-color:#319a9b;color:cfd8dc" " class="form-control">BANDWIDTH LIMITS</b>
+          <p><b style="font-size:16px; width:550px;background-color:#319a9b;color:cfd8dc" class="form-control">BANDWIDTH LIMITS</b>
 
           <div class="btn-group form-inline">
-            <label class="form-control btn-group" 
+            <label class="form-control btn-group"
               style=" width:450px;
 			 background-color:#ffffff;
                         color:319a9b;
@@ -406,7 +400,7 @@
                         width: 100px" name="max_down_limit">
           </div>
           <div class="btn-group form-inline">
-            <label class="form-control btn-group" 
+            <label class="form-control btn-group"
               style=" width:450px;
                        background-color:#ffffff;
                         color:319a9b;
@@ -421,7 +415,7 @@
                         width: 100px" name="max_up_limit">
           </div>
           <div class="btn-group form-inline">
-            <label class="form-control btn-group" 
+            <label class="form-control btn-group"
               style=" width:450px;
                        background-color:#ffffff;
                         color:319a9b;
@@ -439,7 +433,7 @@
           <p><b style="font-size:16px; width:550px;background-color:#319a9b;color:cfd8dc" class="form-control">CONNECTION SETTINGS</b>
 
           <div class="btn-group form-inline">
-            <label class="form-control btn-group" 
+            <label class="form-control btn-group"
               style=" width:450px;
                        background-color:#ffffff;
                         color:319a9b;
@@ -454,7 +448,7 @@
                         width: 100px" name="max_conn_total">
           </div>
           <div class="btn-group form-inline">
-            <label class="form-control btn-group" 
+            <label class="form-control btn-group"
               style=" width:450px;
                        background-color:#ffffff;
                         color:319a9b;
@@ -469,7 +463,7 @@
                         width: 100px" name="max_file_src">
           </div>
           <div class="btn-group form-inline">
-            <label class="form-control btn-group" 
+            <label class="form-control btn-group"
               style=" width:450px;
                        background-color:#ffffff;
                         color:319a9b;
@@ -484,7 +478,7 @@
                         width: 100px" disabled="true" name="nothing">
           </div>
           <div class="btn-group form-inline">
-            <label class="form-control btn-group" 
+            <label class="form-control btn-group"
               style=" width:450px;
                        background-color:#ffffff;
                         color:319a9b;
@@ -502,7 +496,7 @@
           <p><b style="font-size:16px; width:550px;background-color:#319a9b;color:cfd8dc" class="form-control">CONNECTION SETTINGS</b>
 
           <div class="btn-group form-inline">
-            <label class="form-control btn-group" 
+            <label class="form-control btn-group"
               style=" width:450px;
                        background-color:#ffffff;
                         color:319a9b;
@@ -517,7 +511,7 @@
                         width: 100px" name="tcp_port">
           </div>
           <div class="btn-group form-inline">
-            <label class="form-control btn-group" 
+            <label class="form-control btn-group"
               style=" width:450px;
                        background-color:#ffffff;
                         color:319a9b;
@@ -532,7 +526,7 @@
                         width: 100px" name="udp_port">
           </div>
           <div class="btn-group form-inline">
-            <label class="form-control btn-group" 
+            <label class="form-control btn-group"
               style=" width:450px;
                        background-color:#ffffff;
                         color:319a9b;
@@ -550,7 +544,7 @@
         <p><b style="font-size:16px; width:550px;background-color:#319a9b;color:cfd8dc" class="form-control">LINE CAPACITY (STATISTICS)</b>
 
           <div class="btn-group form-inline">
-            <label class="form-control btn-group" 
+            <label class="form-control btn-group"
               style=" width:450px;
                        background-color:#ffffff;
                         color:319a9b;
@@ -565,7 +559,7 @@
                         width: 100px" name="max_line_down_cap">
           </div>
           <div class="btn-group form-inline">
-            <label class="form-control btn-group" 
+            <label class="form-control btn-group"
               style=" width:450px;
                        background-color:#ffffff;
                         color:319a9b;
@@ -583,7 +577,7 @@
           <p><b style="font-size:16px; width:550px;background-color:#319a9b;color:cfd8dc" class="form-control">FILE SETTINGS</b>
 
           <div class="btn-group form-inline">
-            <label class="form-control btn-group" 
+            <label class="form-control btn-group"
               style=" width:450px;
                        background-color:#ffffff;
                         color:319a9b;
@@ -599,7 +593,7 @@
                         width: 100px" name="min_free_space">
           </div>
           <div class="btn-group form-inline">
-            <label class="form-control btn-group" 
+            <label class="form-control btn-group"
               style=" width:450px;
                        background-color:#ffffff;
                         color:319a9b;
@@ -614,7 +608,7 @@
                         width: 100px" disabled="true" name="nothing">
           </div>
           <div class="btn-group form-inline">
-            <label class="form-control btn-group" 
+            <label class="form-control btn-group"
               style=" width:450px;
                        background-color:#ffffff;
                         color:319a9b;
@@ -629,7 +623,7 @@
                         width: 100px" disabled="true" name="nothing">
           </div>
           <div class="btn-group form-inline">
-            <label class="form-control btn-group" 
+            <label class="form-control btn-group"
               style=" width:450px;
                        background-color:#ffffff;
                         color:319a9b;
@@ -644,7 +638,7 @@
                         width: 100px" disabled="true" name="nothing">
           </div>
           <div class="btn-group form-inline">
-            <label class="form-control btn-group" 
+            <label class="form-control btn-group"
               style=" width:450px;
                        background-color:#ffffff;
                         color:319a9b;
@@ -659,7 +653,7 @@
                         width: 100px" disabled="true" name="nothing">
           </div>
           <div class="btn-group form-inline">
-            <label class="form-control btn-group" 
+            <label class="form-control btn-group"
               style=" width:450px;
                        background-color:#ffffff;
                         color:319a9b;
@@ -674,7 +668,7 @@
                         width: 100px" disabled="true" name="nothing">
           </div>
           <div class="btn-group form-inline">
-            <label class="form-control btn-group" 
+            <label class="form-control btn-group"
               style=" width:450px;
                        background-color:#ffffff;
                         color:319a9b;
@@ -689,7 +683,7 @@
                         width: 100px" disabled="true" name="nothing">
           </div>
           <div class="btn-group form-inline">
-            <label class="form-control btn-group" 
+            <label class="form-control btn-group"
               style=" width:450px;
                        background-color:#ffffff;
                         color:319a9b;
@@ -704,7 +698,7 @@
                         width: 100px" disabled="true" name="nothing">
           </div>
           <div class="btn-group form-inline">
-            <label class="form-control btn-group" 
+            <label class="form-control btn-group"
               style=" width:450px;
                        background-color:#ffffff;
                         color:319a9b;
@@ -721,8 +715,8 @@
 
         </div>
 
-        
-      </div>  
+
+      </div>
     </div>
     </form>
 
@@ -734,10 +728,10 @@
           <div class="btn-group">
               <input class="form-control btn-group" name="ed2klink" type="text" id="ed2klink" placeholder="ed2k:// - Insert link" style="border-top-right-radius: 0px; border-bottom-right-radius: 0px; height: 30px;" size="25">
               <select class="form-control btn-group" name="selectcat" id="selectcat" style="height: 30px;">
-        
+
               <?php
             $cats = amule_get_categories();
-            
+
             if ( $HTTP_GET_VARS["Submit"] != "" ) {
               $link = $HTTP_GET_VARS["ed2klink"];
               $target_cat = $HTTP_GET_VARS["selectcat"];
@@ -759,7 +753,7 @@
               echo  '<option>', $c, '</option>';
             }
           ?>
-              
+
             </select>
             <input class="btn btn-default btn-group" type="submit" name="Submit" value="Download link" onClick="amuleweb-main-dload.php" style="height: 30px;">
         </div>
@@ -807,4 +801,3 @@
 
 </body>
 </html>
-
