@@ -7,7 +7,14 @@
 
 	<?php
 		if ( $_SESSION["auto_refresh"] > 0 ) {
-			echo "<meta http-equiv=\"refresh\" content=\"", $_SESSION["auto_refresh"], '">';
+			echo "<script>
+				setInterval(() => {
+				 if (document.querySelectorAll('[action=\"amuleweb-main-search.php\"] input:checked').length > 0) {
+				   return;
+				 }
+				 location.reload();
+				}, 1000 * " . $_SESSION["auto_refresh"] . ");
+				</script>";
 		}
 	?>
 
