@@ -10,7 +10,7 @@ Update style of 'AmuleWebUI-Reloaded' in Material design with CSS
 * gise88 for fixing an error in main search ([Pull 13](https://github.com/MatteoRagni/AmuleWebUI-Reloaded/pull/13))
 * ThecaTTony for fixing an error in sort by files ([Pull 9](https://github.com/MatteoRagni/AmuleWebUI-Reloaded/pull/9))
 * Daneden for animate .css `https://github.com/daneden/animate.css/`
-* tetreum fixed a bug in css ([Pull 23](https://github.com/MatteoRagni/AmuleWebUI-Reloaded/pull/23))
+* tetreum fixed a bug in css ([Pull 23](https://github.com/MatteoRagni/AmuleWebUI-Reloaded/pull/23)) and in refreshing pages ([Pull 24](https://github.com/MatteoRagni/AmuleWebUI-Reloaded/pull/24))
 
 ## Structure 
 
