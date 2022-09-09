@@ -352,7 +352,7 @@
 	<div class="container-fluid panel-tr">
 
 		<!-- Table Download -->
-		<div class="panel">
+		<div class="panel" style="margin-bottom: 10px;">
 		<div class="panel-heading panel-center"><h4>DOWNLOAD</h4></div>
 			<table class="table">
 				<thead>
@@ -552,15 +552,15 @@
 						}
 					}
 					print "<tr>";
-					echo "<td></td>";
-					echo "<td style='font-size:12px;color:#c9c9c9'>", CastToXBytes($countSize, $fakevar), "</td>";
-					echo "<td style='font-size:12px;color:#c9c9c9'>", CastToXBytes($countCompleted, $fakevar), "&nbsp;(",
+					echo "<td style='padding-bottom:0;'></td>";
+					echo "<td style='font-size:12px;color:#c9c9c9;padding-bottom:0;'>", CastToXBytes($countSize, $fakevar), "</td>";
+					echo "<td style='font-size:12px;color:#c9c9c9;padding-bottom:0;'>", CastToXBytes($countCompleted, $fakevar), "&nbsp;(",
 						((float)$countCompleted*100)/((float)$countSize), "%)</td>";
-					echo "<td style='font-size:12px;color:#c9c9c9'>", ($countSpeed > 0) ? (CastToXBytes($countSpeed, $fakevar) . "/s" ) : "-", "</td>";
-					echo "<td></td>";
-					echo "<td></td>";
-					echo "<td></td>";
-					echo "<td></td>";
+					echo "<td style='font-size:12px;color:#c9c9c9;padding-bottom:0;'>", ($countSpeed > 0) ? (CastToXBytes($countSpeed, $fakevar) . "/s" ) : "", "</td>";
+					echo "<td style='padding-bottom:0;'></td>";
+					echo "<td style='padding-bottom:0;'></td>";
+					echo "<td style='padding-bottom:0;'></td>";
+					echo "<td style='padding-bottom:0;'></td>";
 					echo "</tr>";
 					?>
 				</tbody>
@@ -578,7 +578,7 @@
 						<th style="color:#4db6ac">Username</th>
 						<th style="color:#4db6ac">Up</th>
 						<th style="color:#4db6ac">Down</th>
-						<th style="color:#4db6ac">Speed edit</th>
+						<th style="color:#4db6ac">Speed</th>
 					</tr>
 				</thead>
 				<tbody>
@@ -613,14 +613,14 @@
 						// Download dimension
 						echo "<td style='font-size:12px;color:#f5f5f5'>", CastToXBytes($file->xfer_down, $countDownloadDimension), "</td>";
 						// Speed
-						echo "<td style='font-size:12px;color:#f5f5f5'>", ($file->xfer_speed > 0) ? (CastToXBytes($file->xfer_speed, $countSpeed) . "/s") : "-", "</td>";
+						echo "<td style='font-size:12px;color:#f5f5f5'>", ($file->xfer_speed > 0) ? (CastToXBytes($file->xfer_speed, $countSpeed) . "/s") : "", "</td>";
 					}
 					echo "<tr>";
-					echo "<td></td>";
-					echo "<td></td>";
-					echo "<td style='font-size:12px;color:#c9c9c9'>", CastToXBytes($countUploadDimension, $fakevar), "</td>";
-					echo "<td style='font-size:12px;color:#c9c9c9'>", CastToXBytes($countDownloadDimension, $fakevar), "</td>";
-					echo "<td style='font-size:12px;color:#c9c9c9'>", CastToXBytes($countSpeed, $fakevar) . "/s", "</td>";
+					echo "<td style='padding-bottom:0;'></td>";
+					echo "<td style='padding-bottom:0;'></td>";
+					echo "<td style='font-size:12px;color:#c9c9c9;padding-bottom:0;'>", CastToXBytes($countUploadDimension, $fakevar), "</td>";
+					echo "<td style='font-size:12px;color:#c9c9c9;padding-bottom:0;'>", CastToXBytes($countDownloadDimension, $fakevar), "</td>";
+					echo "<td style='font-size:12px;color:#c9c9c9;padding-bottom:0;'>", CastToXBytes($countSpeed, $fakevar) . "/s", "</td>";
 				?>
       </table>
 
