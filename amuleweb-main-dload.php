@@ -165,11 +165,11 @@
 					word-break: break-all;
 					word-wrap: break-word;
 				}
-				.texte-short-name{
+				.texte-full-name{
 					max-width: 0;
 					width: 45%;
 				}
-				.texte-short-name-upload{
+				.texte-full-name-upload{
 					width: 55%;
 				}
         </style>
@@ -540,7 +540,7 @@
 						if ( $filter_status_result and $filter_cat_result) {
 							print "<tr>";
 								// Name and checkbox
-								echo "<td style='font-size:12px;color:#f5f5f5' class='texte texte-short-name'>", '<div class="checkbox download-checkbox" style="margin: 0px;"><label><input type="checkbox" name="', $file->hash, '" >&nbsp;<b>', $file->short_name, "</b></label></div></td>";
+								echo "<td style='font-size:12px;color:#f5f5f5' class='texte texte-full-name'>", '<div class="checkbox download-checkbox" style="margin: 0px;"><label><input type="checkbox" name="', $file->hash, '" >&nbsp;<b>', $file->name, "</b></label></div></td>";
 								echo "<td style='font-size:12px;color:#f5f5f5' class='texte'>", CastToXBytes($file->size, $countSize), "</td>";
 								// Size
 								echo "<td style='font-size:12px;color:#f5f5f5' class='texte'>", CastToXBytes($file->size_done, $countCompleted), "&nbsp;(",
@@ -622,7 +622,7 @@
 					foreach ($uploads as $file) {
 						echo "<tr>";
 						// Name
-						echo "<td style='font-size:12px;color:#f5f5f5' class='texte texte-short-name'><b>", $file->short_name, "</b></td>";
+						echo "<td style='font-size:12px;color:#f5f5f5' class='texte texte-full-name'><b>", $file->name, "</b></td>";
 						// User name
 						echo "<td style='font-size:12px;color:#f5f5f5' class='texte'>", $file->user_name, "</td>";
 						// Upload dimension
