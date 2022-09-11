@@ -424,7 +424,7 @@ function formCommandSubmit(command)
 
 							echo '<tr>';
 
-							echo '<td style="font-size:12px;">', '<div class="checkbox download-checkbox" style="margin: 0px;"><label><input type="checkbox" name="', $file->hash, '" >&nbsp;<b>', $file->short_name, "</b></label></div></td>";
+							echo '<td style="font-size:12px;">', '<div class="checkbox download-checkbox" style="margin: 0px;"><label><input type="checkbox" name="', $file->hash, '" >&nbsp;<b>', $file->name, "</b></label></div></td>";
 							echo '<td style="font-size:12px;">', CastToXBytes($file->xfer), " (", CastToXBytes($file->xfer_all),")</td>";
 							echo '<td style="font-size:12px;">', $file->req, " (", $file->req_all, ")</td>";
 							echo '<td style="font-size:12px;">', $file->accept, " (", $file->accept_all, ")</td>";
@@ -437,7 +437,7 @@ function formCommandSubmit(command)
 							if ($HTTP_GET_VARS["select"] == PrioStringSorter($file)) {
 								echo '<tr>';
 
-								echo '<td style="font-size:12px;">', '<div class="checkbox download-checkbox" style="margin: 0px;"><label><input type="checkbox" name="', $file->hash, '" >&nbsp;<b>', $file->short_name, "</b></label></div></td>";
+								echo '<td style="font-size:12px;">', '<div class="checkbox download-checkbox" style="margin: 0px;"><label><input type="checkbox" name="', $file->hash, '" >&nbsp;<b>', $file->name, "</b></label></div></td>";
 								echo '<td style="font-size:12px;">', CastToXBytes($file->xfer), " (", CastToXBytes($file->xfer_all),")</td>";
 								echo '<td style="font-size:12px;">', $file->req, " (", $file->req_all, ")</td>";
 								echo '<td style="font-size:12px;">', $file->accept, " (", $file->accept_all, ")</td>";

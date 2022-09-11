@@ -155,6 +155,23 @@
                   th {
                         color:#4db6ac
                 }
+				.texte {
+					font-family: Helvetica;
+					font-size: 12px;
+					font-weight: normal;
+					overflow: hidden;
+					white-space: nowrap;
+					text-overflow: ellipsis;
+					word-break: break-all;
+					word-wrap: break-word;
+				}
+				.texte-full-name{
+					max-width: 0;
+					width: 45%;
+				}
+				.texte-full-name-upload{
+					width: 55%;
+				}
         </style>
 
 
@@ -523,18 +540,18 @@
 						if ( $filter_status_result and $filter_cat_result) {
 							print "<tr>";
 								// Name and checkbox
-								echo "<td style='font-size:12px;color:#f5f5f5'>", '<div class="checkbox download-checkbox" style="margin: 0px;"><label><input type="checkbox" name="', $file->hash, '" >&nbsp;<b>', $file->short_name, "</b></label></div></td>";
-								echo "<td style='font-size:12px;color:#f5f5f5'>", CastToXBytes($file->size, $countSize), "</td>";
+								echo "<td style='font-size:12px;color:#f5f5f5' class='texte texte-full-name'>", '<div class="checkbox download-checkbox" style="margin: 0px;"><label><input type="checkbox" name="', $file->hash, '" >&nbsp;<b>', $file->name, "</b></label></div></td>";
+								echo "<td style='font-size:12px;color:#f5f5f5' class='texte'>", CastToXBytes($file->size, $countSize), "</td>";
 								// Size
-								echo "<td style='font-size:12px;color:#f5f5f5'>", CastToXBytes($file->size_done, $countCompleted), "&nbsp;(",
+								echo "<td style='font-size:12px;color:#f5f5f5' class='texte'>", CastToXBytes($file->size_done, $countCompleted), "&nbsp;(",
 									((float)$file->size_done*100)/((float)$file->size), "%)</td>";
 								// Speed
-								echo "<td style='font-size:12px;color:#f5f5f5'>", ($file->speed > 0) ? (CastToXBytes($file->speed, $countSpeed) . "/s") : "-", "</td>";
+								echo "<td style='font-size:12px;color:#f5f5f5' class='texte'>", ($file->speed > 0) ? (CastToXBytes($file->speed, $countSpeed) . "/s") : "-", "</td>";
 								// Progress
 								//echo "<td style='font-size:12px;'>", $file->progress, "</td>";
-								echo "<td style='font-size:12px;'>", create_prg_bar($file), "</td>";
+								echo "<td style='font-size:12px;' class='texte'>", create_prg_bar($file), "</td>";
 								// Sources
-								echo "<td style='font-size:12px;color:#f5f5f5'>";
+								echo "<td style='font-size:12px;color:#f5f5f5' class='texte'>";
 								if ( $file->src_count_not_curr != 0 ) {
 									echo $file->src_count - $file->src_count_not_curr, " / ";
 								}
@@ -544,9 +561,9 @@
 								}
 								echo "</td style='font-size:12px;'>";
 								// Status
-								echo "<td style='font-size:12px;'>", StatusString($file), "</td>";
+								echo "<td style='font-size:12px;' class='texte'>", StatusString($file), "</td>";
 								// Priority
-								echo "<td style='font-size:12px;color:#f5f5f5'>", PrioString($file), "</td>";
+								echo "<td style='font-size:12px;color:#f5f5f5' class='texte'>", PrioString($file), "</td>";
 							echo "</tr>";
 							
 						}
@@ -605,15 +622,15 @@
 					foreach ($uploads as $file) {
 						echo "<tr>";
 						// Name
-						echo "<td style='font-size:12px;color:#f5f5f5'><b>", $file->short_name, "</b></td>";
+						echo "<td style='font-size:12px;color:#f5f5f5' class='texte texte-full-name'><b>", $file->name, "</b></td>";
 						// User name
-						echo "<td style='font-size:12px;color:#f5f5f5'>", $file->user_name, "</td>";
+						echo "<td style='font-size:12px;color:#f5f5f5' class='texte'>", $file->user_name, "</td>";
 						// Upload dimension
-						echo "<td style='font-size:12px;color:#f5f5f5'>", CastToXBytes($file->xfer_up, $countUploadDimension), "</td>";
+						echo "<td style='font-size:12px;color:#f5f5f5' class='texte'>", CastToXBytes($file->xfer_up, $countUploadDimension), "</td>";
 						// Download dimension
-						echo "<td style='font-size:12px;color:#f5f5f5'>", CastToXBytes($file->xfer_down, $countDownloadDimension), "</td>";
+						echo "<td style='font-size:12px;color:#f5f5f5' class='texte'>", CastToXBytes($file->xfer_down, $countDownloadDimension), "</td>";
 						// Speed
-						echo "<td style='font-size:12px;color:#f5f5f5'>", ($file->xfer_speed > 0) ? (CastToXBytes($file->xfer_speed, $countSpeed) . "/s") : "", "</td>";
+						echo "<td style='font-size:12px;color:#f5f5f5' class='texte'>", ($file->xfer_speed > 0) ? (CastToXBytes($file->xfer_speed, $countSpeed) . "/s") : "", "</td>";
 					}
 					echo "<tr>";
 					echo "<td style='padding-bottom:0;'></td>";
