@@ -165,12 +165,26 @@
 					word-break: break-all;
 					word-wrap: break-word;
 				}
-				.texte-full-name{
+				.texte-full-name {
 					max-width: 0;
 					width: 45%;
 				}
-				.texte-full-name-upload{
+				.texte-full-name-upload {
 					width: 55%;
+				}
+				.progress-bar-complex>img {
+					border-bottom-left-radius: 4px;
+					border-bottom-right-radius: 4px;
+					height:4px !important;
+					width: 100%;
+				}
+				.progress {
+					height: 16px;
+					border-bottom-left-radius: 0px;
+					border-bottom-right-radius: 0px;
+				}
+				.label {
+					line-height: inherit;
 				}
         </style>
 
@@ -548,8 +562,8 @@
 								// Speed
 								echo "<td style='font-size:12px;color:#f5f5f5' class='texte'>", ($file->speed > 0) ? (CastToXBytes($file->speed, $countSpeed) . "/s") : "-", "</td>";
 								// Progress
-								//echo "<td style='font-size:12px;'>", $file->progress, "</td>";
-								echo "<td style='font-size:12px;' class='texte'>", create_prg_bar($file), "</td>";
+								echo "<td style='font-size:12px;'><div>", create_prg_bar($file),"</div><div class='progress-bar-complex'>", $file->progress, "</div></td>";
+								//echo "<td style='font-size:12px;' class='texte'>", create_prg_bar($file), "</td>";
 								// Sources
 								echo "<td style='font-size:12px;color:#f5f5f5' class='texte'>";
 								if ( $file->src_count_not_curr != 0 ) {
