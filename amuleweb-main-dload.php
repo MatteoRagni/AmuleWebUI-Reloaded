@@ -582,17 +582,19 @@
 							
 						}
 					}
-					print "<tr>";
-					echo "<td style='padding-bottom:0;'></td>";
-					echo "<td style='font-size:12px;color:#c9c9c9;padding-bottom:0;'>", CastToXBytes($countSize, $fakevar), "</td>";
-					echo "<td style='font-size:12px;color:#c9c9c9;padding-bottom:0;'>", CastToXBytes($countCompleted, $fakevar), "&nbsp;(",
-						((float)$countCompleted*100)/((float)$countSize), "%)</td>";
-					echo "<td style='font-size:12px;color:#c9c9c9;padding-bottom:0;'>", ($countSpeed > 0) ? (CastToXBytes($countSpeed, $fakevar) . "/s" ) : "", "</td>";
-					echo "<td style='padding-bottom:0;'></td>";
-					echo "<td style='padding-bottom:0;'></td>";
-					echo "<td style='padding-bottom:0;'></td>";
-					echo "<td style='padding-bottom:0;'></td>";
-					echo "</tr>";
+					if (count($downloads)>0) {
+						print "<tr>";
+						echo "<td style='font-size:12px;color:#c9c9c9;padding-bottom:0;text-align: right;'>Total</td>";
+						echo "<td style='font-size:12px;color:#c9c9c9;padding-bottom:0;'>", CastToXBytes($countSize, $fakevar), "</td>";
+						echo "<td style='font-size:12px;color:#c9c9c9;padding-bottom:0;'>", CastToXBytes($countCompleted, $fakevar), "&nbsp;(",
+							((float)$countCompleted*100)/((float)$countSize), "%)</td>";
+						echo "<td style='font-size:12px;color:#c9c9c9;padding-bottom:0;'>", ($countSpeed > 0) ? (CastToXBytes($countSpeed, $fakevar) . "/s" ) : "", "</td>";
+						echo "<td style='padding-bottom:0;'></td>";
+						echo "<td style='padding-bottom:0;'></td>";
+						echo "<td style='padding-bottom:0;'></td>";
+						echo "<td style='padding-bottom:0;'></td>";
+						echo "</tr>";
+					}
 					?>
 				</tbody>
 			</table>
@@ -646,12 +648,14 @@
 						// Speed
 						echo "<td style='font-size:12px;color:#f5f5f5' class='texte'>", ($file->xfer_speed > 0) ? (CastToXBytes($file->xfer_speed, $countSpeed) . "/s") : "", "</td>";
 					}
-					echo "<tr>";
-					echo "<td style='padding-bottom:0;'></td>";
-					echo "<td style='padding-bottom:0;'></td>";
-					echo "<td style='font-size:12px;color:#c9c9c9;padding-bottom:0;'>", CastToXBytes($countUploadDimension, $fakevar), "</td>";
-					echo "<td style='font-size:12px;color:#c9c9c9;padding-bottom:0;'>", CastToXBytes($countDownloadDimension, $fakevar), "</td>";
-					echo "<td style='font-size:12px;color:#c9c9c9;padding-bottom:0;'>", CastToXBytes($countSpeed, $fakevar) . "/s", "</td>";
+					if (count($uploads)>0) {
+						echo "<tr>";
+						echo "<td style='padding-bottom:0;'></td>";
+						echo "<td style='font-size:12px;color:#c9c9c9;padding-bottom:0;text-align: right;'>Total</td>";
+						echo "<td style='font-size:12px;color:#c9c9c9;padding-bottom:0;'>", CastToXBytes($countUploadDimension, $fakevar), "</td>";
+						echo "<td style='font-size:12px;color:#c9c9c9;padding-bottom:0;'>", CastToXBytes($countDownloadDimension, $fakevar), "</td>";
+						echo "<td style='font-size:12px;color:#c9c9c9;padding-bottom:0;'>", CastToXBytes($countSpeed, $fakevar) . "/s", "</td>";
+					}
 				?>
       </table>
 
