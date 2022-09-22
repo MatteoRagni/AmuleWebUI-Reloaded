@@ -495,7 +495,13 @@
 								    <div '.$status.' role="progressbar" aria-valuenow="'.$done.'" aria-valuemin="0" aria-valuemax="100" style="width: '.$done.'%"></div>
 								</div>';
 					}
-
+					function create_tooltip($name) {
+						echo '	<div class="texte" style="margin: 0px;"
+									data-toggle="popover" data-placement="bottom"
+									data-html="true" data-trigger="hover" data-content='. "'<b>" . $name . "</b>'" . '>
+									<b>&nbsp;'. $name .'</b>
+								</div>';
+					}
 					// perform command before processing content
 					if ( ($HTTP_GET_VARS["command"] != "") && ($_SESSION["guest_login"] == 0) ) {
 						foreach ( $HTTP_GET_VARS as $name => $val) {
@@ -554,7 +560,7 @@
 						if ( $filter_status_result and $filter_cat_result) {
 							print "<tr>";
 								// Name and checkbox
-								echo "<td style='font-size:12px;color:#f5f5f5' class='texte texte-full-name'>", '<div class="checkbox download-checkbox" style="margin: 0px;"><label><input type="checkbox" name="', $file->hash, '" >&nbsp;<b>', $file->name, "</b></label></div></td>";
+								echo "<td style='font-size:12px;color:#f5f5f5' class='texte texte-full-name'>", '<div class="checkbox download-checkbox" style="margin: 0px;"><label><input type="checkbox" name="', $file->hash, '" >', create_tooltip($file->name) , "</label></div></td>";
 								echo "<td style='font-size:12px;color:#f5f5f5' class='texte'>", CastToXBytes($file->size, $countSize), "</td>";
 								// Size
 								echo "<td style='font-size:12px;color:#f5f5f5' class='texte'>", CastToXBytes($file->size_done, $countCompleted), "&nbsp;(",
@@ -629,6 +635,13 @@
 						}
 						return $result;
 					}
+					function create_tooltip($name) {
+						echo '	<div class="texte" style="margin: 0px;"
+									data-toggle="popover" data-placement="bottom"
+									data-html="true" data-trigger="hover" data-content='. "'<b>" . $name . "</b>'" . '>
+									<b>&nbsp;'. $name .'</b>
+								</div>';
+					}
 					$countUploadDimension = 0;
 					$countDownloadDimension = 0;
 					$countSpeed = 0;
@@ -638,7 +651,7 @@
 					foreach ($uploads as $file) {
 						echo "<tr>";
 						// Name
-						echo "<td style='font-size:12px;color:#f5f5f5' class='texte texte-full-name'><b>", $file->name, "</b></td>";
+						echo "<td style='font-size:12px;color:#f5f5f5' class='texte texte-full-name'><b>", create_tooltip($file->name), "</b></td>";
 						// User name
 						echo "<td style='font-size:12px;color:#f5f5f5' class='texte'>", $file->user_name, "</td>";
 						// Upload dimension
