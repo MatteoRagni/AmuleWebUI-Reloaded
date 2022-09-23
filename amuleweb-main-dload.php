@@ -23,6 +23,12 @@
 	<script type="text/Javascript">
 		$(function () { $("[data-toggle='tooltip']").tooltip(); });
 		$(function () { $("[data-toggle='popover']").popover(); });
+		$(function () { $("[data-toggle='popoverTooltip']").popover({ container: 'body',
+			html: true,
+			content: function () {
+				return $(this).next('.popper-content').html();
+			}
+		}); });
 	</script>
 
 
@@ -129,6 +135,13 @@
                 	background-color:#319a9b;
                 	color:black;
 			border: 1;
+                }
+				.popover-content {
+					background-color:#319a9b;
+					color:#cfd8dc;
+					border: 1;
+					word-wrap: break-word;
+					font-weight: bold;
                 }
 		.glyphicon + span {
     			position: absolute;
@@ -497,10 +510,12 @@
 					}
 					function create_tooltip($name) {
 						echo '	<div class="texte" style="margin: 0px;"
-									data-toggle="popover" data-placement="bottom"
-									data-html="true" data-trigger="hover" data-content='. "'<b>" . $name . "</b>'" . '>
+									data-toggle="popoverTooltip" data-placement="bottom"
+									data-html="true" data-trigger="hover" >
 									<b>&nbsp;'. $name .'</b>
-								</div>';
+								
+								</div>
+								<div class="popper-content hide">&nbsp;'. $name .'</div>';
 					}
 					// perform command before processing content
 					if ( ($HTTP_GET_VARS["command"] != "") && ($_SESSION["guest_login"] == 0) ) {
@@ -635,12 +650,22 @@
 						}
 						return $result;
 					}
+					function utf8_rawurldecode($raw_url_encoded){
+						$enc = rawurldecode($raw_url_encoded);
+						if(utf8_encode(utf8_decode($enc))==$enc){;
+							return rawurldecode($raw_url_encoded);
+						}else{
+							return utf8_encode(rawurldecode($raw_url_encoded));
+						}
+					}
 					function create_tooltip($name) {
 						echo '	<div class="texte" style="margin: 0px;"
-									data-toggle="popover" data-placement="bottom"
-									data-html="true" data-trigger="hover" data-content='. "'<b>" . $name . "</b>'" . '>
+									data-toggle="popoverTooltip" data-placement="bottom"
+									data-html="true" data-trigger="hover" >
 									<b>&nbsp;'. $name .'</b>
-								</div>';
+								
+								</div>
+								<div class="popper-content hide">&nbsp;'. $name .'</div>';
 					}
 					$countUploadDimension = 0;
 					$countDownloadDimension = 0;
@@ -651,7 +676,7 @@
 					foreach ($uploads as $file) {
 						echo "<tr>";
 						// Name
-						echo "<td style='font-size:12px;color:#f5f5f5' class='texte texte-full-name'><b>", create_tooltip($file->name), "</b></td>";
+						echo "<td style='font-size:12px;color:#f5f5f5' class='texte texte-full-name'><b>", create_tooltip($file->name) , "</b></td>";
 						// User name
 						echo "<td style='font-size:12px;color:#f5f5f5' class='texte'>", $file->user_name, "</td>";
 						// Upload dimension
