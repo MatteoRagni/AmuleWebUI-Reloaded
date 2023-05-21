@@ -9,6 +9,7 @@
 		if ( $_SESSION["auto_refresh"] > 0 ) {
 			echo "<meta http-equiv=\"refresh\" content=\"", $_SESSION["auto_refresh"], '">';
 		}
+
 	?>
 
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -263,25 +264,25 @@
 						<!-- Downloads -->
 						<a class="btn  navbar-link" title="Downloads and Uploads" href="amuleweb-main-dload.php">
 				   				<span class="glyphicon glyphicon-transfer"></span>
-								<div style="font-size:9px"><br>Transfer</div>
+								<div style="font-size:9px"><br><?php echo gettext('Transfer');?></div>
 
 						</a>
 				   		<!-- Shared -->
 				   		<a class="btn  navbar-link" title="Sharing" href="amuleweb-main-shared.php">
 					   			<span class="glyphicon glyphicon-share"></span>
-								<div style="font-size:9px"><br>Shared</div>
+								<div style="font-size:9px"><br><?php echo gettext('Shared');?></div>
 
 				   				</a>
 				   		<!-- Search -->
 				   		<a class="btn  navbar-link" title="Search" href="amuleweb-main-search.php">
 					   			<span class="glyphicon glyphicon-search"></span>
-								<div style="font-size:9px"><br>Search</div>
+								<div style="font-size:9px"><br><?php echo gettext('Search');?></div>
 
 					   	</a>
 				   		<!-- Servers -->
 				   		<a class="btn  navbar-link" title="Servers" href="amuleweb-main-servers.php">
 					   			<span class="glyphicon glyphicon-tasks"></span>
-								<div style="font-size:9px"><br>Server</div>
+								<div style="font-size:9px"><br><?php echo gettext('Server');?></div>
 
 					   	</a>
 				   		<!-- Kad -->
@@ -293,7 +294,7 @@
 				   		<!-- Stats -->
 				   		<a class="btn  navbar-link" title="Statistics" href="amuleweb-main-stats.php">
 					   			<span class="glyphicon glyphicon-stats"></span>
-								<div style="font-size:9px"><br>Stats</div>
+								<div style="font-size:9px"><br><?php echo gettext('Stats');?></div>
 
 					   	</a>
 				   	</div>
@@ -301,19 +302,19 @@
 						<!-- Configuration -->
 						<a class="btn navbar-link" title="Configurations" href="amuleweb-main-prefs.php">
 					   			<span class="glyphicon glyphicon-cog"></span>
-								<div style="font-size:9px"><br>Settings</div>
+								<div style="font-size:9px"><br><?php echo gettext('Settings');?></div>
 
 					   	</a>
 				   		<!-- Log -->
 				   		<a class="btn  navbar-link" title="Log" href="amuleweb-main-log.php">
 					   			<span class="glyphicon glyphicon-flag"></span>
-								<div style="font-size:9px"><br>Logs</div>
+								<div style="font-size:9px"><br><?php echo gettext('Logs');?></div>
 
 					   	</a>
 				   		<!-- Exit -->
 				   		<a class="btn navbar-link" title="Exit" href="login.php">
 				   				<span class="glyphicon glyphicon-off"></span>
-								<div style="font-size:9px"><br>Exit</div>
+								<div style="font-size:9px"><br><?php echo gettext('Exit');?></div>
 
 				   		</a>
 				   	</div>
@@ -332,25 +333,25 @@
     		<div class="btn-group">
     			<a class="btn" href="javascript:formCommandSubmit('pause');" title="Pause">
 						<span class="glyphicon glyphicon-pause"></span>
-						<div style="font-size:9px"><br>Pause</div>
+						<div style="font-size:9px"><br><?php echo gettext('Pause');?></div>
 					</a>
     			<a class="btn" href="javascript:formCommandSubmit('resume');" title="Resume">
 						<span class="glyphicon glyphicon-play"></span>
-							<div style="font-size:9px"><br>Resume</div>
+							<div style="font-size:9px"><br><?php echo gettext('Resume');?></div>
 					</a>
     		</div>
     		<div class="btn-group">
     			<a class="btn" href="javascript:formCommandSubmit('priodown');" title="Lower priority">
 						<span class="glyphicon glyphicon-download"></span>
-						<div style="font-size:9px"><br>Lower Priority</div>
+						<div style="font-size:9px"><br><?php echo gettext('Lower Priority');?></div>
 			</a>
     			<a class="btn" href="javascript:formCommandSubmit('cancel');" title="Remove">
 						<span class="glyphicon glyphicon-remove-circle"></span>
-						<div style="font-size:9px"><br>Remove</div>
+						<div style="font-size:9px"><br><?php echo gettext('Remove');?></div>
 			</a>
     			<a class="btn" href="javascript:formCommandSubmit('prioup');" title="Higher priority">
 						<span class="glyphicon glyphicon-upload"></span>
-						<div style="font-size:9px"><br>High Priority</div>
+						<div style="font-size:9px"><br><?php echo gettext('High Priority');?></div>
 			</a>
     		</div>
     		<!-- Inserting filtering php -->
@@ -397,18 +398,18 @@
 
 		<!-- Table Download -->
 		<div class="panel" style="margin-bottom: 10px;">
-		<div class="panel-heading panel-center"><h4>DOWNLOAD</h4></div>
+		<div class="panel-heading panel-center"><h4><?php echo gettext('DOWNLOAD');?></h4></div>
 			<table class="table">
 				<thead>
 					<tr>
-						<th><a href="amuleweb-main-dload.php?sort=name">File name</a></th>
-						<th><a href="amuleweb-main-dload.php?sort=size">Size</a></th>
-						<th><a href="amuleweb-main-dload.php?sort=size_done">Completed</a></th>
-						<th><a href="amuleweb-main-dload.php?sort=speed">Speed</a></th>
-						<th><a href="amuleweb-main-dload.php?sort=progress">Progress</a></th>
-						<th><a href="amuleweb-main-dload.php?sort=srccount">Sources</a></th>
-						<th><a href="amuleweb-main-dload.php?sort=status">Status</a></th>
-						<th><a href="amuleweb-main-dload.php?sort=prio">Priority</a></th>
+						<th><a href="amuleweb-main-dload.php?sort=name"><?php echo gettext('File name');?></a></th>
+						<th><a href="amuleweb-main-dload.php?sort=size"><?php echo gettext('Size');?></a></th>
+						<th><a href="amuleweb-main-dload.php?sort=size_done"><?php echo gettext('Completed');?></a></th>
+						<th><a href="amuleweb-main-dload.php?sort=speed"><?php echo gettext('Speed');?></a></th>
+						<th><a href="amuleweb-main-dload.php?sort=progress"><?php echo gettext('Progress');?></a></th>
+						<th><a href="amuleweb-main-dload.php?sort=srccount"><?php echo gettext('Sources');?></a></th>
+						<th><a href="amuleweb-main-dload.php?sort=status"><?php echo gettext('Status');?></a></th>
+						<th><a href="amuleweb-main-dload.php?sort=prio"><?php echo gettext('Priority');?></a></th>
 					</tr>
 				</thead>
 				<tbody>
@@ -624,15 +625,15 @@
 
 		<!-- Table Upload -->
 		<div class="panel" style="margin-bottom: 60px;background-color:#39425f;">
-		<div class="panel-heading panel-center" style="background-color:#319a9b;"><h4>UPLOAD</h4></div>
+		<div class="panel-heading panel-center" style="background-color:#319a9b;"><h4><?php echo gettext('UPLOAD');?></h4></div>
 			<table class="table">
 				<thead>
 					<tr>
-						<th style="color:#4db6ac">File Name</th>
-						<th style="color:#4db6ac">Username</th>
-						<th style="color:#4db6ac">Up</th>
-						<th style="color:#4db6ac">Down</th>
-						<th style="color:#4db6ac">Speed</th>
+						<th style="color:#4db6ac"><?php echo gettext('File Name');?></th>
+						<th style="color:#4db6ac"><?php echo gettext('Username');?></th>
+						<th style="color:#4db6ac"><?php echo gettext('Up');?></th>
+						<th style="color:#4db6ac"><?php echo gettext('Down');?></th>
+						<th style="color:#4db6ac"><?php echo gettext('Speed');?></th>
 					</tr>
 				</thead>
 				<tbody>

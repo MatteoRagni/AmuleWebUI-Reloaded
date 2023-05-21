@@ -193,22 +193,22 @@ function formCommandSubmit(command)
                                                 <!-- Downloads -->
                                                 <a class="btn  navbar-link" title="Downloads and Uploads" href="amuleweb-main-dload.php">
                                                                 <span class="glyphicon glyphicon-transfer"></span>
-                                                                <div style="font-size:9px"><br>Transfer</div>
+                                                                <div style="font-size:9px"><br><?php echo gettext('Transfer');?></div>
                                                 </a>
                                                 <!-- Shared -->
                                                 <a class="btn  navbar-link" title="Sharing" href="amuleweb-main-shared.php">
                                                                 <span class="glyphicon glyphicon-share"></span>
-                                                                <div style="font-size:9px"><br>Shared</div>
+                                                                <div style="font-size:9px"><br><?php echo gettext('Shared');?></div>
                                                                 </a>
                                                 <!-- Search -->
                                                 <a class="btn  navbar-link" title="Search" href="amuleweb-main-search.php">
                                                                 <span class="glyphicon glyphicon-search"></span>
-                                                                <div style="font-size:9px"><br>Search</div>
+                                                                <div style="font-size:9px"><br><?php echo gettext('Search');?></div>
                                                 </a>
                                                 <!-- Servers -->
                                                 <a class="btn  navbar-link" title="Servers" href="amuleweb-main-servers.php">
                                                                 <span class="glyphicon glyphicon-tasks"></span>
-                                                                <div style="font-size:9px"><br>Server</div>
+                                                                <div style="font-size:9px"><br><?php echo gettext('Server');?></div>
                                                 </a>
                                                 <!-- Kad -->
                                                 <a class="btn  navbar-link" title="Kademlia" href="amuleweb-main-kad.php">
@@ -218,24 +218,24 @@ function formCommandSubmit(command)
                                                 <!-- Stats -->
                                                 <a class="btn  navbar-link" title="Statistics" href="amuleweb-main-stats.php">
                                                                 <span class="glyphicon glyphicon-stats"></span>
-                                                                <div style="font-size:9px"><br>Stats</div>
+                                                                <div style="font-size:9px"><br><?php echo gettext('Stats');?></div>
                                                 </a>
                                         </div>
                                         <div class="btn-group">
                                                 <!-- Configuration -->
                                                 <a class="btn navbar-link" title="Configurations" href="amuleweb-main-prefs.php">
                                                                 <span class="glyphicon glyphicon-cog"></span>
-                                                                <div style="font-size:9px"><br>Settings</div>
+                                                                <div style="font-size:9px"><br><?php echo gettext('Settings');?></div>
                                                 </a>
                                                 <!-- Log -->
                                                 <a class="btn  navbar-link" title="Log" href="amuleweb-main-log.php">
                                                                 <span class="glyphicon glyphicon-flag"></span>
-                                                                <div style="font-size:9px"><br>Logs</div>
+                                                                <div style="font-size:9px"><br><?php echo gettext('Logs');?></div>
                                                 </a>
                                                 <!-- Exit -->
                                                 <a class="btn navbar-link" title="Exit" href="login.php">
                                                                 <span class="glyphicon glyphicon-off"></span>
-                                                                <div style="font-size:9px"><br>Exit</div>
+                                                                <div style="font-size:9px"><br><?php echo gettext('Exit');?></div>
                                                 </a>
 				   	</div>
 		    	</div>
@@ -253,29 +253,29 @@ function formCommandSubmit(command)
     		<div class="btn-group">
     			<a class="btn" href="javascript:formCommandSubmit('priodown');" title="Lower priority">
 						<span class="glyphicon glyphicon-download"></span>
-						<div style="font-size:9px"><br>Lower Priority</div>
+						<div style="font-size:9px"><br><?php echo gettext('Lower Priority');?></div>
 					</a>
     			<a class="btn" href="javascript:formCommandSubmit('reload');" title="Refresh">
 						<span class="glyphicon glyphicon-refresh"></span>
-						<div style="font-size:9px"><br>Refresh</div>
+						<div style="font-size:9px"><br><?php echo gettext('Refresh');?></div>
 					</a>
     			<a class="btn" href="javascript:formCommandSubmit('prioup');" title="Higher priority">
 						<span class="glyphicon glyphicon-upload"></span>
-						<div style="font-size:9px"><br>High Priority</div>
+						<div style="font-size:9px"><br><?php echo gettext('High Priority');?></div>
 					</a>
     		</div>
     		<!-- Inserting filtering php -->
     		<div class="btn-group">
      			<select name="select" id="filter" class="form-control btn-group">
-     				<option selected>All</option>
-     				<option>Low</option>
-     				<option>Normal</option>
-     				<option>High</option>
-     				<option>Release</option>
+     				<option selected><?php echo gettext('All');?></option>
+     				<option><?php echo gettext('Low');?></option>
+     				<option><?php echo gettext('Normal');?></option>
+     				<option><?php echo gettext('High');?></option>
+     				<option><?php echo gettext('Release');?></option>
      			</select>
     			<a class="btn btn-filter" href="javascript:formCommandSubmit('setprio');" title="Filter">
 						<span class="glyphicon glyphicon-check"></span>
-						<div style="font-size:9px"><br>Filter</div>
+						<div style="font-size:9px"><br><?php echo gettext('Filter');?></div>
 					</a>
     			<?php
     				if ($_SESSION["guest_login"] != 0) {
@@ -293,16 +293,16 @@ function formCommandSubmit(command)
 
 		<!-- Table Download -->
 		<div class="panel" style="margin-bottom: 60px;">
-		<div class="panel-heading panel-center"><h4>SHARED FILES</h4></div>
+		<div class="panel-heading panel-center"><h4><?php echo gettext('SHARED FILES');?></h4></div>
 			<table class="table">
 				<thead>
 					<tr>
-						<th><a href="amuleweb-main-shared.php?sort=name">File name</a></th>
-						<th><a href="amuleweb-main-shared.php?sort=xfer">Transferred</a> <a href="amuleweb-main-shared.php?sort=xfer_all">(Total)</a></th>
-						<th><a href="amuleweb-main-shared.php?sort=req">Requested</a> <a href="amuleweb-main-shared.php?sort=req_all">(Total)</a></th>
-						<th><a href="amuleweb-main-shared.php?sort=acc">Accepted Rqst</a> <a href="amuleweb-main-shared.php?sort=acc_all">(Total)</a></th>
-						<th><a href="amuleweb-main-shared.php?sort=size">Size</a></th>
-						<th><a href="amuleweb-main-shared.php?sort=prio">Priority</a></th>
+						<th><a href="amuleweb-main-shared.php?sort=name"><?php echo gettext('File name');?></a></th>
+						<th><a href="amuleweb-main-shared.php?sort=xfer"><?php echo gettext('Transferred');?></a> <a href="amuleweb-main-shared.php?sort=xfer_all">(<?php echo gettext('Total');?>)</a></th>
+						<th><a href="amuleweb-main-shared.php?sort=req"><?php echo gettext('Requested');?></a> <a href="amuleweb-main-shared.php?sort=req_all">(<?php echo gettext('Total');?>)</a></th>
+						<th><a href="amuleweb-main-shared.php?sort=acc"> Rqst<?php echo gettext('Accepted Rqst');?></a> <a href="amuleweb-main-shared.php?sort=acc_all">(<?php echo gettext('Total');?>)</a></th>
+						<th><a href="amuleweb-main-shared.php?sort=size"><?php echo gettext('Size');?></a></th>
+						<th><a href="amuleweb-main-shared.php?sort=prio"><?php echo gettext('Priority');?></a></th>
 					</tr>
 				</thead>
 				<tbody>

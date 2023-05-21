@@ -275,22 +275,22 @@
                                                 <!-- Downloads -->
                                                 <a class="btn  navbar-link" title="Downloads and Uploads" href="amuleweb-main-dload.php">
                                                                 <span class="glyphicon glyphicon-transfer"></span>
-                                                                <div style="font-size:9px"><br>Transfer</div>
+                                                                <div style="font-size:9px"><br><?php echo gettext('Transfer');?></div>
                                                 </a>
                                                 <!-- Shared -->
                                                 <a class="btn  navbar-link" title="Sharing" href="amuleweb-main-shared.php">
                                                                 <span class="glyphicon glyphicon-share"></span>
-                                                                <div style="font-size:9px"><br>Shared</div>
+                                                                <div style="font-size:9px"><br><?php echo gettext('Shared');?></div>
                                                                 </a>
                                                 <!-- Search -->
                                                 <a class="btn  navbar-link" title="Search" href="amuleweb-main-search.php">
                                                                 <span class="glyphicon glyphicon-search"></span>
-                                                                <div style="font-size:9px"><br>Search</div>
+                                                                <div style="font-size:9px"><br><?php echo gettext('Search');?></div>
                                                 </a>
                                                 <!-- Servers -->
                                                 <a class="btn  navbar-link" title="Servers" href="amuleweb-main-servers.php">
                                                                 <span class="glyphicon glyphicon-tasks"></span>
-                                                                <div style="font-size:9px"><br>Server</div>
+                                                                <div style="font-size:9px"><br><?php echo gettext('Server');?></div>
                                                 </a>
                                                 <!-- Kad -->
                                                 <a class="btn  navbar-link" title="Kademlia" href="amuleweb-main-kad.php">
@@ -300,24 +300,24 @@
                                                 <!-- Stats -->
                                                 <a class="btn  navbar-link" title="Statistics" href="amuleweb-main-stats.php">
                                                                 <span class="glyphicon glyphicon-stats"></span>
-                                                                <div style="font-size:9px"><br>Stats</div>
+                                                                <div style="font-size:9px"><br><?php echo gettext('Stats');?></div>
                                                 </a>
                                         </div>
                                         <div class="btn-group">
                                                 <!-- Configuration -->
                                                 <a class="btn navbar-link" title="Configurations" href="amuleweb-main-prefs.php">
                                                                 <span class="glyphicon glyphicon-cog"></span>
-                                                                <div style="font-size:9px"><br>Settings</div>
+                                                                <div style="font-size:9px"><br><?php echo gettext('Settings');?></div>
                                                 </a>
                                                 <!-- Log -->
                                                 <a class="btn  navbar-link" title="Log" href="amuleweb-main-log.php">
                                                                 <span class="glyphicon glyphicon-flag"></span>
-                                                                <div style="font-size:9px"><br>Logs</div>
+                                                                <div style="font-size:9px"><br><?php echo gettext('Logs');?></div>
                                                 </a>
                                                 <!-- Exit -->
                                                 <a class="btn navbar-link" title="Exit" href="login.php">
                                                                 <span class="glyphicon glyphicon-off"></span>
-                                                                <div style="font-size:9px"><br>Exit</div>
+                                                                <div style="font-size:9px"><br><?php echo gettext('Exit');?></div>
                                                 </a>
             </div>
           </div>
@@ -346,10 +346,10 @@
 
          <div class="container-fluid panel-tr" style="margin-bottom:60px;">
       <div class="panel">
-      <div class="panel-heading panel-center"><h4>PREFERENCES</h4></div>
+      <div class="panel-heading panel-center"><h4><?php echo gettext('PREFERENCES');?></h4></div>
 
         <div style="width:600px; margin: auto; margin-top: 20px;">
-          <p><b style="font-size:16px;width:550px;background-color:#319a9b;color:cfd8dc" class="form-control">WEBSERVER</b>
+          <p><b style="font-size:16px;width:550px;background-color:#319a9b;color:cfd8dc" class="form-control"><?php echo gettext('WEBSERVER');?></b>
 
           <div class="btn-group form-inline">
             <label class="form-control btn-group"
@@ -374,7 +374,7 @@
                       border-top-right-radius: 0px;
                       border-bottom-right-radius: 0px;">
                 <input type="checkbox" class="btn btn-default" name="use_gzip">&nbsp;&nbsp;
-                Use gzip compression
+                <?php echo gettext('Use gzip compression');?>
               </label>
               <input type="text" class="btn-group form-control"
                 style=" border-top-left-radius:0px;
@@ -382,7 +382,7 @@
                         width: 100px" disabled="true" name="nothing">
           </div></p>
 
-          <p><b style="font-size:16px; width:550px;background-color:#319a9b;color:cfd8dc" class="form-control">BANDWIDTH LIMITS</b>
+          <p><b style="font-size:16px; width:550px;background-color:#319a9b;color:cfd8dc" class="form-control"><?php echo gettext('BANDWIDTH LIMITS');?></b>
 
           <div class="btn-group form-inline">
             <label class="form-control btn-group"
@@ -392,7 +392,7 @@
                       border-top-right-radius: 0px;
                       border-bottom-right-radius: 0px;" onclick="javascript:focusName('max_down_limit')">
                 <input type="checkbox" class="btn btn-default" name="nothing" disabled>&nbsp;&nbsp;
-                Max download rate
+                <?php echo gettext('Max download rate');?>
               </label>
               <input type="text" class="btn-group form-control"
                 style=" border-top-left-radius:0px;
@@ -407,7 +407,7 @@
                       border-top-right-radius: 0px;
                       border-bottom-right-radius: 0px;" onclick="javascript:focusName('max_up_limit')">
                 <input type="checkbox" class="btn btn-default" name="nothing" disabled>&nbsp;&nbsp;
-                Max Upload Rate
+                <?php echo gettext('Max Upload Rate');?>
               </label>
               <input type="text" class="btn-group form-control"
                 style=" border-top-left-radius:0px;
@@ -422,7 +422,7 @@
                       border-top-right-radius: 0px;
                       border-bottom-right-radius: 0px;" onclick="javascript:focusName('slot_alloc')">
                 <input type="checkbox" class="btn btn-default" name="nothing" disabled>&nbsp;&nbsp;
-                Slot Allocation
+                <?php echo gettext('Slot Allocation');?>
               </label>
               <input type="text" class="btn-group form-control"
                 style=" border-top-left-radius:0px;
@@ -430,7 +430,7 @@
                         width: 100px" name="slot_alloc">
           </div></p>
 
-          <p><b style="font-size:16px; width:550px;background-color:#319a9b;color:cfd8dc" class="form-control">CONNECTION SETTINGS</b>
+          <p><b style="font-size:16px; width:550px;background-color:#319a9b;color:cfd8dc" class="form-control"><?php echo gettext('CONNECTION SETTINGS');?></b>
 
           <div class="btn-group form-inline">
             <label class="form-control btn-group"
@@ -440,7 +440,7 @@
                       border-top-right-radius: 0px;
                       border-bottom-right-radius: 0px;" onclick="javascript:focusName('max_conn_total')">
                 <input type="checkbox" class="btn btn-default" name="nothing" disabled>&nbsp;&nbsp;
-                Max total connections
+                <?php echo gettext('Max total connections');?>
               </label>
               <input type="text" class="btn-group form-control"
                 style=" border-top-left-radius:0px;
@@ -455,7 +455,7 @@
                       border-top-right-radius: 0px;
                       border-bottom-right-radius: 0px;" onclick="javascript:focusName('max_file_src')">
                 <input type="checkbox" class="btn btn-default" name="nothing" disabled>&nbsp;&nbsp;
-                Max sources per file
+                <?php echo gettext('Max sources per file');?>
               </label>
               <input type="text" class="btn-group form-control"
                 style=" border-top-left-radius:0px;
@@ -470,7 +470,7 @@
                       border-top-right-radius: 0px;
                       border-bottom-right-radius: 0px;">
                 <input type="checkbox" class="btn btn-default" name="autoconn_en">&nbsp;&nbsp;
-                Autoconnect at startup
+                <?php echo gettext('Autoconnect at startup');?>
               </label>
               <input type="text" class="btn-group form-control"
                 style=" border-top-left-radius:0px;
@@ -485,7 +485,7 @@
                       border-top-right-radius: 0px;
                       border-bottom-right-radius: 0px;">
                 <input type="checkbox" class="btn btn-default" name="reconn_en">&nbsp;&nbsp;
-                Reconnect when connection lost
+                <?php echo gettext('Reconnect when connection lost');?>
               </label>
               <input type="text" class="btn-group form-control"
                 style=" border-top-left-radius:0px;
@@ -493,7 +493,7 @@
                         width: 100px" disabled="true" name="nothing">
           </div></p>
 
-          <p><b style="font-size:16px; width:550px;background-color:#319a9b;color:cfd8dc" class="form-control">CONNECTION SETTINGS</b>
+          <p><b style="font-size:16px; width:550px;background-color:#319a9b;color:cfd8dc" class="form-control"><?php echo gettext('CONNECTION SETTINGS');?></b>
 
           <div class="btn-group form-inline">
             <label class="form-control btn-group"
@@ -503,7 +503,7 @@
                       border-top-right-radius: 0px;
                       border-bottom-right-radius: 0px;" onclick="javascript:focusName('tcp_port')">
                 <input type="checkbox" class="btn btn-default" name="nothing" disabled>&nbsp;&nbsp;
-                TCP Port
+                TCP <?php echo gettext('Port');?>
               </label>
               <input type="text" class="btn-group form-control"
                 style=" border-top-left-radius:0px;
@@ -518,7 +518,7 @@
                       border-top-right-radius: 0px;
                       border-bottom-right-radius: 0px;" onclick="javascript:focusName('udp_port')">
                 <input type="checkbox" class="btn btn-default" name="nothing" disabled>&nbsp;&nbsp;
-                UDP Port
+                UDP <?php echo gettext('Port');?>
               </label>
               <input type="text" class="btn-group form-control"
                 style=" border-top-left-radius:0px;
@@ -533,7 +533,7 @@
                       border-top-right-radius: 0px;
                       border-bottom-right-radius: 0px;">
                 <input type="checkbox" class="btn btn-default" name="udp_dis">&nbsp;&nbsp;
-                Disable UDP connections
+                <?php echo gettext('Disable UDP connections');?>
               </label>
               <input type="text" class="btn-group form-control"
                 style=" border-top-left-radius:0px;
@@ -541,7 +541,7 @@
                         width: 100px" disabled="true" name="nothing">
           </div></p>
 
-        <p><b style="font-size:16px; width:550px;background-color:#319a9b;color:cfd8dc" class="form-control">LINE CAPACITY (STATISTICS)</b>
+        <p><b style="font-size:16px; width:550px;background-color:#319a9b;color:cfd8dc" class="form-control"><?php echo gettext('LINE CAPACITY (STATISTICS)');?></b>
 
           <div class="btn-group form-inline">
             <label class="form-control btn-group"
@@ -551,7 +551,7 @@
                       border-top-right-radius: 0px;
                       border-bottom-right-radius: 0px;" onclick="javascript:focusName('max_line_down_cap')">
                 <input type="checkbox" class="btn btn-default" name="nothing" disabled>&nbsp;&nbsp;
-                Max download rate
+                <?php echo gettext('Max download rate');?>
               </label>
               <input type="text" class="btn-group form-control"
                 style=" border-top-left-radius:0px;
@@ -566,7 +566,7 @@
                       border-top-right-radius: 0px;
                       border-bottom-right-radius: 0px;" onclick="javascript:focusName('max_line_up_cap')">
                 <input type="checkbox" class="btn btn-default" name="nothing" disabled>&nbsp;&nbsp;
-                Max upload rate
+                <?php echo gettext('Max upload rate');?>
               </label>
               <input type="text" class="btn-group form-control"
                 style=" border-top-left-radius:0px;
@@ -574,7 +574,7 @@
                         width: 100px" name="max_line_up_cap">
           </div></p>
 
-          <p><b style="font-size:16px; width:550px;background-color:#319a9b;color:cfd8dc" class="form-control">FILE SETTINGS</b>
+          <p><b style="font-size:16px; width:550px;background-color:#319a9b;color:cfd8dc" class="form-control"><?php echo gettext('FILE SETTINGS');?></b>
 
           <div class="btn-group form-inline">
             <label class="form-control btn-group"
@@ -585,7 +585,7 @@
                       border-bottom-right-radius: 0px;">
                 <input type="checkbox" class="btn btn-default" name="check_free_space"
                    onclick="javascript:toggleStatus('check_free_space','min_free_space')">&nbsp;&nbsp;
-                Check free minimum space (MB)
+                <?php echo gettext('Check free minimum space (MB)');?>
               </label>
               <input type="text" class="btn-group form-control"
                 style=" border-top-left-radius:0px;

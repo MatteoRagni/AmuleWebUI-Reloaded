@@ -229,22 +229,22 @@
                                                 <!-- Downloads -->
                                                 <a class="btn  navbar-link" title="Downloads and Uploads" href="amuleweb-main-dload.php">
                                                                 <span class="glyphicon glyphicon-transfer"></span>
-                                                                <div style="font-size:9px"><br>Transfer</div>
+                                                                <div style="font-size:9px"><br><?php echo gettext('Transfer');?></div>
                                                 </a>
                                                 <!-- Shared -->
                                                 <a class="btn  navbar-link" title="Sharing" href="amuleweb-main-shared.php">
                                                                 <span class="glyphicon glyphicon-share"></span>
-                                                                <div style="font-size:9px"><br>Shared</div>
+                                                                <div style="font-size:9px"><br><?php echo gettext('Shared');?></div>
                                                                 </a>
                                                 <!-- Search -->
                                                 <a class="btn  navbar-link" title="Search" href="amuleweb-main-search.php">
                                                                 <span class="glyphicon glyphicon-search"></span>
-                                                                <div style="font-size:9px"><br>Search</div>
+                                                                <div style="font-size:9px"><br><?php echo gettext('Search');?></div>
                                                 </a>
                                                 <!-- Servers -->
                                                 <a class="btn  navbar-link" title="Servers" href="amuleweb-main-servers.php">
                                                                 <span class="glyphicon glyphicon-tasks"></span>
-                                                                <div style="font-size:9px"><br>Server</div>
+                                                                <div style="font-size:9px"><br><?php echo gettext('Server');?></div>
                                                 </a>
                                                 <!-- Kad -->
                                                 <a class="btn  navbar-link" title="Kademlia" href="amuleweb-main-kad.php">
@@ -254,24 +254,24 @@
                                                 <!-- Stats -->
                                                 <a class="btn  navbar-link" title="Statistics" href="amuleweb-main-stats.php">
                                                                 <span class="glyphicon glyphicon-stats"></span>
-                                                                <div style="font-size:9px"><br>Stats</div>
+                                                                <div style="font-size:9px"><br><?php echo gettext('Stats');?></div>
                                                 </a>
                                         </div>
                                         <div class="btn-group">
                                                 <!-- Configuration -->
                                                 <a class="btn navbar-link" title="Configurations" href="amuleweb-main-prefs.php">
                                                                 <span class="glyphicon glyphicon-cog"></span>
-                                                                <div style="font-size:9px"><br>Settings</div>
+                                                                <div style="font-size:9px"><br><?php echo gettext('Settings');?></div>
                                                 </a>
                                                 <!-- Log -->
                                                 <a class="btn  navbar-link" title="Log" href="amuleweb-main-log.php">
                                                                 <span class="glyphicon glyphicon-flag"></span>
-                                                                <div style="font-size:9px"><br>Logs</div>
+                                                                <div style="font-size:9px"><br><?php echo gettext('Logs');?></div>
                                                 </a>
                                                 <!-- Exit -->
                                                 <a class="btn navbar-link" title="Exit" href="login.php">
                                                                 <span class="glyphicon glyphicon-off"></span>
-                                                                <div style="font-size:9px"><br>Exit</div>
+                                                                <div style="font-size:9px"><br><?php echo gettext('Exit');?></div>
                                                 </a>
             </div>
           </div>
@@ -285,7 +285,7 @@
       <div class="panel-body container panel-center">
         <div class="form-inline form-tasks">
         <div class="btn-group">
-          <label class="control-label form-control btn-group" id="text-label" style="background-color:#39425f;"><b style="color:#4db6ac">Bootstrap from Node</b></label>
+          <label class="control-label form-control btn-group" id="text-label" style="background-color:#39425f;"><b style="color:#4db6ac"><?php echo gettext('Bootstrap from Node');?></b></label>
           <input class="form-control btn-group" style="background-color:#ffffff;" type="text" name="ip3" maxlength="3" id="ip-text" placeholder="255">
           <label class="control-label form-control btn-group" style="background-color:#ffffff;" id="ip-label">.</label>
           <input class="form-control btn-group" style="background-color:#ffffff;" type="text" name="ip2" maxlength="3" id="ip-text" placeholder="255">
@@ -305,23 +305,23 @@
   <!-- BEGIN OF CENTRAL BODY -->
   <div class="container-fluid panel-tr"  style="margin-bottom: 60px;">
     <div class="panel">
-    <div class="panel-heading panel-center"><h4>KAD STATUS</h4></div>
+    <div class="panel-heading panel-center"><h4>KAD <?php echo gettext('STATUS');?></h4></div>
       <?php
         function print_table($kad1, $kad2) {
           echo '<table class="table status-table" style="width:auto; margin: 0 auto; margin-bottom: 15px; margin-top:15px;">
           <thead>
             <tr>
-              <th>Parameter</th>
-              <th>Status</th>
+              <th>' . gettext('Parameter') . '</th>
+              <th>' . gettext('Status') . '</th>
             </tr>
           </thead>
           <tbody>
             <tr>
-              <td>Connection</td>
+              <td>' . gettext('Connection') . '</td>
               <td>'.$kad1.'</td>
             </tr>
             <tr>
-              <td>Firewall</td>
+              <td>' . gettext('Firewall') . '</td>
               <td>'.$kad2.'</td>
             </tr>
             <tr>

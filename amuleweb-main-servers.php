@@ -141,22 +141,22 @@
                                                 <!-- Downloads -->
                                                 <a class="btn  navbar-link" title="Downloads and Uploads" href="amuleweb-main-dload.php">
                                                                 <span class="glyphicon glyphicon-transfer"></span>
-                                                                <div style="font-size:9px"><br>Transfer</div>
+                                                                <div style="font-size:9px"><br><?php echo gettext('Transfer');?></div>
                                                 </a>
                                                 <!-- Shared -->
                                                 <a class="btn  navbar-link" title="Sharing" href="amuleweb-main-shared.php">
                                                                 <span class="glyphicon glyphicon-share"></span>
-                                                                <div style="font-size:9px"><br>Shared</div>
+                                                                <div style="font-size:9px"><br><?php echo gettext('Shared');?></div>
                                                                 </a>
                                                 <!-- Search -->
                                                 <a class="btn  navbar-link" title="Search" href="amuleweb-main-search.php">
                                                                 <span class="glyphicon glyphicon-search"></span>
-                                                                <div style="font-size:9px"><br>Search</div>
+                                                                <div style="font-size:9px"><br><?php echo gettext('Search');?></div>
                                                 </a>
                                                 <!-- Servers -->
                                                 <a class="btn  navbar-link" title="Servers" href="amuleweb-main-servers.php">
                                                                 <span class="glyphicon glyphicon-tasks"></span>
-                                                                <div style="font-size:9px"><br>Server</div>
+                                                                <div style="font-size:9px"><br><?php echo gettext('Server');?></div>
                                                 </a>
                                                 <!-- Kad -->
                                                 <a class="btn  navbar-link" title="Kademlia" href="amuleweb-main-kad.php">
@@ -166,24 +166,24 @@
                                                 <!-- Stats -->
                                                 <a class="btn  navbar-link" title="Statistics" href="amuleweb-main-stats.php">
                                                                 <span class="glyphicon glyphicon-stats"></span>
-                                                                <div style="font-size:9px"><br>Stats</div>
+                                                                <div style="font-size:9px"><br><?php echo gettext('Stats');?></div>
                                                 </a>
                                         </div>
                                         <div class="btn-group">
                                                 <!-- Configuration -->
                                                 <a class="btn navbar-link" title="Configurations" href="amuleweb-main-prefs.php">
                                                                 <span class="glyphicon glyphicon-cog"></span>
-                                                                <div style="font-size:9px"><br>Settings</div>
+                                                                <div style="font-size:9px"><br><?php echo gettext('Settings');?></div>
                                                 </a>
                                                 <!-- Log -->
                                                 <a class="btn  navbar-link" title="Log" href="amuleweb-main-log.php">
                                                                 <span class="glyphicon glyphicon-flag"></span>
-                                                                <div style="font-size:9px"><br>Logs</div>
+                                                                <div style="font-size:9px"><br><?php echo gettext('Logs');?></div>
                                                 </a>
                                                 <!-- Exit -->
                                                 <a class="btn navbar-link" title="Exit" href="login.php">
                                                                 <span class="glyphicon glyphicon-off"></span>
-                                                                <div style="font-size:9px"><br>Exit</div>
+                                                                <div style="font-size:9px"><br><?php echo gettext('Exit');?></div>
                                                 </a>
 				   	</div>
 		    	</div>
@@ -197,16 +197,16 @@
 
 		<!-- Table Download -->
 		<div class="panel" style="margin-bottom: 60px;">
-		<div class="panel-heading panel-center" style="background-color:#319a9b;"><h4 style="color:#cfd8dc; font-family: 'Rouge Script', font-size: 30px; font-weight: normal; text-align: center;">SERVERS</h4></div>
+		<div class="panel-heading panel-center" style="background-color:#319a9b;"><h4 style="color:#cfd8dc; font-family: 'Rouge Script', font-size: 30px; font-weight: normal; text-align: center;"><?php echo gettext('SERVERS');?></h4></div>
 			<table class="table" style="background-color:#39425f;">
 				<thead>
 					<tr>
 						<th style="width:55px;"></th>
-						<th><a href="amuleweb-main-servers.php?sort=name">Server name</a></th>
-						<th><a href="amuleweb-main-servers.php?sort=desc">Description</a></th>
-						<th style="color:#4db6ac">Address</th>
-						<th><a href="amuleweb-main-servers.php?sort=users">Users</a></th>
-						<th><a href="amuleweb-main-servers.php?sort=files">Files</a></th>
+						<th><a href="amuleweb-main-servers.php?sort=name"><?php echo gettext('Server name');?></a></th>
+						<th><a href="amuleweb-main-servers.php?sort=desc"><?php echo gettext('Description');?></a></th>
+						<th style="color:#4db6ac"><?php echo gettext('Address');?></th>
+						<th><a href="amuleweb-main-servers.php?sort=users"><?php echo gettext('Users');?></a></th>
+						<th><a href="amuleweb-main-servers.php?sort=files"><?php echo gettext('Files');?></a></th>
 					</tr>
 				</thead>
 				<tbody>
