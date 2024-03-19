@@ -247,12 +247,12 @@
 	    			</a>
     			</div>
     			<div class="btn-group">
-	    			<b class="btn btn-group" style="background-color:#ef5350" href="amuleweb-main-log.php?rstlog=1" onclick="return confirm('Do you really want to RESET aMule log?')">
+	    			<a class="btn btn-group" style="background-color:#ef5350" href="amuleweb-main-log.php?rstlog=1" onclick="return confirm('Do you really want to RESET aMule log?')">
 	    				<span class="glyphicon glyphicon-floppy-remove" style="color:#ffffff"></span>&nbsp;Clear aMule Log
-	    			</b>
-	    			<b class="btn btn-group" style="background-color:#ef5350" href="amuleweb-main-log.php?rstsrv=1" onclick="return confirm('Do you really want to RESET Server log?')">
+	    			</a>
+	    			<a class="btn btn-group" style="background-color:#ef5350" href="amuleweb-main-log.php?rstsrv=1" onclick="return confirm('Do you really want to RESET Server log?')">
 	    				<span class="glyphicon glyphicon-floppy-remove" style="color:#ffffff"></span>&nbsp;Clear Server Log
-	    			</b>
+	    			</a>
 	    		</div>
   			</div>
   		</div>
