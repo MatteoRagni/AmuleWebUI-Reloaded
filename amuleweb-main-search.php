@@ -206,9 +206,35 @@
 						echo "return;";
 				}
 			?>
+			if ( command == "download" ) {
+				var boxchecked = document.querySelectorAll('input[type="checkbox"]:checked');
+				var selectedFiles = Object.values(boxchecked).filter(selected => selected.name != 'selectAllFiles').length;
+				if (selectedFiles == 0)
+					return;
+				var res = confirm("Download selected " + (selectedFiles) + " files ?")
+				if ( res == false ) {
+					return;
+				}
+			}
 			var frm=document.forms.mainform
 			frm.command.value=command
 			frm.submit()
+		}
+	function selectAll(check)
+		{
+			var checkboxes = document.querySelectorAll('input[type="checkbox"]');
+			if (check.checked)
+			{
+				checkboxes.forEach(function(checkbox) {
+					checkbox.checked = true;
+				});			
+			}
+			else
+			{
+				checkboxes.forEach(function(checkbox) {
+					checkbox.checked = false;
+				});
+			}
 		}
 	</script>
 
@@ -319,6 +345,7 @@ $(document).ready(function(){
     				<option>Local</option>
     				<option selected>Global</option>
     				<option>Kad</option>
+			</select>
     			<input class="btn btn-info btn-group" name="Search" type="submit" value="Search" onClick="javascript:formCommandSubmit('search');" style="width:140px;">
     		</div></p><p>
     		<div class="btn-group">
@@ -353,7 +380,7 @@ $(document).ready(function(){
     		<div class="form-inline form-tasks">
     		<div class="btn-group">
     			<label class="form-control btn-group" style="border-top-right-radius:0px; border-bottom-right-radius:0px; background-color:#eee;">For each element selected</label>
-    			<input class="btn btn-success btn-group" name="Download" type="submit" value="Download" onClick="javascript:formCommandSubmit('download');" style="border-radius:0px;">
+			<a class="btn btn-success btn-group" title="Download" href="javascript:formCommandSubmit('download');" style="border-radius:0px;">Download</a>
     			<label class="form-control btn-group" style="border-radius:0px; background-color:#eee;"> in category </label>
     			<select class="form-control btn-group" name="targetcat" style="border-top-left-radius:0px; border-bottom-left-radius:0px; background-color:#eee;">
           		<?php
@@ -376,6 +403,7 @@ $(document).ready(function(){
 			<table class="table">
 				<thead>
 					<tr>
+						<th><input type="checkbox" name="selectAllFiles" onclick='selectAll(this);'></th>
 						<th><a href="amuleweb-main-search.php?sort=name">File name</a></th>
 						<th><a href="amuleweb-main-search.php?sort=size">Size</a></th>
 						<th><a href="amuleweb-main-search.php?sort=sources">Sources</a></th>
@@ -402,7 +430,7 @@ $(document).ready(function(){
 					function my_cmp($a, $b) {
 						global $sort_order, $sort_reverse;
 
-		switch ( $sort_order) {
+						switch ( $sort_order) {
 							case "size": $result = $a->size > $b->size; break;
 							case "name": $result = $a->name > $b->name; break;
 							case "sources": $result = $a->sources > $b->sources; break;
@@ -487,7 +515,8 @@ $(document).ready(function(){
 
 					foreach ($search as $file) {
 						echo '<tr>';
-						echo '<td><label style="font-size:12px;"><input type="checkbox" name="', $file->hash, '" > ',$file->name,'</label></td>';
+						echo '<td><input type="checkbox" name="', $file->hash, '" ></td>';
+						echo '<td><label style="font-size:12px;">',$file->name,'</label></td>';
 						echo '<td style="font-size: 12px;">', CastToXBytes($file->size), '</td>';
 						echo '<td style="font-size: 12px;"><span class="badge badge-default">', $file->sources, '</span></td>';
 						echo '</tr>';
