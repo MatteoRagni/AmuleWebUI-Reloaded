@@ -232,7 +232,11 @@
 	function formCommandSubmit(command)
 	{
 		if ( command == "cancel" ) {
-			var res = confirm("Delete selected files ?")
+			var boxchecked = document.querySelectorAll('input[type="checkbox"]:checked');
+			var selectedFiles = Object.values(boxchecked).filter(selected => selected.name != 'selectAllFiles').length;
+			if (selectedFiles == 0)
+				return;
+			var res = confirm("Delete selected " + (selectedFiles) + " files ?")
 			if ( res == false ) {
 				return;
 			}
@@ -249,6 +253,22 @@
 		frm.command.value=command
 		frm.submit()
 	}
+	function selectAll(check)
+		{
+			var checkboxes = document.querySelectorAll('input[type="checkbox"]');
+			if (check.checked)
+			{
+				checkboxes.forEach(function(checkbox) {
+					checkbox.checked = true;
+				});			
+			}
+			else
+			{
+				checkboxes.forEach(function(checkbox) {
+					checkbox.checked = false;
+				});
+			}
+		}
 	</script>
 </head>
 
@@ -401,6 +421,7 @@
 			<table class="table">
 				<thead>
 					<tr>
+						<th><input type="checkbox" name="selectAllFiles" onclick='selectAll(this);'></th>
 						<th><a href="amuleweb-main-dload.php?sort=name">File name</a></th>
 						<th><a href="amuleweb-main-dload.php?sort=size">Size</a></th>
 						<th><a href="amuleweb-main-dload.php?sort=size_done">Completed</a></th>
@@ -427,13 +448,23 @@
 						return $result;
 					}
 
-					function StatusString($file) {
+					function StatusClass($file) {
 						if ( $file->status == 7 ) {
 							return '<span class="label label-info" style="font-size:12px; padding-top:3.6px;">Paused</span>';
 						} elseif ( $file->src_count_xfer > 0 ) {
 							return '<span class="label label-success" style="font-size:12px;">Downloading</span>';
 						} else {
 							return '<span class="label label-warning" style="font-size:12px;">Waiting</span>';
+						}
+					}
+
+					function StatusString($file) {
+						if ( $file->status == 7 ) {
+							return 'Paused';
+						} elseif ( $file->src_count_xfer > 0 ) {
+							return 'Downloading';
+						} else {
+							return 'Waiting';
 						}
 					}
 
@@ -472,7 +503,7 @@
 							case "name": $result = $a->name > $b->name; break;
 							case "speed": $result = $a->speed > $b->speed; break;
 							case "scrcount": $result = $a->src_count > $b->src_count; break;
-							case "status": $result = StatusString($a) > StatusString($b); break;
+							case "status": $result = StatusClass($a) > StatusClass($b); break;
 							case "prio": $result = $a->prio < $b->prio; break;
 						}
 
@@ -574,8 +605,10 @@
 
 						if ( $filter_status_result and $filter_cat_result) {
 							print "<tr>";
-								// Name and checkbox
-								echo "<td style='font-size:12px;color:#f5f5f5' class='texte texte-full-name'>", '<div class="checkbox download-checkbox" style="margin: 0px;"><label><input type="checkbox" name="', $file->hash, '" >', create_tooltip($file->name) , "</label></div></td>";
+								// Checkbox
+								echo "<td class='texte'>", '<div class="checkbox download-checkbox" style="margin: 0px;"><input type="checkbox" name="', $file->hash, '" >', "</div></td>";
+								// Name
+								echo "<td style='font-size:12px;color:#f5f5f5' class='texte texte-full-name'>", '<label>', create_tooltip($file->name) , "</label></td>";
 								echo "<td style='font-size:12px;color:#f5f5f5' class='texte'>", CastToXBytes($file->size, $countSize), "</td>";
 								// Size
 								echo "<td style='font-size:12px;color:#f5f5f5' class='texte'>", CastToXBytes($file->size_done, $countCompleted), "&nbsp;(",
@@ -596,19 +629,19 @@
 								}
 								echo "</td style='font-size:12px;'>";
 								// Status
-								echo "<td style='font-size:12px;' class='texte'>", StatusString($file), "</td>";
+								echo "<td style='font-size:12px;' class='texte'>", StatusClass($file), "</td>";
 								// Priority
 								echo "<td style='font-size:12px;color:#f5f5f5' class='texte'>", PrioString($file), "</td>";
 							echo "</tr>";
 							
 						}
 					}
-					if (count($downloads)>0) {
+					if (count($downloads) > 0 and $countSize > 0) {
 						print "<tr>";
 						echo "<td style='font-size:12px;color:#c9c9c9;padding-bottom:0;text-align: right;padding-right: 20px;'>Total</td>";
 						echo "<td style='font-size:12px;color:#c9c9c9;padding-bottom:0;'>", CastToXBytes($countSize, $fakevar), "</td>";
 						echo "<td style='font-size:12px;color:#c9c9c9;padding-bottom:0;'>", CastToXBytes($countCompleted, $fakevar), "&nbsp;(",
-							((float)$countCompleted*100)/((float)$countSize), "%)</td>";
+							($countSize > 0) ? ((float)$countCompleted*100)/((float)$countSize) : "0", "%)</td>";
 						echo "<td style='font-size:12px;color:#c9c9c9;padding-bottom:0;'>", ($countSpeed > 0) ? (CastToXBytes($countSpeed, $fakevar) . "/s" ) : "", "</td>";
 						echo "<td style='padding-bottom:0;'></td>";
 						echo "<td style='padding-bottom:0;'></td>";
