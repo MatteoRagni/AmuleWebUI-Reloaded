@@ -167,17 +167,33 @@
 
 <script language="JavaScript" type="text/JavaScript">
 function formCommandSubmit(command)
-{
-	<?php
-		if ($_SESSION["guest_login"] != 0) {
-				echo 'alert("You logged in as guest - commands are disabled");';
-				echo "return;";
+	{
+		<?php
+			if ($_SESSION["guest_login"] != 0) {
+					echo 'alert("You logged in as guest - commands are disabled");';
+					echo "return;";
+			}
+		?>
+		var frm=document.forms.mainform
+		frm.command.value=command
+		frm.submit()
+	}
+function selectAll(check)
+	{
+		var checkboxes = document.querySelectorAll('input[type="checkbox"]');
+		if (check.checked)
+		{
+			checkboxes.forEach(function(checkbox) {
+				checkbox.checked = true;
+			});			
 		}
-	?>
-	var frm=document.forms.mainform
-	frm.command.value=command
-	frm.submit()
-}
+		else
+		{
+			checkboxes.forEach(function(checkbox) {
+				checkbox.checked = false;
+			});
+		}
+	}
 </script>
 
 
@@ -297,6 +313,7 @@ function formCommandSubmit(command)
 			<table class="table">
 				<thead>
 					<tr>
+						<th><input type="checkbox" name="selectAllFiles" onclick='selectAll(this);'></th>
 						<th><a href="amuleweb-main-shared.php?sort=name">File name</a></th>
 						<th><a href="amuleweb-main-shared.php?sort=xfer">Transferred</a> <a href="amuleweb-main-shared.php?sort=xfer_all">(Total)</a></th>
 						<th><a href="amuleweb-main-shared.php?sort=req">Requested</a> <a href="amuleweb-main-shared.php?sort=req_all">(Total)</a></th>
@@ -423,8 +440,8 @@ function formCommandSubmit(command)
 						foreach ($shared as $file) {
 
 							echo '<tr>';
-
-							echo '<td style="font-size:12px;">', '<div class="checkbox download-checkbox" style="margin: 0px;"><label><input type="checkbox" name="', $file->hash, '" >&nbsp;<b>', $file->name, "</b></label></div></td>";
+							echo '<td style="font-size:12px;">', '<div class="checkbox download-checkbox" style="margin: 0px;"><input type="checkbox" name="', $file->hash, '" >', "</div></td>";
+							echo '<td style="font-size:12px;">', '<div style="margin: 0px;"><label><b>', $file->name, "</b></label></div></td>";
 							echo '<td style="font-size:12px;">', CastToXBytes($file->xfer), " (", CastToXBytes($file->xfer_all),")</td>";
 							echo '<td style="font-size:12px;">', $file->req, " (", $file->req_all, ")</td>";
 							echo '<td style="font-size:12px;">', $file->accept, " (", $file->accept_all, ")</td>";
@@ -436,8 +453,8 @@ function formCommandSubmit(command)
 						foreach ($shared as $file) {
 							if ($HTTP_GET_VARS["select"] == PrioStringSorter($file)) {
 								echo '<tr>';
-
-								echo '<td style="font-size:12px;">', '<div class="checkbox download-checkbox" style="margin: 0px;"><label><input type="checkbox" name="', $file->hash, '" >&nbsp;<b>', $file->name, "</b></label></div></td>";
+								echo '<td style="font-size:12px;">', '<div class="checkbox download-checkbox" style="margin: 0px;"><input type="checkbox" name="', $file->hash, '" >', "</div></td>";
+								echo '<td style="font-size:12px;">', '<div style="margin: 0px;"><label><b>', $file->name, "</b></label></div></td>";
 								echo '<td style="font-size:12px;">', CastToXBytes($file->xfer), " (", CastToXBytes($file->xfer_all),")</td>";
 								echo '<td style="font-size:12px;">', $file->req, " (", $file->req_all, ")</td>";
 								echo '<td style="font-size:12px;">', $file->accept, " (", $file->accept_all, ")</td>";
