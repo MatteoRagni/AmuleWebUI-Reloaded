@@ -260,7 +260,7 @@
 			{
 				checkboxes.forEach(function(checkbox) {
 					checkbox.checked = true;
-				});			
+				});
 			}
 			else
 			{
@@ -544,7 +544,7 @@
 									data-toggle="popoverTooltip" data-placement="bottom"
 									data-html="true" data-trigger="hover" >
 									<b>&nbsp;'. $name .'</b>
-								
+
 								</div>
 								<div class="popper-content hide">&nbsp;'. $name .'</div>';
 					}
@@ -633,7 +633,7 @@
 								// Priority
 								echo "<td style='font-size:12px;color:#f5f5f5' class='texte'>", PrioString($file), "</td>";
 							echo "</tr>";
-							
+
 						}
 					}
 					if (count($downloads) > 0 and $countSize > 0) {
@@ -696,7 +696,7 @@
 									data-toggle="popoverTooltip" data-placement="bottom"
 									data-html="true" data-trigger="hover" >
 									<b>&nbsp;'. $name .'</b>
-								
+
 								</div>
 								<div class="popper-content hide">&nbsp;'. $name .'</div>';
 					}
@@ -760,7 +760,9 @@
 							if ( strlen($link) > 0 ) {
 								$links = split("ed2k://", $link);
 								foreach($links as $linkn) {
-								    amule_do_ed2k_download_cmd("ed2k://" . $linkn, $target_cat_idx);
+									if (strlen($linkn) > 0){
+										amule_do_ed2k_download_cmd("ed2k://" . $linkn, $target_cat_idx);
+									}
 								}
 							}
 						}
