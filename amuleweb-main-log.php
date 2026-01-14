@@ -302,7 +302,9 @@
 							if ( strlen($link) > 0 ) {
 								$links = split("ed2k://", $link);
 								foreach($links as $linkn) {
-								    amule_do_ed2k_download_cmd("ed2k://" . $linkn, $target_cat_idx);
+									if (strlen($linkn) > 0){
+										amule_do_ed2k_download_cmd("ed2k://" . $linkn, $target_cat_idx);
+									}
 								}
 							}
 						}
